@@ -1,0 +1,159 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Fuentes
+3.0 VARIABLES
+4.0 GENERAL
+5.0 NAVIGATION
+6.0 FOOTER
+7.0 HEADER
+8.0 HOME
+9.0 LOOP POSTS
+10.0 SIDEBAR
+11.0 SINGLE PAGE
+12.0 POPUP
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+
+@import 'sass/reset';
+
+/*--------------------------------------------------------------
+2.0 Fuentes
+--------------------------------------------------------------*/
+
+@import 'sass/fonts';
+
+/*--------------------------------------------------------------
+3.0 variables
+--------------------------------------------------------------*/
+
+@import 'sass/variables';
+
+/*--------------------------------------------------------------
+4.0 General
+--------------------------------------------------------------*/
+
+html, body {
+    font-family: $fuente-principal;
+    color: $color-negro;
+    background-color: $color-blanco;
+    font-size: 4vw;
+    line-height: 3.5vh;
+    @media (min-width: $sm) {
+        font-size: 4vw;
+        line-height: 2.5vh;
+    }
+    @media (min-width: $md) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.main-wrapper {
+    
+}
+
+.inner-wrapper {
+    padding-top: 80px;
+    @media (min-width: $sm) {
+        padding-top: 150px;
+    }
+    @media (min-width: $md) {
+        padding-top: 0;
+    }
+}
+#page404 {
+    padding: 150px 7vw;
+    min-height: 65vh;
+    @media (min-width: $md) {
+            max-width: 650px;
+        }
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: $fuente-light;
+        font-size: 5vw;
+        line-height: 120%;
+        text-align: center;
+        margin: 20px;
+        @media (min-width: $md) {
+            font-size: 2vw;
+        }
+    }
+
+    p {
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    .btn {
+        display: block;
+        font-weight: $fuente-light;
+        margin: 10px auto;
+        border: 1px solid $color-gris-texto;
+        padding: 10px 20px;
+        width: 50vw;
+        max-width: 200px;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        } 
+    }
+}
+
+
+/*--------------------------------------------------------------
+5.0 navigation
+--------------------------------------------------------------*/
+
+@import 'sass/navigation';
+
+/*--------------------------------------------------------------
+6.0 footer
+--------------------------------------------------------------*/
+
+@import 'sass/footer';
+
+/*--------------------------------------------------------------
+7.0 header
+--------------------------------------------------------------*/
+
+@import 'sass/header'; //navigation mostly
+
+/*--------------------------------------------------------------
+8.0 Home
+--------------------------------------------------------------*/
+
+@import 'sass/home';
+
+/*--------------------------------------------------------------
+9.0 loop posts
+--------------------------------------------------------------*/
+
+@import 'sass/loop-page';
+
+/*--------------------------------------------------------------
+10.0 SIDEBAR
+--------------------------------------------------------------*/
+
+@import 'sass/sidebar';
+
+/*--------------------------------------------------------------
+11.0 SINGLE PAGE
+--------------------------------------------------------------*/
+
+@import 'sass/single';
+
+/*--------------------------------------------------------------
+12.0 POPUP
+--------------------------------------------------------------*/
+
+@import 'sass/popup';
