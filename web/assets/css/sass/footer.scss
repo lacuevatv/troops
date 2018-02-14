@@ -2,9 +2,69 @@ footer {
     position: relative;
 }
 
+#socios {
+    position: relative;
+    padding: 80px 0 100px;
+    img {
+        display: block;
+        width: 80%;
+        margin: 50px auto 50px;
+        @media (min-width: $xs) {
+            width: 60%;
+        }
+    }
+}
 
+.go-up {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -61px -145px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
 
+    &:hover {
+        background-position: -111px -145px;
+    }
+}
 
+#legales {
+    padding: 20px 0;
+    color: $color-blanco;
+    background-color: $color-gris-oscuro;
+    img {
+        display: block;
+        width: 70%;
+        margin: 0px auto;
+        @media (min-width: $xs) {
+            width: 50%;
+            max-width: 255px;
+        }
+        @media (min-width: $md) {
+            width: 30%;
+            
+        }
+    }   
+    p {
+        margin: 15px 0;
+        font-size: 75%;
+        text-align: center;
+        @media (min-width: $xs) {
+            font-size: 60%;
+        }
+        @media (min-width: $md) {
+            font-size: 80%;
+        }
+    }
+}
 
 
 //hit legales
@@ -28,7 +88,7 @@ footer {
         &:hover {
             &:before {
                 @media (min-width: $md) {
-                    content: "Design and development";
+                content: "Design and development";
                 position: absolute;
                 text-transform: uppercase;
                 display: inline-block;

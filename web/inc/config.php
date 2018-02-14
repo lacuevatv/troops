@@ -24,6 +24,7 @@ define ('UPLOADSFILE', MAINSURL . '/contenido');
 define('SITETITLE', 'Troops');
 define('METADESCRIPTION', '');
 define('METAKEYS', '');
+define( 'HABILITACIONES', 'Toors Viajes E.V y T. 0.000 Disp. 0.000' );
 //LINKS:
 define('LINK_FACEBOOK', '#');
 define('LINK_INSTAGRAM', '#');

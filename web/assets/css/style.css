@@ -196,18 +196,76 @@ html, body {
       line-height: 2.5vh; } }
   @media (min-width: 767px) {
     html, body {
-      font-size: 3vw;
+      font-size: 2.5vw;
       line-height: 2.5vh; } }
   @media (min-width: 992px) {
     html, body {
       font-size: 14px;
       line-height: 18px; } }
 
+.container {
+  padding: 0 25px; }
+
 /*--------------------------------------------------------------
 5.0 footer
 --------------------------------------------------------------*/
 footer {
   position: relative; }
+
+#socios {
+  position: relative;
+  padding: 80px 0 100px; }
+  #socios img {
+    display: block;
+    width: 80%;
+    margin: 50px auto 50px; }
+    @media (min-width: 576px) {
+      #socios img {
+        width: 60%; } }
+
+.go-up {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url(../images/sprite.png) no-repeat;
+  background-position: -61px -145px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .go-up:hover {
+    background-position: -111px -145px; }
+
+#legales {
+  padding: 20px 0;
+  color: #fff;
+  background-color: #9b9b9b; }
+  #legales img {
+    display: block;
+    width: 70%;
+    margin: 0px auto; }
+    @media (min-width: 576px) {
+      #legales img {
+        width: 50%;
+        max-width: 255px; } }
+    @media (min-width: 992px) {
+      #legales img {
+        width: 30%; } }
+  #legales p {
+    margin: 15px 0;
+    font-size: 75%;
+    text-align: center; }
+    @media (min-width: 576px) {
+      #legales p {
+        font-size: 60%; } }
+    @media (min-width: 992px) {
+      #legales p {
+        font-size: 80%; } }
 
 .hit-legales {
   color: #fff;

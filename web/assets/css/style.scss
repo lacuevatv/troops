@@ -44,7 +44,7 @@ html, body {
         line-height: 2.5vh;
     }
     @media (min-width: $sm) {
-        font-size: 3vw;
+        font-size: 2.5vw;
         line-height: 2.5vh;
     }
     @media (min-width: $md) {
@@ -54,6 +54,12 @@ html, body {
 }
 
 .inner-wrapper {
+    @media (min-width: $sm) {}
+    @media (min-width: $md) {}
+}
+
+.container {
+    padding: 0 25px;
     @media (min-width: $sm) {}
     @media (min-width: $md) {}
 }
