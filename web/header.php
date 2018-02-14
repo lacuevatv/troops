@@ -19,8 +19,9 @@ global $pageActual;
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo MAINSURL; ?>/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo MAINSURL; ?>/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo MAINSURL; ?>/favicon-16x16.png">
-    <link rel="manifest" href="<?php echo MAINSURL; ?>/manifest.json">
+    <link rel="manifest" href="<?php echo MAINSURL; ?>/site.webmanifest">
     <link rel="mask-icon" href="<?php echo MAINSURL; ?>/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
 <!-- SEO SECCTION -->
@@ -61,5 +62,5 @@ global $pageActual;
         
     </header>
 
-    <main role="main">
-        <div class="main-wrapper">
+    <main role="main" class="main-wrapper">
+        <div class="inner-wrapper">

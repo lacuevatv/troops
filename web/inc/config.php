@@ -4,7 +4,6 @@
  * @LaCueva.tv
  * Since 1.0
  * CONFIG
- * Contenido: conneccion
 */
 //BD
 define('DB_SERVER', 'localhost');
@@ -20,7 +19,7 @@ define ( 'TEMPLATEDIR', dirname( __FILE__ ) . '/../templates' );
 define ('CARPETASERVIDOR', '' );//esta variable se define si el sitio no está en el root del dominio y si está en una subcarpeta
 define ('MAINSURL', 'http://' . $_SERVER['HTTP_HOST'] . CARPETASERVIDOR );
 define ('UPLOADSURL', MAINSURL . '/contenido');
-define ('UPLOADSFILE', MAINSURL . '/contenido/archivos');
+define ('UPLOADSFILE', MAINSURL . '/contenido');
 //META TAGS
 define('SITETITLE', 'Troops');
 define('METADESCRIPTION', '');
@@ -29,7 +28,7 @@ define('METAKEYS', '');
 define('LINK_FACEBOOK', '#');
 define('LINK_INSTAGRAM', '#');
 define('LINK_TWITTER', '#');
-define('LINK_FLICKR', '#');
+define('LINK_VIMEO', '#');
 define('LINK_YOUTUBE', '#');
 
 global $categorias;

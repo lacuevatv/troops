@@ -16,33 +16,12 @@ if( isAjax() ) {
 	$function = isset($_POST['function']) ? $_POST['function'] : '';
 
 	switch ( $function ) {
-		case 'paginationLoop':
+		case 'funcion1':
 			
-			$page  = isset($_POST['page']) ? $_POST['page'] : 1;
-			$postPerPage  = isset($_POST['postPerPage']) ? $_POST['postPerPage'] : '1';
-			$categoria = isset($_POST['categoria']) ? $_POST['categoria'] : 'none';
-
-			$offset = ($page-1) * $postPerPage;
-
-			$loop = getPosts( $categoria, $postPerPage, $exclude = 'none', $status = 'publicado', $offset );
-
-			getTemplate( 'posts-loop', $loop );
+			echo 'funcion1';
 
 		break;
 
-		case 'searchLoop':
-			
-			$page  = isset($_POST['page']) ? $_POST['page'] : 1;
-			$postPerPage  = isset($_POST['postPerPage']) ? $_POST['postPerPage'] : '1';
-			$busqueda = isset($_POST['busqueda']) ? $_POST['busqueda'] : '';
-
-			$offset = ($page-1) * $postPerPage .',' .$postPerPage;
-
-			$loop = getSearch ($busqueda, $offset );
-
-			getTemplate( 'posts-loop-mini', $loop );
-
-		break;
 	}
 
 	

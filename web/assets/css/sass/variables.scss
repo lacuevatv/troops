@@ -1,29 +1,26 @@
 /*FUENTES*/
-$fuente-principal: 'brandon_grotesque', sans-serif;
-$fuente-secundaria: 'bebasregular', $fuente-principal;
-$fuente-arial: 'arialbold', $fuente-principal;
-$fuente-light: 300;
-$fuente-bold: 800;
-$fuente-black: 900;
+$fuente-principal: 'NB International Pro', sans-serif;
+$fuente-principal-light: 'NB International Pro Light', sans-serif;
+//$fuente-monospace: 'NB International Pro Mono', monospace;
+$fuente-titulos: 'Champagne & Limousines', $fuente-principal;
+$fuente-titulos-italic: 'Champagne & Limousines Italic', $fuente-principal;
+$fuente-titulos-bold: 'Champagne & Limousines Bold' , $fuente-principal;
+$fuente-titulos-bold-italic: 'Champagne & Limousines Bold Italic' , $fuente-principal;
+//$fuente-segunda: 'Myriad Pro', $fuente-principal;
 
 /*COLORES*/
 $color-blanco: #fff;
-$color-negro: #333;
-$color-gris-texto: #787978;
-
-$color-violeta: #822b78;
-$color-verde: #93af37;
-$color-azul: #2872a1;
-$color-amarillo: #f8b134;
-$color-rojo: #e31949;
-
-$color-gris-fondo: #ececec;
-$color-negro-footer: #212121;
-$negro-transparente: rgba(0,0,0,0.5);
+$color-negro: #625e59;
+$color-semi-transparente: rgba(0,0,0,0.5);
+$color-verde: #45dacc;
+$color-amarillo: #ffe900;
+$color-rosa: #ff87b5;
+$color-gris-claro: #dedede;
+$color-gris-oscuro: #9b9b9b;
 
 /*GRID OPTIONS*/
 $xs: 576px; //<576px
-$sm: 768px; //<768px
+$sm: 767px; //<768px
 $md: 992px; //<992px
 $lg: 1200px; //<1200px
 $xlg: 1500px;
@@ -80,4 +77,3 @@ justify-content: center;
     opacity: 0.5;
 }
 */
-

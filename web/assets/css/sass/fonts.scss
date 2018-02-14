@@ -1,90 +1,68 @@
-// FONT TYPE DEFINITIONS
 @font-face {
-    font-family: 'arialbold';
-    src: url('../fonts/arial_bold-webfont.woff2') format('woff2'),
-         url('../fonts/arial_bold-webfont.woff') format('woff');
+    font-family: 'NB International Pro';
+    src: local('NB International Pro'),
+         url('../fonts/nbinternationalpro-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'bebasregular';
-    src: local('Bebas'),
-         url('../fonts/bebas.ttf') format('truetype'),
-         url('../fonts/bebas___-webfont.woff2') format('woff2'),
-         url('../fonts/bebas___-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'brandon_grotesque';
-    src: local('Brandon_Grotesque'), local('brandon-grotesque'), 
-         url('../fonts/brandon-bld.otf') format("opentype"),
-         url('../fonts/brandon-bld.ttf') format('truetype'),
-         url('../fonts/brandon_bld-webfont.woff2') format('woff2'),
-         url('../fonts/brandon_bld-webfont.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'brandon_grotesque';
-    src: local('Brandon_Grotesque'), local('brandon-grotesque'), 
-         url('../fonts/brandon_blk.otf') format("opentype"),
-         url('../fonts/brandon_blk.ttf') format('truetype'),
-         url('../fonts/brandon_blk-webfont.woff2') format('woff2'),
-         url('../fonts/brandon_blk-webfont.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'brandon_grotesque';
-    src: local('Brandon_Grotesque'), local('brandon-grotesque'),
-        url('../fonts/brandon_light.otf') format("opentype"), 
-        url('../fonts/brandon_light.ttf') format('truetype'),
-        url('../fonts/brandon_light-webfont.woff2') format('woff2'),
-        url('../fonts/brandon_light-webfont.woff') format('woff');
+    font-family: 'NB International Pro Light';
+    src: local('NB International Pro Light'),
+         url('../fonts/nbinternationalpro-light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
-
 }
 
-@font-face {
-    font-family: 'brandon_grotesque';
-    src: local('Brandon_Grotesque'), local('brandon-grotesque'), 
-         url('../fonts/brandon_reg.otf') format("opentype"),
-         url('../fonts/brandon_reg.ttf') format('truetype'),
-         url('../fonts/brandon_reg-webfont.woff2') format('woff2'),
-         url('../fonts/brandon_reg-webfont.woff') format('woff');
+
+//MONOSPACED
+/*@font-face {
+    font-family: 'NB International Pro Mono';
+    src: local('NB International Pro Mono'),
+         url('../fonts/nbinternationalpro-monospaced.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}*/
 
+//FUENTE TITULOS
+@font-face {
+    font-family: 'Champagne & Limousines';
+    src: local('Champagne & Limousines'),
+         url('../fonts/champagne&limousines.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-
-/*VAG ROUNDED STD FONT
+@font-face {
+    font-family: 'Champagne & Limousines Italic';
+    src: local('Champagne & Limousines Italic'),
+         url('../fonts/champagne&limousinesitalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
 
 @font-face {
-    font-family: 'Vag Rounded Std';
-    src: local('Vag Rounded Std'), local('Vag-Rounded-Std'), url('assets/fonts/vagroundedstd-bold.otf') format("opentype");
+    font-family: 'Champagne & Limousines Bold';
+    src: local('Champagne & Limousines Bold Italic'),
+         url('../fonts/champagne&limousinesbold.ttf') format('truetype');
     font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Vag Rounded Std';
-    src: local('Vag Rounded Std'), local('Vag-Rounded-Std'), url('assets/fonts/vagroundedstd-light.otf') format("opentype");
-    font-weight: 300;
+    font-family: 'Champagne & Limousines Bold Italic';
+    src: local('Champagne & Limousines Bold Italic'),
+         url('../fonts/champagne&limousines-bold-italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
-@font-face {
-    font-family: 'Vag Rounded Std Thin';
-    src: local('Vag Rounded Std Thin'), local('Vag-Rounded-Std-Thin'), url('assets/fonts/vagroundedstd-thin.otf') format("opentype");
+
+//FUENTE SEGUNDA
+/*@font-face {
+    font-family: 'Myriad Pro';
+    src: local('Myriad Pro'),
+         url('../fonts/myriadpro-regular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
 }*/

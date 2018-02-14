@@ -9,13 +9,17 @@
 ?>
 
 
-        </div> <!--- //.main-wrapper -->
-    </main>
+        </div> <!--- //.inner-wrapper -->
+    </main><!--- //.main-wrapper -->
 
 <!--- footer ---------------------->
     <footer class="footer-site">
         
-        footer
+        <div class="hit-legales">
+            <a href="http://hit.com.ar/" target="_blank" class="btn logo-hit-footer">
+                <img src="<?php echo MAINSURL; ?>/assets/images/logo-hit-static.png" alt="Hit" class="logo-hit">
+            </a>
+        </div>
         
     </footer>
 
