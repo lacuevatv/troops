@@ -13,6 +13,8 @@
 
 var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
+var pageActual = $('.wrapper-site').attr('data-page-actual');
+
 
 //se pasa con numeral #page
 function scrollToID ( id ) {
@@ -34,12 +36,24 @@ $(document).ready(function(){
             scrollTop: 0
         }, "slow");
     });
-    $('.brand-name a').click(function(){
-        $("html, body").animate({
-            scrollTop: 0
-        }, "slow");
+    $('.brand-name').click(function( e ){
+        if ( pageActual == 'inicio' ) {
+            e.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+        }
+    });
+    $('.go-up-link').click(function( e ){
+        if ( pageActual == 'inicio' ) {
+            e.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, "slow");
+        }
     });
 
+    //toggle
     $(document).on('click', '.toggle', function(){
         var menu = $('.top-menu');
 
@@ -57,22 +71,34 @@ $(document).ready(function(){
         }
     });//.click toggle
 
+    //close menu
     $(document).on('click', '.close-menu', function(){
         var menu = $('.top-menu');
 
-        if ( menu.css('height') == '0px' ) {
+        menu.animate({
+            'height': '0px',
+        }, 500);
+    });//.click toggle
+
+
+    //links scroll
+    /*scroll down on link animation*/
+    $('.scroll-down-link').on('click', function ( event ) {
+        if ( pageActual == 'inicio' ) {
+            event.preventDefault();
+            var url = '#' + $(this).attr('data-href');
             
-            var h = menu.prop('scrollHeight');
-            
-            menu.animate({
-                'height': h,
-            }, 2000);
-        } else {
-            menu.animate({
+            $('html, body').stop().animate({
+                scrollTop: $(url).offset().top - 90
+            }, 'slow');
+        }
+
+        if (window.innerWidth < 992) {
+            $('.top-menu').animate({
                 'height': '0px',
             }, 500);
         }
-    });//.click toggle
+    });
 
 });//.ready()
 

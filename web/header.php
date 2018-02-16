@@ -6,6 +6,30 @@
  * HEADER
 */
 global $pageActual;
+
+$headerTitulo = 'Are you ready?';
+$imagenHeader = MAINSURL . '/assets/images/header-portada-pc.png';
+if ( dispositivo() != 'pc' ) {
+    $imagenHeader = MAINSURL . '/assets/images/header-portada-movil.png';
+}
+
+
+//esto se remplaza luego con base de datos
+if ( $pageActual == 'bariloche' ) {
+    $headerTitulo = 'Bariloche';
+    $imagenHeader = MAINSURL . '/assets/images/bariloche-header.png';
+    if ( dispositivo() != 'pc' ) {
+        $imagenHeader = MAINSURL . '/assets/images/bariloche-header.png';
+    }
+}
+if ( $pageActual == 'las-lenas' ) {
+    $headerTitulo = 'Las Leñas';
+    $imagenHeader = MAINSURL . '/assets/images/lenas-header.png';
+    if ( dispositivo() != 'pc' ) {
+        $imagenHeader = MAINSURL . '/assets/images/lenas-header.png';
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -50,7 +74,7 @@ global $pageActual;
 
 </head>
 <body>
-<div class="wrapper-site">
+<div class="wrapper-site" data-page-actual="<?php echo $pageActual; ?>">
 <!--- header ---------------------->
     <?php
         openPopUp($pageActual);
@@ -72,35 +96,7 @@ global $pageActual;
                     <span class="tog3"></span>
                 </button>
                 
-                <ul class="top-menu" role="menu">
-                    <span class="close-menu"></span>
-                    <li role="menuitem">
-                        <a href="<?php echo MAINSURL; ?>" title="">
-                            Home
-                        </a>
-                    </li>
-                    <li role="menuitem">
-                        <a href="<?php echo MAINSURL; ?>/#nosotros" title="">
-                            Nosotros
-                        </a>
-                    </li>
-                    <li role="menuitem">
-                        <a href="<?php echo MAINSURL; ?>/#sociales" title="">
-                            Sociales
-                        </a>
-                    </li>
-                    <li role="menuitem">
-                        <a href="<?php echo MAINSURL; ?>/#contacto" title="">
-                            Contacto
-                        </a>
-                    </li>
-                    <li role="menuitem">
-                        <a href="<?php echo MAINSURL; ?>/#socios" title="">
-                            Socios
-                        </a>
-                    </li>
-
-                </ul><!-- //.top-menu -->
+                
 
                 <ul class="social-menu" role="menu">
 
@@ -155,22 +151,50 @@ global $pageActual;
                 </ul><!-- //.social-menu -->
 
             </div><!-- //.container -->
+
+            <ul class="top-menu" role="menu">
+                    <span class="close-menu"></span>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>" title="Inicio">
+                            Home
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#nosotros" title="Nosotros" class="scroll-down-link" data-href="nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#sociales" title="Sociales" class="scroll-down-link" data-href="sociales">
+                            Sociales
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#contacto" title="Contacto" class="scroll-down-link" data-href="contacto">
+                            Contacto
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#socios" title="Socios" class="scroll-down-link" data-href="socios">
+                            Socios
+                        </a>
+                    </li>
+
+                </ul><!-- //.top-menu -->
+
         </nav><!-- //.main-nav-wrapper -->
 
-        <div class="top-header-content">
-            <?php 
-            $imagenHeader = MAINSURL . '/assets/images/header-portada-pc.png';
+<!-- MAIN CONTENT HEADER -->
 
-            if ( dispositivo() != 'pc' ) {
-                $imagenHeader = MAINSURL . '/assets/images/header-portada-movil.png';
-            }
-            ?>
+        <div class="top-header-content">
             
             <img src="<?php echo $imagenHeader; ?>" alt="troops">
             <h1>
-                Are you ready?
+                <?php echo $headerTitulo; ?>
             </h1>
         </div>
+
+<!-- //..MAIN CONTENT HEADER -->
 
         <nav class="tours-nav">
             <?php 
