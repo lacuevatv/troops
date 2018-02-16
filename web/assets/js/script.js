@@ -40,13 +40,30 @@ $(document).ready(function(){
         }, "slow");
     });
 
-    $(document).on('click', '.toggle_menu', function(){
-        var menu = $('.main-menu');
+    $(document).on('click', '.toggle', function(){
+        var menu = $('.top-menu');
 
         if ( menu.css('height') == '0px' ) {
-            menu.css('height', 'auto');
-            var h = menu.css('height');
-            menu.css('height', '0px');
+            
+            var h = menu.prop('scrollHeight');
+            
+            menu.animate({
+                'height': h,
+            }, 2000);
+        } else {
+            menu.animate({
+                'height': '0px',
+            }, 500);
+        }
+    });//.click toggle
+
+    $(document).on('click', '.close-menu', function(){
+        var menu = $('.top-menu');
+
+        if ( menu.css('height') == '0px' ) {
+            
+            var h = menu.prop('scrollHeight');
+            
             menu.animate({
                 'height': h,
             }, 2000);

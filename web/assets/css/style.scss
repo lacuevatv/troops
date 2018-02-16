@@ -59,9 +59,19 @@ html, body {
 }
 
 .container {
-    padding: 0 25px;
-    @media (min-width: $sm) {}
-    @media (min-width: $md) {}
+    padding: 0 20px;
+    @media (min-width: $xs) {
+        padding: 0 25px;
+    }
+    @media (min-width: $md) {
+        padding: 0 50px;
+    }
+    @media (min-width: $lg) {
+        padding: 0 5%;
+    }
+    @media (min-width: $xlg) {
+        padding: 0 10%;
+    }
 }
 
 

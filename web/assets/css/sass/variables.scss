@@ -14,10 +14,13 @@ $color-negro: #625e59;
 $color-semi-transparente: rgba(0,0,0,0.5);
 $color-verde: #45dacc;
 $color-amarillo: #ffe900;
+$color-amarillo-menu: #fffa00;
+$color-amarillo-menu-semi-transparente: rgba(255,250,0,0.7);
+$color-amarillo-menu-transparente: rgba(255,250,0,0.3);
 $color-rosa: #ff87b5;
 $color-gris-claro: #dedede;
 $color-gris-oscuro: #9b9b9b;
-
+$color-toggle: #625e59;
 /*GRID OPTIONS*/
 $xs: 576px; //<576px
 $sm: 767px; //<768px
@@ -45,6 +48,21 @@ $xlg: 1500px;
       -ms-box-shadow: $var;
           box-shadow: $var;
 }
+
+@mixin text-shadow($var) {
+  -webkit-text-shadow: $var;
+     -moz-text-shadow: $var;
+      -ms-text-shadow: $var;
+          text-shadow: $var;
+}
+
+@mixin transform($var) {
+  -webkit-transform: $var;
+     -moz-transform: $var;
+      -ms-transform: $var;
+          transform: $var;
+}
+
 
 
 /*

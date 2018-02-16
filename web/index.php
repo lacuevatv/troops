@@ -14,7 +14,7 @@ include 'header.php';
 
 ?>
 
-<div style="padding: 150px 0;background-color: lightblue">
+<div style="padding: 250px 0;background-color: lightblue">
 	<h1>CONTENIDO PRINCIPAL</h1>
 	<h2>titulo2</h2>
 	<h3>titulo3</h3>

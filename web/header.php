@@ -6,7 +6,6 @@
  * HEADER
 */
 global $pageActual;
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -56,11 +55,197 @@ global $pageActual;
     <?php
         openPopUp($pageActual);
     ?>
-    <header>
+    <header class="main-header">
 
-        header
+        <nav class="main-nav-wrapper">
+
+            <div class="container main-nav-innner-wrapper">
+
+                <a class="brand-name" href="<?php echo MAINSURL; ?>" title="<?php echo SITETITLE; ?>">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/logo.gif" alt="<?php echo SITETITLE; ?>">
+                </a>
+
+                <button class="toggle">
+                    <span class="sr-only">Toggle</span>
+                    <span class="tog1"></span>
+                    <span class="tog2"></span>
+                    <span class="tog3"></span>
+                </button>
+                
+                <ul class="top-menu" role="menu">
+                    <span class="close-menu"></span>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>" title="">
+                            Home
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#nosotros" title="">
+                            Nosotros
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#sociales" title="">
+                            Sociales
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#contacto" title="">
+                            Contacto
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo MAINSURL; ?>/#socios" title="">
+                            Socios
+                        </a>
+                    </li>
+
+                </ul><!-- //.top-menu -->
+
+                <ul class="social-menu" role="menu">
+
+                <?php if ( dispositivo () == 'pc' ) : ?>
+                    <li role="menuitem">
+                        <a href="https://api.whatsapp.com/send?phone=<?php echo WHATSAPP; ?>" target="_blank" class="icon-social icon-social-whatsapp">
+                            <span class="whatsapp-menu">
+                                <?php echo WHATSAPPTEXT; ?>
+                            </span>
+                        </a>
+                    </li>
+
+                <?php endif; ?>
+
+                    <li role="menuitem">
+                        <a href="<?php echo LINK_INSTAGRAM; ?>" target="_blank" class="icon-social icon-social-instagram">
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo LINK_FACEBOOK; ?>" target="_blank" class="icon-social icon-social-facebook">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo LINK_VIMEO; ?>" target="_blank" class="icon-social icon-social-vimeo">
+                            <span class="sr-only">Vimeo</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo LINK_YOUTUBE; ?>" target="_blank" class="icon-social icon-social-youtube">
+                            <span class="sr-only">Youtube</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="<?php echo LINK_TWITTER; ?>" target="_blank" class="icon-social icon-social-twitter">
+                            <span class="sr-only">Titter</span>
+                        </a>
+                    </li>
+
+                    <?php if ( dispositivo () != 'pc' ) : ?>
+                    <li role="menuitem">
+                        <a href="https://api.whatsapp.com/send?phone=<?php echo WHATSAPP; ?>" target="_blank" class="icon-social icon-social-whatsapp">
+                            <span class="whatsapp-menu">
+                                <?php echo WHATSAPPTEXT; ?>
+                            </span>
+                        </a>
+                    </li>
+
+                <?php endif; ?>
+
+                </ul><!-- //.social-menu -->
+
+            </div><!-- //.container -->
+        </nav><!-- //.main-nav-wrapper -->
+
+        <div class="top-header-content">
+            <?php 
+            $imagenHeader = MAINSURL . '/assets/images/header-portada-pc.png';
+
+            if ( dispositivo() != 'pc' ) {
+                $imagenHeader = MAINSURL . '/assets/images/header-portada-movil.png';
+            }
+            ?>
+            
+            <img src="<?php echo $imagenHeader; ?>" alt="troops">
+            <h1>
+                Are you ready?
+            </h1>
+        </div>
+
+        <nav class="tours-nav">
+            <?php 
+                $html = '<ul class="tours-nav-menu';
+                if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'jurere' ) {
+                    $html .= ' section-active';
+                }
+
+                $html .= '" role="menu">';
+
+                echo $html;
+            ?>
+                <li role="menuitem">
+                    <a href="<?php echo MAINSURL; ?>/bariloche" title="Bariloche">
+                        Bariloche
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="<?php echo MAINSURL; ?>/porto-seguro" title="Porto Seguro">
+                        Porto Seguro
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="<?php echo MAINSURL; ?>/jurere" title="Jureré">
+                        Jureré
+                    </a>
+                </li>
+                <span class="paquete-active"></span>
+            </ul>
+            
+            <!-- ICON RULETA -->
+            <div class="tours-nav-icon">
+                <?php 
+                    if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'jurere' ) {
+                        echo '<img src="' .MAINSURL . '/assets/images/ruletamenos.png">';
+                    } elseif ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
+                        echo '<img src="' .MAINSURL . '/assets/images/ruletamas.png">';
+                    } else {
+                        echo '<img src="' .MAINSURL . '/assets/images/ruleta-troops.gif">';
+                    }
+                ?>
+
+            </div>
+
+            <?php 
+                $html = '<ul class="tours-nav-menu tours-nav-menu-right';
+                if ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
+                    $html .= ' section-active';
+                }
+
+                $html .= '" role="menu">';
+
+                echo $html;
+            ?>
+
+                <li role="menuitem">
+                    <a href="<?php echo MAINSURL; ?>/las-lenas" title="Porto Seguro">
+                        Las Leñas
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="<?php echo MAINSURL; ?>/cancun" title="Cancún">
+                        Cancún
+                    </a>
+                </li>
+                <li role="menuitem">
+                    <a href="<?php echo MAINSURL; ?>/tematicos" title="Temáticos">
+                        Temáticos
+                    </a>
+                </li>
+                <span class="paquete-active"></span>
+            </ul> 
+        </nav>
         
-    </header>
+    </header> <!-- //.main-header -->
 
     <main role="main" class="main-wrapper">
         <div class="inner-wrapper">

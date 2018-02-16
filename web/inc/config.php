@@ -26,6 +26,8 @@ define('METADESCRIPTION', '');
 define('METAKEYS', '');
 define( 'HABILITACIONES', 'Toors Viajes E.V y T. 0.000 Disp. 0.000' );
 //LINKS:
+define( 'WHATSAPPTEXT', '+54.934.1559.0789');
+define( 'WHATSAPP', '54934590789');
 define('LINK_FACEBOOK', '#');
 define('LINK_INSTAGRAM', '#');
 define('LINK_TWITTER', '#');

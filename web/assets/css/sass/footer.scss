@@ -54,14 +54,18 @@ footer {
         }
     }   
     p {
+        font-family: $fuente-titulos-bold;
         margin: 15px 0;
-        font-size: 75%;
+        font-size: 80%;
         text-align: center;
+        letter-spacing: .5px;
         @media (min-width: $xs) {
-            font-size: 60%;
+            font-size: 90%;
+            letter-spacing: .5px;
         }
         @media (min-width: $md) {
-            font-size: 80%;
+            font-size: 100%;
+            letter-spacing: .5px;
         }
     }
 }
