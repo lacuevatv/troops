@@ -420,12 +420,12 @@ function getPaginationSearch ( $busqueda, $postPerPage ) {
 
 
 //busca la noticia en particular y recoge los datos para pasar al template
-function singlePostData ( $noticia ) {
+function singlePostData ( $url ) {
 	$connection = connectDB();
 	$fecha_actual = date("Y-m-d");
-	$tabla = 'noticias';
+	$tabla = 'posts';
 
-	$query  = "SELECT * FROM " .$tabla. " WHERE post_url='".$noticia."' LIMIT 1 ";
+	$query  = "SELECT * FROM " .$tabla. " WHERE post_url='".$url."' LIMIT 1 ";
 	$result = mysqli_query($connection, $query);
 
 	closeDataBase( $connection );

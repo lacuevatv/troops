@@ -4,29 +4,69 @@
  * @LaCueva.tv
  * Since 1.0
  *
+ * TRES TEMPLATES: 1. home 2. -18 3. +18
 */
 require_once 'inc/functions.php';
 
+/*
+ * $pageActual sirve para ver en que pagina estamos y ayuda a marcar el menú
+*/
 global $pageActual;
+global $headerTitulo;
+global $imagenHeader;
+$data = null;
 $pageActual = pageActual( cleanUri() );
+
+/*
+ * titulo header e imagen por defecto 
+*/
+$headerTitulo = 'Are you ready?';
+$imagenHeader = MAINSURL . '/assets/images/header-portada-pc.png';
+if ( dispositivo() != 'pc' ) {
+    $imagenHeader = MAINSURL . '/assets/images/header-portada-movil.png';
+}
+
+
+if ( $pageActual != 'inicio' ) {
+	$data = singlePostData( $pageActual );
+}
+
+if ($data != null ) {
+	$headerTitulo = $data['post_titulo'];
+    $imagenHeader = UPLOADSURL . '/' . $data['post_imagen'];
+	if ( dispositivo() != 'pc' ) {
+        $imagenHeader = UPLOADSURL . '/' . $data['post_imagen'];
+    }
+}
 
 include 'header.php';
 
-?>
+switch ($pageActual) {
+	case 'bariloche':
+	case 'porto-seguro':
+	case 'jurere':
+		
+		if ( $data != null ) {
+			getTemplate( 'menos18', $data );
+		} else {
+			getTemplate( '404' );
+		}
 
-<div style="padding: 250px 0;background-color: lightblue">
-	<h1>CONTENIDO PRINCIPAL</h1>
-	<h2>titulo2</h2>
-	<h3>titulo3</h3>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
-	<a href="#">ver mas</a>
-</div>
+		break;
 
+	case 'las-lenas':
+	case 'cancun':
+	case 'tematicos':
+		if ( $data != null ) {
+			getTemplate( 'mas18', $data );
+		} else {
+			getTemplate( '404' );
+		}
+		break;
+	
+	default:
+		getTemplate( 'inicio' );
+		break;
+}
 
-<?php
 include 'footer.php';

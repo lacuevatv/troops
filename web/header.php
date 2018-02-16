@@ -7,28 +7,7 @@
 */
 global $pageActual;
 
-$headerTitulo = 'Are you ready?';
-$imagenHeader = MAINSURL . '/assets/images/header-portada-pc.png';
-if ( dispositivo() != 'pc' ) {
-    $imagenHeader = MAINSURL . '/assets/images/header-portada-movil.png';
-}
 
-
-//esto se remplaza luego con base de datos
-if ( $pageActual == 'bariloche' ) {
-    $headerTitulo = 'Bariloche';
-    $imagenHeader = MAINSURL . '/assets/images/bariloche-header.png';
-    if ( dispositivo() != 'pc' ) {
-        $imagenHeader = MAINSURL . '/assets/images/bariloche-header.png';
-    }
-}
-if ( $pageActual == 'las-lenas' ) {
-    $headerTitulo = 'Las Leñas';
-    $imagenHeader = MAINSURL . '/assets/images/lenas-header.png';
-    if ( dispositivo() != 'pc' ) {
-        $imagenHeader = MAINSURL . '/assets/images/lenas-header.png';
-    }
-}
 
 ?>
 <!DOCTYPE html>
