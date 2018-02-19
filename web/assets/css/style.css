@@ -1136,7 +1136,8 @@ footer {
     z-index: 1; }
 
 .nosotros-equipo-item {
-  position: relative; }
+  position: relative;
+  z-index: 0; }
   .nosotros-equipo-item h1 {
     text-align: center;
     text-transform: uppercase;
@@ -1145,6 +1146,11 @@ footer {
     margin: 30px auto;
     display: block;
     cursor: pointer; }
+
+.toogle-icons-contenidos {
+  display: block;
+  position: relative;
+  z-index: 1; }
 
 .nosotros-equipo-content {
   height: 0;
@@ -1206,20 +1212,24 @@ footer {
   height: 0px;
   position: absolute;
   top: 25px;
-  left: -10000px;
+  left: 135px;
   z-index: 0;
   border-top: 50px solid transparent;
   border-right: 70px solid #ffe900;
-  border-bottom: 50px solid transparent; }
+  border-bottom: 50px solid transparent;
+  display: none; }
   @media (min-width: 767px) {
     .equipo-item-active {
-      top: 67px;
+      top: 7px;
+      left: 345px;
       border-top: 40px solid transparent;
       border-right: 60px solid #ffe900;
       border-bottom: 40px solid transparent; } }
   @media (min-width: 992px) {
     .equipo-item-active {
+      display: block;
       top: 87px;
+      left: -10000px;
       border-top: 40px solid transparent;
       border-right: 60px solid #ffe900;
       border-bottom: 40px solid transparent; } }

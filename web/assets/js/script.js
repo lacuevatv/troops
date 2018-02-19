@@ -121,25 +121,38 @@ $(document).ready(function(){
     //click en los icons de contenido sección nosotros
     $(document).on('click', '.toogle-icons-contenidos', function( e ){
         e.preventDefault();
+        //debugger;
         var href = $(this).attr('href');
         var item = $(href);
         var h = item.prop('scrollHeight') + 'px';
+        var itemWidth = $(this).width();
+        var positionTop = $(this).position().top;
+        var positionLeft = ($(this).offset().left) - itemWidth;
+        var marcador = $('.equipo-item-active');       
 
         //opción pantalla chica se abren todos a la vez
         if ( window.innerWidth < 992 ) {
-
+            
+            $('.equipo-item-active')
             if ( item.css('height') == '0px' ) {
                 
                 item.animate({
                     'height': h,
-                }, 2000);
+                }, 1000);
+                $('.equipo-item-active').clone().prependTo($(this).closest('article')).fadeIn('slow')
+                //marcador.fadeIn()
+
             } else {
                 item.animate({
                     'height': '0px',
-                }, 500);
+                }, 200);
+                $($(this).closest('article')).find('.equipo-item-active').fadeOut('slow').remove();
+
             }
-        } else {
-            //opción pantalla grande se abre solo uno a la vez
+
+        } //opción pantalla grande se abre solo uno a la vez
+        else {         
+
             //primero busca si hay alguno abierto y lo cierra
             $('.item-abierto').each(function(){
                 $(this).animate({
@@ -152,13 +165,23 @@ $(document).ready(function(){
                 
                 item.animate({
                     'height': h,
-                }, 2000);
+                }, 1000);
+                //le coloca una clase para indicar q este modulo esta abierto
                 item.addClass('item-abierto');
+                //coloca el marcador sobre el icono
+                $(marcador).animate({
+                    'left': positionLeft + 'px',
+                }, 500);
             } else {
                 item.animate({
                     'height': '0px',
-                }, 500);
+                }, 200);
+                //quita la clase que indica q esta abierto
                 item.removeClass('item-abierto');
+                //mueve el marcador afuera
+                $(marcador).animate({
+                    'left': '-10000px',
+                }, 500);
             }
         }
 
