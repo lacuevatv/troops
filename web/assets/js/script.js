@@ -5,7 +5,7 @@
  * @ver 1.0
  --------------------------------------------------------------
 >>> TABLE OF CONTENTS:
-1.0 NAVIGATION
+1.0 NAVIGATION / AJAX FORMS
 2.0 POP UP PROMO
 3.0 OWL SLIDERS
 4.0 
@@ -23,8 +23,13 @@ function scrollToID ( id ) {
     }, 'slow');
 }
 
+//setea la altura del contenedor
+function setHeightContentVideo() {
+    $('.video-wrapper').height( parseInt($('.image-ref-video').height()) + parseInt($('.image-ref-video').css('top')) );    
+}
+
 /*--------------------------------------------------------------
-1.0 NAVIGATION
+1.0 NAVIGATION / AJAX FORMS
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
@@ -100,43 +105,123 @@ $(document).ready(function(){
         }
     });
 
+
+    /*
+     * SECCION EQUIPOS
+    */
+    //Si es pc o la pantalla es mayor a 992px entonces toma los contenidos y los copia abajo para poder abrirlos al hacer clic
+    
+    if (window.innerWidth > 992) {
+        $('.nosotros-equipo-content').each( function() {
+            $('#contenedor-data-equipo').append(this);
+        } );
+    }
+
+
+    //click en los icons de contenido sección nosotros
+    $(document).on('click', '.toogle-icons-contenidos', function( e ){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        var item = $(href);
+        var h = item.prop('scrollHeight') + 'px';
+
+        //opción pantalla chica se abren todos a la vez
+        if ( window.innerWidth < 992 ) {
+
+            if ( item.css('height') == '0px' ) {
+                
+                item.animate({
+                    'height': h,
+                }, 2000);
+            } else {
+                item.animate({
+                    'height': '0px',
+                }, 500);
+            }
+        } else {
+            //opción pantalla grande se abre solo uno a la vez
+            //primero busca si hay alguno abierto y lo cierra
+            $('.item-abierto').each(function(){
+                $(this).animate({
+                    'height': '0px',
+                }, 500);
+                $(this).removeClass('item-abierto');
+            });
+
+            if ( item.css('height') == '0px' ) {
+                
+                item.animate({
+                    'height': h,
+                }, 2000);
+                item.addClass('item-abierto');
+            } else {
+                item.animate({
+                    'height': '0px',
+                }, 500);
+                item.removeClass('item-abierto');
+            }
+        }
+
+    });
+
+
+
+    /*
+     * AJAX FORMS
+    */
+    console.log('form ready')
+    $('#contact-form-home').submit(function( event ){
+        event.preventDefault();
+    
+        console.log('formulario');
+
+        formData = new FormData( this );
+        formData.append('function','contact-home');
+
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
+            //funcion antes de enviar
+            beforeSend: function() {
+            },
+            success: function ( response ) {
+                console.log(response);
+                
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+    });//cierre ajax
+
+
+    });//.submit
+
+
+
+
 });//.ready()
 
-/*--------------------------------------------------------------
-3.0 POPUP PROMO
---------------------------------------------------------------*/
-
-$(window).on('load', function(){
-
-    var popup = $( '.popup' );
-    var popupIMG = $( '.popup img' );
-    var tiempo = 7000;
-    if ( popup.length != 0 ) {
-        var closeX = $( '.close-popup' );
-        var closeBTN = $( '.cerrar-popup' );
-        
-        function openPop () {
-            popup.addClass('popup-active');
-            popupIMG.fadeIn();
-        }
-        
-        setTimeout( openPop, tiempo);
-        
-        function closePopup() {
-            popup.removeClass('popup-active');
-            popupIMG.fadeOut(tiempo);
-        }
-
-        closeX.click(closePopup);
-        closeBTN.click(closePopup);
-
-    }
-});
+/*
+ * FUNCIONES QUE REQUIEREN QUE TODO ESTE CARGADO
+*/
 
 
 $( window ).on('load', function(){
 
     console.log('all loaded')
+
+    /*
+     * SECCION VIDEO
+    */
+    //setea la altura del video cuando la ventana se agranda o se achica
+    setHeightContentVideo();
+    $( window ).resize(function() {
+        setHeightContentVideo();
+    });
 
     /*var $animation_elements = $('.animation-element');
     var $window = $(window);
@@ -166,6 +251,46 @@ $( window ).on('load', function(){
     $window.trigger('scroll');*/
     
 });//ON LOAD
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+2.0 POPUP PROMO
+--------------------------------------------------------------*/
+
+$(window).on('load', function(){
+
+    var popup = $( '.popup' );
+    var popupIMG = $( '.popup img' );
+    var tiempo = 7000;
+    if ( popup.length != 0 ) {
+        var closeX = $( '.close-popup' );
+        var closeBTN = $( '.cerrar-popup' );
+        
+        function openPop () {
+            popup.addClass('popup-active');
+            popupIMG.fadeIn();
+        }
+        
+        setTimeout( openPop, tiempo);
+        
+        function closePopup() {
+            popup.removeClass('popup-active');
+            popupIMG.fadeOut(tiempo);
+        }
+
+        closeX.click(closePopup);
+        closeBTN.click(closePopup);
+
+    }
+});
+
 
 /*--------------------------------------------------------------
 3.0 OWL SLIDERS

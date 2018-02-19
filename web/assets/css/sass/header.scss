@@ -145,7 +145,7 @@
 */
 .top-menu {
 	//display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 111;
 	left: 0;
 	top: 0;
@@ -157,6 +157,7 @@
 	overflow: hidden;
 
 	@media (min-width: $md) {
+		position: absolute;
 		z-index: 1;
 		height: auto;
 		overflow: hidden;		
@@ -552,18 +553,10 @@
 		background: $color-amarillo url(../images/header-fondo-pc.png) no-repeat;
 		background-size: cover;
 		background-position: center;
-		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
-		-moz-clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
-		-ms-clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
-		-o-clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
-		clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
+		 @include clip-path(polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%));
 	}
 	@media (min-width: $lg) {
-		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
-		-moz-clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
-		-ms-clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
-		-o-clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);
-		clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%);	
+		@include clip-path(polygon(0% 0%, 100% 0%, 100% 92%, 0% 100%));
 	}
 	@media (min-width: $xlg) {}
 
