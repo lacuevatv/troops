@@ -150,7 +150,7 @@
 		}
 		?>
 
-		<img class="image-responsive" src="<?php echo $imagenInst; ?>">
+		<!--<img class="image-responsive" src="<?php echo $imagenInst; ?>">-->
 
 		<div class="sociales-wrapper">
 
@@ -160,7 +160,7 @@
 			$iframeInstagram = 	INSTAGRAMWIDGETMOVIL;
 		}
 
-		//echo $iframeInstagram;
+		echo $iframeInstagram;
 
 		?>		
 		
@@ -236,26 +236,32 @@
 		</div><!-- //.form-wrapper -->
 		
 		<div class="mapa-wrapper">
-			<img class="image-responsive" src="<?php echo MAINSURL; ?>/assets/images/temp/mapa.png">
-			<?php 
-			$iframeGoogle = '<iframe class="iframe-google" src="'.IFRAMEGOOGLE.'" width="100%"';
+			<!--<img class="image-responsive" src="<?php echo MAINSURL; ?>/assets/images/temp/mapa.png">-->
+		
+			<div class="iframe-google" id="mapa"></div>
 
-			if ( dispositivo() == 'pc' ) {
-				$iframeGoogle.= ' height="450"';
-			} elseif( dispositivo() == 'tablet' ) {
-				$iframeGoogle.= ' height="500"';
-			} else {
-				$iframeGoogle.= ' height="300"';
-			}
-
-			$iframeGoogle .= ' frameborder="0" style="border:0" allowfullscreen></iframe>';
-
-			//echo $iframeGoogle;
-
-			
-			?>
 		</div><!-- //.mapa-wrapper -->
 
 	</div>
 
 </section><!-- //#contacto -->
+<script>
+	function initMap() {
+        var uluru = {lat: -32.9248294, lng: -60.6692648};
+        var map = new google.maps.Map(document.getElementById('mapa'), {
+          zoom: 14,
+          center: uluru,
+          styles: [
+          	{
+              featureType: 'all',
+              elementType: 'all',
+              stylers: [{saturation: -100}]
+            },
+          ],
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+</script>

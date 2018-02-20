@@ -60,6 +60,10 @@
     <script src="<?php echo MAINSURL; ?>/assets/js/jquery-3.2.1.min.js"></script>
     <!------- owl ------>
     <script src="<?php echo MAINSURL; ?>/inc/lib/owl/owl.carousel.min.js"></script>
+    <!------- GOOGLE MAPS ------>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<?php echo APIKEYGOOGLE; ?>&callback=initMap">
+    </script>
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
 </body>
 </html>
