@@ -94,7 +94,7 @@ $(document).ready(function(){
             var url = '#' + $(this).attr('data-href');
             
             $('html, body').stop().animate({
-                scrollTop: $(url).offset().top - 90
+                scrollTop: $(url).offset().top - 130
             }, 'slow');
         }
 
@@ -161,7 +161,7 @@ $(document).ready(function(){
                 item.animate({
                     'height': h,
                 }, 1000);
-                $('.equipo-item-active').clone().prependTo($(this).closest('article')).fadeIn('slow')
+                $('.equipo-item-active').clone().prependTo($(this).closest('article')).fadeIn()
                 
 
             } else {

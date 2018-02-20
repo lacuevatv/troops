@@ -234,6 +234,25 @@ html, body {
     .inner-container {
       padding: 0 12%; } }
 
+.wrapper-404 {
+  margin: 80px 0 0; }
+  @media (min-width: 992px) {
+    .wrapper-404 {
+      margin: 60px 0; } }
+
+.backhome-btn {
+  cursor: pointer;
+  font-family: "NB International Pro Light", sans-serif !important;
+  border: none;
+  background-color: #ffe900;
+  font-size: 130%;
+  color: #625e59;
+  margin: 20px 0;
+  padding: 12px 20px;
+  display: inline-block; }
+  .backhome-btn:hover {
+    background-color: #45dacc; }
+
 /*--------------------------------------------------------------
 5.0 footer
 --------------------------------------------------------------*/
@@ -1233,7 +1252,7 @@ footer {
   width: 0px;
   height: 0px;
   position: absolute;
-  top: 25px;
+  top: -25px;
   left: 135px;
   z-index: 0;
   border-top: 50px solid transparent;
@@ -1547,7 +1566,7 @@ footer {
         height: 500px; } }
     @media (min-width: 992px) {
       .mapa-wrapper .iframe-google {
-        height: 100%; } }
+        height: 450px; } }
 
 .formulario {
   font-family: "NB International Pro", sans-serif !important; }
@@ -1559,7 +1578,8 @@ footer {
       width: 100%;
       display: block;
       height: 30px;
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      border: 1px solid #625e59; }
     .formulario .form-group textarea {
       height: 80px; }
   .formulario .form-group-col-2 {
