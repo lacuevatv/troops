@@ -187,21 +187,30 @@ global $pageActual;
                 echo $html;
             ?>
                 <li role="menuitem">
+                    <?php if ( $pageActual == 'bariloche' ) {
+                        echo '<span class="tour-active-icon"></span>';
+                    } ?>
                     <a href="<?php echo MAINSURL; ?>/bariloche" title="Bariloche">
                         Bariloche
                     </a>
                 </li>
                 <li role="menuitem">
+                    <?php if ( $pageActual == 'porto-seguro' ) {
+                        echo '<span class="tour-active-icon"></span>';
+                    } ?>
                     <a href="<?php echo MAINSURL; ?>/porto-seguro" title="Porto Seguro">
                         Porto Seguro
                     </a>
                 </li>
                 <li role="menuitem">
+                    <?php if ( $pageActual == 'jurere' ) {
+                        echo '<span class="tour-active-icon"></span>';
+                    } ?>
                     <a href="<?php echo MAINSURL; ?>/jurere" title="Jureré">
                         Jureré
                     </a>
                 </li>
-                <span class="paquete-active"></span>
+                
             </ul>
             
             <!-- ICON RULETA -->
@@ -230,21 +239,30 @@ global $pageActual;
             ?>
 
                 <li role="menuitem">
-                    <a href="<?php echo MAINSURL; ?>/las-lenas" title="Porto Seguro">
+                    <?php if ( $pageActual == 'las-lenas' ) {
+                        echo '<span class="tour-active-icon"></span>';
+                    } ?>
+                    <a href="<?php echo MAINSURL; ?>/las-lenas" title="Las Leñas">
                         Las Leñas
                     </a>
                 </li>
                 <li role="menuitem">
+                    <?php if ( $pageActual == 'cancun' ) {
+                        echo '<span class="tour-active-icon"></span>';
+                    } ?>
                     <a href="<?php echo MAINSURL; ?>/cancun" title="Cancún">
                         Cancún
                     </a>
                 </li>
                 <li role="menuitem">
+                    <?php if ( $pageActual == 'tematicos' ) {
+                        echo '<span class="tour-active-icon"></span>';
+                    } ?>
                     <a href="<?php echo MAINSURL; ?>/tematicos" title="Temáticos">
                         Temáticos
                     </a>
                 </li>
-                <span class="paquete-active"></span>
+                
             </ul> 
         </nav>
         

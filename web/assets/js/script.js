@@ -105,6 +105,20 @@ $(document).ready(function(){
         }
     });
 
+    /*
+     * MARCADOR MENU
+    */
+    $('.tours-nav-menu li').hover(
+        function() {
+            if ( $('.tour-active-icon').length != 0 ) {
+                $('.tour-active-icon').clone().addClass('item-tem').prependTo($(this))
+            } else {
+                $('<span class="tour-active-icon item-tem"></span>').prependTo($(this))
+            }
+        }, function() {
+            $('.item-tem').fadeOut().remove();
+        });
+    //$('.tour-active-icon').prependTo($($('.tours-nav-menu li')[4]))
 
     /*
      * SECCION EQUIPOS
@@ -127,8 +141,16 @@ $(document).ready(function(){
         var h = item.prop('scrollHeight') + 'px';
         var itemWidth = $(this).width();
         var positionTop = $(this).position().top;
-        var positionLeft = ($(this).offset().left) - itemWidth;
-        var marcador = $('.equipo-item-active');       
+        //var positionLeft = ($(this).offset().left) - itemWidth;
+        var positionLeft = ($(this).offset().left)-70;
+        var marcador = $('.equipo-item-active');
+
+        if (window.innerWidth > 1500) {
+            var positionLeft = ($(this).offset().left)-150;
+        }
+        if (window.innerWidth > 1800) {
+            var positionLeft = ($(this).offset().left)-200;
+        }
 
         //opción pantalla chica se abren todos a la vez
         if ( window.innerWidth < 992 ) {
@@ -140,7 +162,7 @@ $(document).ready(function(){
                     'height': h,
                 }, 1000);
                 $('.equipo-item-active').clone().prependTo($(this).closest('article')).fadeIn('slow')
-                //marcador.fadeIn()
+                
 
             } else {
                 item.animate({
