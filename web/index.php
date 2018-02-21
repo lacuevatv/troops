@@ -52,6 +52,8 @@ switch ($pageActual) {
 			getTemplate( '404' );
 		}
 
+		getTemplate( 'formularios', 'menos18' );
+
 		break;
 
 	case 'las-lenas':
@@ -62,6 +64,9 @@ switch ($pageActual) {
 		} else {
 			getTemplate( '404' );
 		}
+
+		getTemplate( 'formularios', 'mas18' );
+
 		break;
 	
 	default:

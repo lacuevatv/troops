@@ -5,11 +5,3 @@
 
 	</div>
 </section>
-
-<!-- contacto -->
-<section id="contacto" class="contact-section contact-section-tours">
-	<span class="form-deco-top"></span>
-	
-	<?php getTemplate( 'formularios', 'menos18' ); ?>
-
-</section><!-- //#contacto -->
