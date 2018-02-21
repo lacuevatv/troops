@@ -89,4 +89,8 @@ input[type=submit] {
 button {
     border: none;
     background-color:transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
 }

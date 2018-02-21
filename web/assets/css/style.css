@@ -96,7 +96,11 @@ input[type=submit] {
 
 button {
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0; }
 
 /*--------------------------------------------------------------
 2.0 Fuentes
@@ -1768,5 +1772,73 @@ footer {
     /* Firefox 18- */
     color: #625e59;
     font-family: "NB International Pro", sans-serif !important; }
+
+/*
+2.0 MENOS 18
+*/
+.lugar-section {
+  margin: 50px 0; }
+
+.paquetes {
+  margin: 50px 0; }
+  .paquetes li {
+    width: 100%;
+    margin: 20px 0; }
+    @media (min-width: 992px) {
+      .paquetes li {
+        margin: 0; } }
+
+.paquetes-item {
+  width: 200px; }
+
+.paquetes-item--width2 {
+  width: 400px; }
+
+.paquetes-columns {
+  display: block;
+  column-count: 2;
+  column-gap: 0; }
+  .paquetes-columns li {
+    overflow: hidden;
+    width: 100%;
+    height: auto; }
+    @media (min-width: 992px) {
+      .paquetes-columns li {
+        height: 340px; } }
+    @media (min-width: 1200px) {
+      .paquetes-columns li {
+        height: 450px; } }
+    .paquetes-columns li .paquete-imagen {
+      width: 120%; }
+      @media (min-width: 992px) {
+        .paquetes-columns li .paquete-imagen {
+          width: 130%; } }
+      @media (min-width: 1200px) {
+        .paquetes-columns li .paquete-imagen {
+          width: 150%; } }
+      @media (min-width: 1280px) {
+        .paquetes-columns li .paquete-imagen {
+          width: 140%; } }
+      @media (min-width: 1320px) {
+        .paquetes-columns li .paquete-imagen {
+          width: 132%; } }
+      @media (min-width: 1366px) {
+        .paquetes-columns li .paquete-imagen {
+          width: 127%; } }
+      @media (min-width: 1500px) {
+        .paquetes-columns li .paquete-imagen {
+          width: 105%; } }
+
+.paquete-menos18 .paquete-imagen {
+  width: 100%;
+  display: block; }
+.paquete-menos18 .paquete-info {
+  display: none; }
+.paquete-menos18 .paquete-resumen {
+  display: none; }
+.paquete-menos18 .paquete-botones {
+  display: none; }
+.paquete-menos18 .paquete-lista-imagenes {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

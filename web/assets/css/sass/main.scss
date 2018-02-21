@@ -904,3 +904,104 @@
 	}
 
 }//formulario
+
+/*
+2.0 MENOS 18
+*/
+
+.lugar-section {
+	margin: 50px 0;
+}
+
+.paquetes-wrapper {}
+
+.paquetes {//ul
+	margin: 50px 0;
+	li {
+		width: 100%;
+		margin: 20px 0;
+
+		@media (min-width: $md) {
+			margin: 0;
+		}
+	}
+}
+
+.paquetes-item {
+	width: 200px;
+}
+
+.paquetes-item--width2 {
+	width: 400px;	
+}
+
+
+//esto es para los navegadores que no soportan grid
+.paquetes-columns {//ul
+	display: block;
+	column-count: 2;
+	column-gap: 0;
+	li {
+		overflow: hidden;
+		width: 100%;
+		height: auto;
+		@media (min-width: $md) {
+			height: 340px;
+		}
+		@media (min-width: $lg) {
+			height: 450px;
+		}
+		
+		
+		.paquete-imagen {
+			width: 120%;
+			@media (min-width: $md) {
+				width: 130%;
+			}
+			@media (min-width: $lg) {
+				width: 150%;
+			}
+			@media (min-width: 1280px) {
+				width: 140%;
+			}
+			@media (min-width: 1320px) {
+				width: 132%;
+			}
+			@media (min-width: 1366px) {
+				width: 127%;
+			}
+			@media (min-width: $xlg) {
+				width: 105%;
+			}
+		}
+	}
+}
+
+.paquete { //article
+
+}
+
+.paquete-menos18 { //article
+
+
+	.paquete-imagen {
+		width: 100%;
+		display: block;
+	}
+
+	.paquete-info {
+		display: none;
+	}
+
+	.paquete-resumen {
+		display: none;
+	}
+
+	.paquete-botones { //ul
+		display: none;
+	}
+
+	.paquete-lista-imagenes {
+		display: none;
+	}
+}

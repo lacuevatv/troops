@@ -64,7 +64,6 @@
     <?php if ($pageActual == 'inicio') {
         echo '<script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key='.APIKEYGOOGLE.'&callback=initMap"></script>';
     } ?>
-    
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
 </body>
 </html>
