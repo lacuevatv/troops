@@ -14,7 +14,7 @@
 				</h5>
 
 				<p>
-					No encontramos el paquete cargado
+					No encontramos nada cargado.
 				</p>
 				<a href="<?php echo MAINSURL; ?>" class="backhome-btn">Volver al inicio</a>
 			</div>

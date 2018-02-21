@@ -39,6 +39,8 @@ Las entradas se guardan en la tabla noticias y están divididas en pages y posts
 
 #### MySQL version 5.6
 
+La tabla tiene 5 lugares. Options guarda opciones varias, sliders carga los sliders, usuarios tiene todos los usuarios en medios se guardan todas las imágenes y archivos y en posts se guarda todo, desde lugares, paginas y paquetes.  
+PostTipe pueden ser lugares, por ejemplo bariloche o las leñas. Además pueden ser paquetes, que es lo que se muestra en cada uno de los lugares, estos se dividen en categorias, que son cada uno de los lugares.
 
 ### BACKEND:
 * Versión 5.0 mejorado 10/11/2017

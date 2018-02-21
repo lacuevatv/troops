@@ -28,7 +28,7 @@ if ( dispositivo() != 'pc' ) {
 
 
 if ( $pageActual != 'inicio' ) {
-	$data = singlePostData( $pageActual );
+	$data = getPostExtended( $pageActual, 'lugar' );
 }
 
 if ($data != null ) {

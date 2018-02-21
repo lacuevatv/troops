@@ -300,13 +300,15 @@ function closeDataBase( $connection ){
     }
 }
 
-
+/*
+ * POSTS LOOPS
+*/
 
 //busca datos para loop de noticias por categoria y los devuelve en una variables:
 function getPosts( $categoria = 'none', $number = -1, $exclude = 'none', $status = 'publicado', $offset = 0 ) {
 	$connection = connectDB();
 	$fecha_actual = date("Y-m-d");
-	$tabla = 'noticias';
+	$tabla = 'posts';
 
 	if ( $offset != '0' ) {
 		$number = $offset.','.$number;
@@ -346,13 +348,61 @@ function getPosts( $categoria = 'none', $number = -1, $exclude = 'none', $status
 	return $loop;
 }
 
+//busca datos para loop de noticias por categoria de acuerdo al post type:
+function getPostsExtended( $postType, $categoria = 'none', $number = -1, $exclude = 'none', $status = 'publicado', $offset = 0 ) {
+	$connection = connectDB();
+	$fecha_actual = date("Y-m-d");
+	$tabla = 'posts';
+
+	if ( $offset != '0' ) {
+		$number = $offset.','.$number;
+	}
+
+	$query  = "SELECT * FROM " .$tabla;
+	$query .= " WHERE post_status='";
+	$query .= $status . "'";
+	if ( $categoria != 'none' ) {
+		$query .= " AND post_categoria = '".$categoria."'";
+	}
+	if ( $exclude != 'none' ) {
+		$query .= " AND post_url!='".$exclude."'";
+	}
+	if ( $status == 'publicado' ) {
+		$query .= " AND post_fecha <= '".$fecha_actual."'";	
+	}
+	$query .= " AND post_type = '".$postType."'";	
+	$query .= " ORDER by post_fecha desc ";
+	if ( $number != -1 ) {
+		$query .= " LIMIT ".$number." ";
+	}
+	
+	$result = mysqli_query($connection, $query);
+	
+	closeDataBase( $connection );
+
+	if ( $result->num_rows == 0 ) {
+		$loop = null;
+	} else {
+
+		while ($row = $result->fetch_array()) {
+				$loop[] = $row;
+			}
+
+	}
+	
+	return $loop;
+}
+
+/*
+ * SEARCH
+*/
 
 //realiza la búsqueda según parametros del buscador
 function getSearch( $busqueda, $offset = -1 ) {
 	if ($busqueda != '') {
 		$busqueda = trim($busqueda);
 		$connection = connectDB();
-		$tabla = 'noticias';
+		$tabla = 'posts';
 
 		$query  = "SELECT * FROM ".$tabla." WHERE (post_titulo LIKE '%" .$busqueda. "%') OR (post_contenido LIKE '%" .$busqueda. "%') OR (post_categoria LIKE '%" .$busqueda. "%')";
 		if ( $offset != -1 ) {
@@ -378,6 +428,10 @@ function getSearch( $busqueda, $offset = -1 ) {
 	}
 }
 
+
+/*
+ * PAGINATION
+*/
 
 //Crea la paginación y los links de acuerdo a la cantidad de post dividido la cantidad a mostrar por pagina
 function getPagination( $categoria, $postPerPage ) {
@@ -418,9 +472,12 @@ function getPaginationSearch ( $busqueda, $postPerPage ) {
 	getTemplate( 'pagination', $data );
 }
 
+/*
+ * POST INDIVIDUALES
+*/
 
-//busca la noticia en particular y recoge los datos para pasar al template
-function singlePostData ( $url ) {
+//busca el post en general en base a url y recoge los datos para pasar al template
+function getPost ( $url ) {
 	$connection = connectDB();
 	$fecha_actual = date("Y-m-d");
 	$tabla = 'posts';
@@ -441,6 +498,33 @@ function singlePostData ( $url ) {
 	return $singlePost;
 
 }
+
+//busca el post mediante post type y url recoge los datos para pasar al template
+function getPostExtended ( $url, $postType ) {
+	$connection = connectDB();
+	$fecha_actual = date("Y-m-d");
+	$tabla = 'posts';
+
+	$query  = "SELECT * FROM " .$tabla. " WHERE post_url='".$url."' AND post_type='".$postType."' LIMIT 1 ";
+	$result = mysqli_query($connection, $query);
+
+	closeDataBase( $connection );
+
+	if ( $result->num_rows == 0 ) {
+		$singlePost = null;
+	} else {
+
+		$singlePost = mysqli_fetch_array($result);
+
+	}
+
+	return $singlePost;
+
+}
+
+/*
+ * SLIDERS
+ */
 
 //busca el slider en base de datos de acuerdo a su 'ubicacion' pasada
 function getSliders( $slider ) {
@@ -466,6 +550,10 @@ function getSliders( $slider ) {
 	closeDataBase( $connection );
 } //getSliders()
 
+
+/*
+ * POPUPS
+*/
 
 function openPopUp ( $page ) {
 	
@@ -535,64 +623,4 @@ function getUrlPromo() {
 	}
 
 	closeDataBase($connection);
-}
-
-/*
- * TRAE El MENÚ DEL FOOTER
- * DEVUELVE DATA CON A INFO
-*/
-function getMenuFooter( $columna ) {
-	$connection = connectDB();
-	$tabla = 'options';
-	$query  = "SELECT * FROM " .$tabla . " WHERE options_name='".$columna."' ORDER by options_value asc";
-
-	$result = mysqli_query($connection, $query);
-
-	$menu = $result->fetch_array();
-
-	isset($connection) ? mysqli_close($connection) : exit;
-
-	return $menu;
-}
-
-/*
- * TRAE LOS VIDEOS
- * DEVUELVE DATA CON A INFO
-*/
-function getVideosFooter() {
-	$connection = connectDB();
-	$tabla = 'options';
-	$query  = "SELECT * FROM " .$tabla . " WHERE options_name='videos_inicio'";
-
-	$result = mysqli_query($connection, $query);
-
-	$videos = $result->fetch_array();
-
-	isset($connection) ? mysqli_close($connection) : exit;
-	return unserialize($videos['options_note']);
-}
-
-/*
- * TRAE LOS VIDEOS
- * DEVUELVE DATA CON A INFO
-*/
-function getBoletines() {
-	$connection = connectDB();
-	$tabla = 'boletines';
-	$query  = "SELECT * FROM " .$tabla. " ORDER by boletin_number desc";
-		
-	$result = mysqli_query($connection, $query);
-	
-	if ( $result->num_rows == 0 ) {
-		echo '<div>Ninguno cargado</div>';
-	} else {
-
-		while ( $row = $result->fetch_array(MYSQLI_ASSOC) ) {
-			$boletines[] = $row;
-		}
-		
-		return $boletines;
-
-	}//else
-	closeDataBase( $connection );
 }
