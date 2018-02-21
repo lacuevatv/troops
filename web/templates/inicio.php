@@ -186,7 +186,7 @@
 
 <!-- contacto -->
 <section id="contacto" class="contact-section">
-	
+
 	<div class="inner-container col-flex col-flex-inverse">
 		
 		<div class="form-wrapper">
@@ -233,6 +233,7 @@
 				</div>
 
 			</form>
+
 		</div><!-- //.form-wrapper -->
 		
 		<div class="mapa-wrapper">

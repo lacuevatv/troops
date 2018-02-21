@@ -109,7 +109,7 @@ button {
 @font-face {
   font-family: 'NB International Pro Light';
   src: local("NB International Pro Light"), url("../fonts/nbinternationalpro-light.ttf") format("truetype");
-  font-weight: 300;
+  font-weight: light;
   font-style: normal; }
 /*@font-face {
     font-family: 'NB International Pro Mono';
@@ -980,6 +980,7 @@ footer {
 - sociales
 - video
 - contacto
+2.0 MENOS 18
 --------------------------------------------------------------*/
 @media (min-width: 992px) {
   .col-flex {
@@ -1275,7 +1276,7 @@ footer {
       border-right: 60px solid #ffe900;
       border-bottom: 40px solid transparent; } }
 
-.nosotros-deco-sup, .nosotros-deco-middle, .nosotros-deco-bottom, .video-deco-bottom {
+.nosotros-deco-sup, .nosotros-deco-middle, .nosotros-deco-bottom, .video-deco-bottom, .form-deco-top, .form-deco-bottom {
   display: block;
   width: 50px;
   height: 50px;
@@ -1539,16 +1540,83 @@ footer {
       padding: 120px 0;
       margin-top: -60px; } }
 
-@media (min-width: 992px) {
-  .form-wrapper {
-    padding: 40px 0 40px 10%; } }
-.form-wrapper address {
-  font-size: 80%;
-  line-height: 180%; }
+.contact-section-tours {
+  margin-top: 50px;
+  padding: 90px 20px 50px;
+  -webkit-clip-path: polygon(0% 0%, 100% 2%, 100% 98%, 0% 100%);
+  -moz-clip-path: polygon(0% 0%, 100% 2%, 100% 98%, 0% 100%);
+  -ms-clip-path: polygon(0% 0%, 100% 2%, 100% 98%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 2%, 100% 98%, 0% 100%); }
   @media (min-width: 992px) {
-    .form-wrapper address {
-      font-size: 90%;
-      line-height: 200%; } }
+    .contact-section-tours {
+      margin-top: 80px;
+      -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+      -moz-clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+      -ms-clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%); } }
+  @media (min-width: 1200px) {
+    .contact-section-tours {
+      -webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 95%, 0% 100%);
+      -moz-clip-path: polygon(0% 0%, 100% 10%, 100% 95%, 0% 100%);
+      -ms-clip-path: polygon(0% 0%, 100% 10%, 100% 95%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 10%, 100% 95%, 0% 100%); } }
+  @media (min-width: 1500px) {
+    .contact-section-tours {
+      -webkit-clip-path: polygon(0% 0%, 100% 8%, 100% 93%, 0% 100%);
+      -moz-clip-path: polygon(0% 0%, 100% 8%, 100% 93%, 0% 100%);
+      -ms-clip-path: polygon(0% 0%, 100% 8%, 100% 93%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 8%, 100% 93%, 0% 100%); } }
+
+.image-form {
+  position: relative; }
+  @media (min-width: 992px) {
+    .image-form {
+      padding: 5%; } }
+  @media (min-width: 1500px) {
+    .image-form {
+      padding: 5% 10% 5%; } }
+
+.form-deco-top {
+  display: none;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  top: 0;
+  background: url(../images/deco-white-stripes.png) no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+  @media (min-width: 767px) {
+    .form-deco-top {
+      width: 150px;
+      height: 150px; } }
+  @media (min-width: 992px) {
+    .form-deco-top {
+      display: block;
+      width: 150px;
+      height: 150px;
+      right: 0;
+      bottom: 0; } }
+
+.form-deco-bottom {
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  left: 10px;
+  bottom: -20px;
+  background: url(../images/deco-triangle-green.png) no-repeat;
+  background-size: contain; }
+  @media (min-width: 767px) {
+    .form-deco-bottom {
+      width: 120px;
+      height: 120px;
+      left: 40px;
+      bottom: 0; } }
+  @media (min-width: 992px) {
+    .form-deco-bottom {
+      display: none; } }
 
 .mapa-wrapper {
   padding: 40px 20px 40px 0; }
@@ -1567,6 +1635,65 @@ footer {
     @media (min-width: 992px) {
       .mapa-wrapper .iframe-google {
         height: 450px; } }
+
+.titulo-formulario-tours {
+  position: relative;
+  font-family: "Champagne & Limousines", "NB International Pro", sans-serif;
+  font-size: 175%;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 40px; }
+  @media (min-width: 576px) {
+    .titulo-formulario-tours {
+      font-size: 200%; } }
+  .titulo-formulario-tours:before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    border-top: 40px solid transparent;
+    border-right: 80px solid #ffe900;
+    border-bottom: 60px solid transparent;
+    top: -40px;
+    right: 0; }
+    @media (min-width: 576px) {
+      .titulo-formulario-tours:before {
+        right: initial;
+        left: 35%; } }
+    @media (min-width: 767px) {
+      .titulo-formulario-tours:before {
+        left: 35%; } }
+    @media (min-width: 992px) {
+      .titulo-formulario-tours:before {
+        left: 48%; } }
+    @media (min-width: 1200px) {
+      .titulo-formulario-tours:before {
+        left: 42%;
+        top: -60px;
+        border-top: 70px solid transparent;
+        border-right: 100px solid #ffe900;
+        border-bottom: 50px solid transparent; } }
+    @media (min-width: 1500px) {
+      .titulo-formulario-tours:before {
+        left: 35%; } }
+  .titulo-formulario-tours span {
+    position: relative;
+    z-index: 1; }
+
+@media (min-width: 992px) {
+  .form-wrapper {
+    padding: 40px 0 40px 10%; } }
+.form-wrapper address {
+  font-size: 80%;
+  line-height: 180%; }
+  @media (min-width: 992px) {
+    .form-wrapper address {
+      font-size: 90%;
+      line-height: 200%; } }
+
+@media (min-width: 992px) {
+  .form-wrapper-tours {
+    padding: 20px 0; } }
 
 .formulario {
   font-family: "NB International Pro", sans-serif !important; }
@@ -1628,18 +1755,18 @@ footer {
   .formulario ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #625e59;
-    font-family: "NB International Pro Light", sans-serif !important; }
+    font-family: "NB International Pro", sans-serif !important; }
   .formulario ::-moz-placeholder {
     /* Firefox 19+ */
     color: #625e59;
-    font-family: "NB International Pro Light", sans-serif !important; }
+    font-family: "NB International Pro", sans-serif !important; }
   .formulario :-ms-input-placeholder {
     /* IE 10+ */
     color: #625e59;
-    font-family: "NB International Pro Light", sans-serif !important; }
+    font-family: "NB International Pro", sans-serif !important; }
   .formulario :-moz-placeholder {
     /* Firefox 18- */
     color: #625e59;
-    font-family: "NB International Pro Light", sans-serif !important; }
+    font-family: "NB International Pro", sans-serif !important; }
 
 /*# sourceMappingURL=style.css.map */
