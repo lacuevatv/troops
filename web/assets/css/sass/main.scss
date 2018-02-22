@@ -915,7 +915,7 @@
 
 .paquetes-wrapper {}
 
-.paquetes {//ul
+.paquetes-menos18 {//ul
 	margin: 50px 0;
 
 	@media (min-width: $md) {
@@ -955,6 +955,19 @@
 			height: 300px;//medida relativa para que muestre algo
 
 		}
+	}
+}
+
+.deco-paquetes-top-right {
+	@media (min-width: $md) {
+		position: absolute;
+		z-index: 1;
+	    width: 80px;
+	    height: 80px;
+	    right: -30px;
+	    top: -40px;
+	    background: url(../images/deco-triangle-green.png) no-repeat;
+	    background-size: contain;
 	}
 }
 
@@ -1198,4 +1211,14 @@
 }
 .icon-paquete-boton-galeria {
 	background-position: -373px -33px!important;
+}
+
+//background de galeria y mas info
+.background-more-info {
+	display: none;
+	position: absolute;
+	z-index: 11;
+	background: $color-blanco-transparente;
+	width: 100%;
+	height: 100%;
 }

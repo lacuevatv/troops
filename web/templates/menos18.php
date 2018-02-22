@@ -6,10 +6,11 @@
 ?>
 <section class="lugar-section">
 	<div class="paquetes-wrapper">
+		<div class="background-more-info"></div>
 		<div class="container">
-			
-			<!--<img src="<?php echo MAINSURL; ?>/assets/images/temp/bariloche-fotos.jpg" class="image-responsive">-->
-			<ul class="paquetes">
+
+			<ul class="paquetes-menos18">
+				<span class="deco-paquetes-top-right"></span>
 		<?php 
 			for ($i=0; $i < count($paquetes); $i++) { ?>
 				<li>

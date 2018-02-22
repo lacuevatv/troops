@@ -976,6 +976,32 @@ footer {
 /*--------------------------------------------------------------
 8.0 ANIMATIONS
 --------------------------------------------------------------*/
+.background-more-info.open-background {
+  animation-name: fade-in;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .paquete-menos18.in-view .paquete-hover {
   animation-name: fade-in-scroll;
   animation-duration: 2s;
@@ -1821,10 +1847,10 @@ footer {
 .lugar-section {
   margin: 50px 0; }
 
-.paquetes {
+.paquetes-menos18 {
   margin: 50px 0; }
   @media (min-width: 992px) {
-    .paquetes {
+    .paquetes-menos18 {
       position: relative;
       height: 800px;
       display: flex;
@@ -1848,14 +1874,25 @@ footer {
       -ms-align-items: flex-start;
       -o-align-items: flex-start;
       align-items: flex-start; } }
-  .paquetes > li {
+  .paquetes-menos18 > li {
     width: 100%;
     margin: 20px 0; }
     @media (min-width: 992px) {
-      .paquetes > li {
+      .paquetes-menos18 > li {
         margin: 0;
         width: 300px;
         height: 300px; } }
+
+@media (min-width: 992px) {
+  .deco-paquetes-top-right {
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    right: -30px;
+    top: -40px;
+    background: url(../images/deco-triangle-green.png) no-repeat;
+    background-size: contain; } }
 
 .paquetes-columns {
   display: block;
@@ -2045,5 +2082,13 @@ footer {
 
 .icon-paquete-boton-galeria {
   background-position: -373px -33px !important; }
+
+.background-more-info {
+  display: none;
+  position: absolute;
+  z-index: 11;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

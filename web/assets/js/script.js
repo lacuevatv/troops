@@ -5,7 +5,10 @@
  * @ver 1.0
  --------------------------------------------------------------
 >>> TABLE OF CONTENTS:
-1.0 NAVIGATION / AJAX FORMS
+1.0 A) ON READY
+NAVIGATION / SECCION EQUIPOS (pg inicio) / AJAX FORMS 
+B ) ON LOAD (requieren que todo este cargado)
+VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
 2.0 POP UP PROMO
 3.0 OWL SLIDERS
 4.0 
@@ -48,7 +51,7 @@ function menos18TemplateHacks() {
     }
 
     if (safari || ms_ie) {
-            $('.paquetes').addClass('paquetes-columns');
+            $('.paquetes-menos18').addClass('paquetes-columns');
     }
 }
 
@@ -330,7 +333,7 @@ $( window ).on('load', function(){
     function resizeImageTours() {
         //debugger;
         //contenedor de los paquetes
-        var contenedor = $('.paquetes');
+        var contenedor = $('.paquetes-menos18');
         //busca todos los paquetes (articles)
         var paquetes = $('.paquete-menos18');
         var li = paquetes.closest('li');
@@ -363,6 +366,8 @@ $( window ).on('load', function(){
         
     }//resizeImageTours()
 
+
+    //iguala la altura de la imagen con el article, para que no quede sin fondo y además coloca el width en auto para que la imagen no se deforme
     function resizeImageToursMovil() {
 
         var paquetes = $('.paquete-menos18');
@@ -443,6 +448,8 @@ $( window ).on('load', function(){
         $window.on('scroll resize', check_if_in_view);
         $window.trigger('scroll');
     }
+   
+
    
 
 
