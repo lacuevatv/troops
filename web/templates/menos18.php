@@ -12,8 +12,8 @@
 			<ul class="paquetes">
 		<?php 
 			for ($i=0; $i < count($paquetes); $i++) { ?>
-				<li class="paquetes-item">
-					<article id="<?php echo $paquetes[$i]['post_url']; ?>" class="paquete paquete-menos18">
+				<li>
+					<article id="<?php echo $paquetes[$i]['post_url']; ?>" class="paquete-menos18">
 						<figure class="paquete-imagen">
 							<img src="<?php echo UPLOADSURL . '/' . $paquetes[$i]['post_imagen']; ?>">	
 						</figure>

@@ -58,7 +58,9 @@ function menos18TemplateHacks() {
 
 $(document).ready(function(){
 
-
+    /*
+     * MENU basico
+    */
     //scroll top
     $('.go-up').click(function(){
         $("html, body").animate({
@@ -233,8 +235,6 @@ $(document).ready(function(){
 
     });
 
-
-
     /*
      * AJAX FORMS
     */
@@ -323,7 +323,98 @@ $( window ).on('load', function(){
         setHeightContentVideo();
     });
 
-    /*var $animation_elements = $('.animation-element');
+    /*
+     * GRILLA MENOS 18
+    */
+    //función que ajusta y coloca las imagenes en la grilla
+    function resizeImageTours() {
+        //debugger;
+        //contenedor de los paquetes
+        var contenedor = $('.paquetes');
+        //busca todos los paquetes (articles)
+        var paquetes = $('.paquete-menos18');
+        var li = paquetes.closest('li');
+
+        
+        //primero redimensiona a todos
+        $(li[0]).width('29.3%').height('34.5%');
+        $(li[1]).width('29.3%').height('34.5%');
+        $(li[2]).width('41.2%').height('34.5%');
+        $(li[3]).width('40.4%').height('65.5%');
+        $(li[4]).width('34.8%').height('32.7%');
+        $(li[5]).width('24.6%').height('32.7%');
+        $(li[6]).width('29.6%').height('32.8%');
+        $(li[7]).width('29.8%').height('32.8%');
+        //además ubica las dos ultimas según posicion
+        $(li[6]).css({
+            'position': 'absolute',
+            'bottom' : '0',
+            'right' : '29.9%',
+        });
+        $(li[7]).css({
+            'position': 'absolute',
+            'bottom' : '0',
+            'right' : '1px'
+        });
+
+        var newheight = contenedor.width() * 800/1105;
+            
+        contenedor.height(newheight);
+        
+    }//resizeImageTours()
+
+    function resizeImageToursMovil() {
+
+        var paquetes = $('.paquete-menos18');
+        paquetes.each(function(){
+            var img = $(this).find('img');
+            if (img.height() < $(this).height()) {
+                img.height($(this).height());
+                img.css('width', 'auto');
+            }
+
+        });
+
+    }//resizeImageToursMovil()
+
+    //funciones de hover para que se muestre en celulares
+    function hoverPaqueteIn (elem) {
+        var item = $(elem).find('.paquete-hover');
+        $(item).fadeIn().addClass('hover-animation');
+    }
+
+    //funciones de hover
+    function hoverPaqueteOut (elem) {
+        var item = $(elem).find('.paquete-hover');
+        $(item).fadeOut().removeClass('hover-animation');
+
+    }
+
+    //al cargar se arma la grilla
+    if (window.innerWidth > 992) {
+        
+        resizeImageTours();
+
+    } else {
+        resizeImageToursMovil();
+    }//innerWidth > 992 GRILLA
+
+    //cada vez que la ventana se redimenciona se arma la grilla
+    $( window ).resize(function() {
+        if (window.innerWidth > 992) {
+            resizeImageTours();
+        };
+    });
+
+    //al hacer hover en un paquete de la grilla
+    $('.paquete-menos18').hover(function(){
+        hoverPaqueteIn (this);
+    }, function(){
+        hoverPaqueteOut (this);
+    })
+
+    //hover en celulares
+    var $animation_elements = $('.paquete-menos18');
     var $window = $(window);
 
     function check_if_in_view() {
@@ -347,9 +438,15 @@ $( window ).on('load', function(){
       });
     }
 
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');*/
-    
+
+    if (window.innerWidth < 992) {
+        $window.on('scroll resize', check_if_in_view);
+        $window.trigger('scroll');
+    }
+   
+
+
+
 });//ON LOAD
 
 
