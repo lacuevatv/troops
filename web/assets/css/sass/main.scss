@@ -927,15 +927,6 @@
 	}
 }
 
-.paquetes-item {
-	width: 200px;
-}
-
-.paquetes-item--width2 {
-	width: 400px;	
-}
-
-
 //esto es para los navegadores que no soportan grid
 .paquetes-columns {//ul
 	display: block;
@@ -951,7 +942,6 @@
 		@media (min-width: $lg) {
 			height: 450px;
 		}
-		
 		
 		.paquete-imagen {
 			width: 120%;
@@ -978,30 +968,195 @@
 }
 
 .paquete { //article
-
+	position: relative;
+	z-index: 1;
 }
 
 .paquete-menos18 { //article
-
+	//overflow: hidden;
+	height: 250px;
+	@media (min-width: 400px) {
+		height: 300px;
+	}
+	@media (min-width: $xs) {
+		height: 450px;
+	}
+	@media (min-width: $sm) {
+		height: 550px;
+	}
+	@media (min-width: $md) {
+		height: auto;
+	    min-height: 350px;
+	    max-width: 350px;
+	    width: 100%;
+	}
 
 	.paquete-imagen {
 		width: 100%;
 		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		height: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+	.paquete-hover {
+		position: absolute;
+		z-index: 11;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-verde-transparente;
 	}
 
+	.paquete-resumen {
+		position: absolute;
+		z-index: 111;
+		bottom: 10px;
+		left: 0;
+		width: 90%;
+		background-color: $color-blanco-transparente;
+		font-size: 75%;
+    	line-height: 150%;
+    	padding: 10px 20px;
+
+    	@media (min-width: $md) {
+			bottom: 20px;
+		}
+
+    	&:before {
+		    content: '';
+			border-top: 30px transparent solid;
+			border-right: 50px #45dacc solid;
+			border-bottom: 50px transparent solid;
+			left: 0px;
+			top: 5%;
+			position: absolute;
+			z-index: 0;
+			@include transform(translateY(-10%));
+
+			@media (min-width: $md) {
+				left: -20px;
+			}
+    	}
+
+    	p {
+    		position: relative;
+    		z-index: 1;
+    	}
+	}
+
+	.paquete-botones { //ul
+		position: absolute;
+		z-index: 111;
+		top: 10px;
+		right: 10px;
+		width: 100%;
+		height: 200px;
+
+		@media (min-width: $md) {
+			left: 90%;
+		}
+
+		> li {
+			margin: 10px 0;
+
+			> a, button {
+				position: relative;
+				display: block;
+				text-align: right;
+				width: 100%;
+				height: 23px;
+				cursor: pointer;
+
+				@media (min-width: $md) {
+					text-align: left;
+				}
+
+				> span {
+					display: inline-block;
+					padding: 3px 5px;
+				}
+
+				.icon-paquete-boton {
+					position: absolute;
+					right: 0;
+					top: 0;
+					display: block;
+					width: 23px;
+					height: 23px;
+					background: $color-blanco-transparente url(../images/sprite.png);
+					@media (min-width: $md) {
+						left: 0;
+					}
+				}
+
+				.texto-paquete-btn {
+					padding: 0px 7px;
+					display: inline-block;
+					margin-right: 30px;
+					background: $color-blanco-transparente;
+					&:after {
+						content: '';
+						border-left: 5px $color-blanco-transparente solid;
+						border-bottom: 5px transparent solid;
+						border-top: 5px transparent solid;
+						position: absolute;
+						right: 25px;
+						top:5px;
+					}
+
+					@media (min-width: $md) {
+						margin-right: 0px;
+						margin-left: 30px;
+						&:before {
+							content: '';
+							border-right: 5px $color-blanco-transparente solid;
+							border-bottom: 5px transparent solid;
+							border-top: 5px transparent solid;
+							position: absolute;
+							left: 25px;
+							top:5px;
+						}
+						&:after {
+							content: none;
+						}
+					}
+				}
+
+				&:hover {
+					.icon-paquete-boton {
+						background: $color-amarillo-menu-semi-transparente url(../images/sprite.png);
+					}
+				}		
+				
+			}//a, button
+		}
+	}//.paquete-botones
+
+	//contenedor mas info
 	.paquete-info {
 		display: none;
 	}
 
-	.paquete-resumen {
-		display: none;
-	}
-
-	.paquete-botones { //ul
-		display: none;
-	}
-
+	//esto no se muestra, solo sirve para listar los archivos de la galeria y tenerlo guardado
 	.paquete-lista-imagenes {
 		display: none;
 	}
+}//.paquete (article)
+
+//iconos paquetes:
+.icon-paquete-boton-pdf {
+	background-position: -283px -33px!important;
+}
+.icon-paquete-boton-info {
+	background-position: -326px -33px!important;
+}
+.icon-paquete-boton-galeria {
+	background-position: -373px -33px!important;
 }

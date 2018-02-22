@@ -14,9 +14,48 @@
 			for ($i=0; $i < count($paquetes); $i++) { ?>
 				<li class="paquetes-item">
 					<article id="<?php echo $paquetes[$i]['post_url']; ?>" class="paquete paquete-menos18">
+						<figure class="paquete-imagen">
+							<img src="<?php echo UPLOADSURL . '/' . $paquetes[$i]['post_imagen']; ?>">	
+						</figure>
+						<div class="paquete-hover">
 
-						<img src="<?php echo UPLOADSURL . '/' . $paquetes[$i]['post_imagen']; ?>" class="paquete-imagen">	
+							<div class="paquete-resumen">
+								<p>
+									<?php echo $paquetes[$i]['post_resumen']; ?>
+								</p>
+							</div>
 
+							<ul class="paquete-botones">
+								<li>
+									<a href="<?php echo UPLOADSFILE . '/' . $paquetes[$i]['post_file']; ?>" title="Descargar detalles" target="_blank" class="paquete-btn-pdf">
+										<span class="icon-paquete-boton icon-paquete-boton-pdf"></span>
+										<span class="texto-paquete-btn">
+											Descargar PDF
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<button class="paquete-btn-info">
+										<span class="icon-paquete-boton icon-paquete-boton-info"></span>
+										<span class="texto-paquete-btn">
+											Más info
+										</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="paquete-btn-galeria">
+										<span class="icon-paquete-boton icon-paquete-boton-galeria"></span>
+										<span class="texto-paquete-btn">
+											Ver galería
+										</span>
+									</button>
+								</li>
+							</ul>
+
+						</div>
+						
 						<div class="paquete-info">
 							<h1>
 								<?php echo $paquetes[$i]['post_titulo']; ?>
@@ -25,33 +64,6 @@
 								<?php echo $paquetes[$i]['post_contenido']; ?>
 							</div>
 						</div>
-
-						<div class="paquete-resumen">
-							<p>
-								<?php echo $paquetes[$i]['post_resumen']; ?>
-							</p>
-						</div>
-
-						<ul class="paquete-botones">
-							<li>
-								<a href="<?php echo UPLOADSFILE . '/' . $paquetes[$i]['post_file']; ?>" title="Descargar detalles" target="_blank">
-									Descargar PDF
-								</a>
-							</li>
-
-							<li>
-								<button class="paquete-btn-info">
-									Más info
-								</button>
-							</li>
-
-							<li>
-								<button class="paquete-btn-galeria">
-									Ver galería
-								</button>
-							</li>
-						</ul>
-						
 
 					<?php if ($paquetes[$i]['post_imagenesGal'] != '') : ?>
 						<ul class="paquete-lista-imagenes">

@@ -26,7 +26,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1788,12 +1788,6 @@ footer {
       .paquetes li {
         margin: 0; } }
 
-.paquetes-item {
-  width: 200px; }
-
-.paquetes-item--width2 {
-  width: 400px; }
-
 .paquetes-columns {
   display: block;
   column-count: 2;
@@ -1829,16 +1823,154 @@ footer {
         .paquetes-columns li .paquete-imagen {
           width: 105%; } }
 
-.paquete-menos18 .paquete-imagen {
-  width: 100%;
-  display: block; }
-.paquete-menos18 .paquete-info {
-  display: none; }
-.paquete-menos18 .paquete-resumen {
-  display: none; }
-.paquete-menos18 .paquete-botones {
-  display: none; }
-.paquete-menos18 .paquete-lista-imagenes {
-  display: none; }
+.paquete {
+  position: relative;
+  z-index: 1; }
+
+.paquete-menos18 {
+  height: 250px; }
+  @media (min-width: 400px) {
+    .paquete-menos18 {
+      height: 300px; } }
+  @media (min-width: 576px) {
+    .paquete-menos18 {
+      height: 450px; } }
+  @media (min-width: 767px) {
+    .paquete-menos18 {
+      height: 550px; } }
+  @media (min-width: 992px) {
+    .paquete-menos18 {
+      height: auto;
+      min-height: 350px;
+      max-width: 350px;
+      width: 100%; } }
+  .paquete-menos18 .paquete-imagen {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100%; }
+    .paquete-menos18 .paquete-imagen img {
+      width: 100%; }
+  .paquete-menos18 .paquete-hover {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(69, 218, 204, 0.7); }
+  .paquete-menos18 .paquete-resumen {
+    position: absolute;
+    z-index: 111;
+    bottom: 10px;
+    left: 0;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 75%;
+    line-height: 150%;
+    padding: 10px 20px; }
+    @media (min-width: 992px) {
+      .paquete-menos18 .paquete-resumen {
+        bottom: 20px; } }
+    .paquete-menos18 .paquete-resumen:before {
+      content: '';
+      border-top: 30px transparent solid;
+      border-right: 50px #45dacc solid;
+      border-bottom: 50px transparent solid;
+      left: 0px;
+      top: 5%;
+      position: absolute;
+      z-index: 0;
+      -webkit-transform: translateY(-10%);
+      -moz-transform: translateY(-10%);
+      -ms-transform: translateY(-10%);
+      transform: translateY(-10%); }
+      @media (min-width: 992px) {
+        .paquete-menos18 .paquete-resumen:before {
+          left: -20px; } }
+    .paquete-menos18 .paquete-resumen p {
+      position: relative;
+      z-index: 1; }
+  .paquete-menos18 .paquete-botones {
+    position: absolute;
+    z-index: 111;
+    top: 10px;
+    right: 10px;
+    width: 100%;
+    height: 200px; }
+    @media (min-width: 992px) {
+      .paquete-menos18 .paquete-botones {
+        left: 90%; } }
+    .paquete-menos18 .paquete-botones > li {
+      margin: 10px 0; }
+      .paquete-menos18 .paquete-botones > li > a, .paquete-menos18 .paquete-botones > li button {
+        position: relative;
+        display: block;
+        text-align: right;
+        width: 100%;
+        height: 23px;
+        cursor: pointer; }
+        @media (min-width: 992px) {
+          .paquete-menos18 .paquete-botones > li > a, .paquete-menos18 .paquete-botones > li button {
+            text-align: left; } }
+        .paquete-menos18 .paquete-botones > li > a > span, .paquete-menos18 .paquete-botones > li button > span {
+          display: inline-block;
+          padding: 3px 5px; }
+        .paquete-menos18 .paquete-botones > li > a .icon-paquete-boton, .paquete-menos18 .paquete-botones > li button .icon-paquete-boton {
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: block;
+          width: 23px;
+          height: 23px;
+          background: rgba(255, 255, 255, 0.8) url(../images/sprite.png); }
+          @media (min-width: 992px) {
+            .paquete-menos18 .paquete-botones > li > a .icon-paquete-boton, .paquete-menos18 .paquete-botones > li button .icon-paquete-boton {
+              left: 0; } }
+        .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn {
+          padding: 0px 7px;
+          display: inline-block;
+          margin-right: 30px;
+          background: rgba(255, 255, 255, 0.8); }
+          .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn:after, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn:after {
+            content: '';
+            border-left: 5px rgba(255, 255, 255, 0.8) solid;
+            border-bottom: 5px transparent solid;
+            border-top: 5px transparent solid;
+            position: absolute;
+            right: 25px;
+            top: 5px; }
+          @media (min-width: 992px) {
+            .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn {
+              margin-right: 0px;
+              margin-left: 30px; }
+              .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn:before, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn:before {
+                content: '';
+                border-right: 5px rgba(255, 255, 255, 0.8) solid;
+                border-bottom: 5px transparent solid;
+                border-top: 5px transparent solid;
+                position: absolute;
+                left: 25px;
+                top: 5px; }
+              .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn:after, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn:after {
+                content: none; } }
+        .paquete-menos18 .paquete-botones > li > a:hover .icon-paquete-boton, .paquete-menos18 .paquete-botones > li button:hover .icon-paquete-boton {
+          background: rgba(255, 250, 0, 0.7) url(../images/sprite.png); }
+  .paquete-menos18 .paquete-info {
+    display: none; }
+  .paquete-menos18 .paquete-lista-imagenes {
+    display: none; }
+
+.icon-paquete-boton-pdf {
+  background-position: -283px -33px !important; }
+
+.icon-paquete-boton-info {
+  background-position: -326px -33px !important; }
+
+.icon-paquete-boton-galeria {
+  background-position: -373px -33px !important; }
 
 /*# sourceMappingURL=style.css.map */
