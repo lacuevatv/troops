@@ -7,7 +7,7 @@
 <section class="lugar-section">
 	<div class="paquetes-wrapper">
 		<div class="background-more-info"></div>
-		
+
 		<div class="container">
 
 			<ul class="paquetes-menos18">
@@ -28,6 +28,8 @@
 							</div>
 
 							<ul class="paquete-botones">
+
+							<?php if ( $paquetes[$i]['post_file'] != '' ) : ?>
 								<li>
 									<a href="<?php echo UPLOADSFILE . '/' . $paquetes[$i]['post_file']; ?>" title="Descargar detalles" target="_blank" class="paquete-btn-pdf">
 										<span class="icon-paquete-boton icon-paquete-boton-pdf"></span>
@@ -36,7 +38,9 @@
 										</span>
 									</a>
 								</li>
+							<?php endif; ?>
 
+							<?php if ( $paquetes[$i]['post_contenido'] != '' ) : ?>
 								<li>
 									<button class="paquete-btn-info">
 										<span class="icon-paquete-boton icon-paquete-boton-info"></span>
@@ -46,6 +50,10 @@
 									</button>
 								</li>
 
+							<?php endif; ?>
+
+							<?php if ( $paquetes[$i]['post_galeria'] == '1' ) : ?>
+
 								<li>
 									<button class="paquete-btn-galeria">
 										<span class="icon-paquete-boton icon-paquete-boton-galeria"></span>
@@ -54,6 +62,9 @@
 										</span>
 									</button>
 								</li>
+
+							<?php endif; ?>
+
 							</ul>
 
 						</div>
