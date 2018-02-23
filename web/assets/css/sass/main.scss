@@ -911,6 +911,7 @@
 
 .lugar-section {
 	margin: 50px 0;
+	position: relative;
 }
 
 .paquetes-wrapper {}
@@ -1049,7 +1050,7 @@
 	}
 	.paquete-hover {
 		position: absolute;
-		z-index: 11;
+		z-index: 1;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -1218,7 +1219,123 @@
 	display: none;
 	position: absolute;
 	z-index: 11;
-	background: $color-blanco-transparente;
+	background: $color-blanco;
 	width: 100%;
-	height: 100%;
+	padding: 0%;
+	padding-bottom: 50px;
+	@media (min-width: $sm) {
+		padding-bottom: 150px;
+	}
+	@media (min-width: $md) {
+		background: $color-blanco-transparente;
+		padding: 10%;
+		height: 100%;
+	}
+
+	.controls {
+		.close-control {
+			display: none;
+			position: absolute;
+			z-index: 11;
+			cursor: pointer;
+			right: 5%;
+			top: 0%;
+			width: 40px;
+			height: 50px;
+			background: url(../images/sprite.png) no-repeat;
+			background-position: -277px -209px;
+			@media (min-width: $md) {
+				right: 10%;
+				top: 10%;
+			}
+
+			&:hover {
+				background-position: -277px -258px;
+			}
+		}
+
+		.left-control {
+			display: none;
+			position: absolute;
+			z-index: 11;
+			cursor: pointer;
+			left: 5%;
+			top: 50%;
+			@include transform(translateY(-50%));
+			width: 40px;
+			height: 40px;
+			background: url(../images/sprite.png) no-repeat;
+			background-position: -370px -209px;
+			@media (min-width: $md) {
+				left: 10%;
+			}
+
+			&:hover {
+				background-position: -370px -258px;
+			}
+		}
+
+		.right-control {
+			display: none;
+			position: absolute;
+			z-index: 11;
+			cursor: pointer;
+			right: 10%;
+			top: 50%;
+			@include transform(translateY(-50%));
+			width: 40px;
+			height: 40px;
+			background: url(../images/sprite.png) no-repeat;
+			background-position: -327px -209px;
+			@media (min-width: $md) {
+				right: 5%;
+			}
+
+			&:hover {
+				background-position: -327px -258px;
+			}
+		}
+
+	}
+
+	.paquete-info {
+		position:relative;
+		display: block;
+		padding: 6%;
+    	@media (min-width: $md) {
+    		padding: 20%;
+    		overflow: hidden;
+    	}
+    	h1 {
+    		margin: 10px 0;
+    		position: relative;
+    		span {
+    			position: relative;
+    			z-index: 1;
+    		}
+    		&:before {
+	    		content: '';
+	    		position: absolute;
+	    		z-index: 0;
+	    		left: 0;
+	    		top: -30px;
+	    		display: block;
+			    border-top: 50px solid transparent;
+				border-right: 60px solid $color-verde;
+				border-bottom: 30px solid transparent;
+	    	}
+    	}
+
+    	.paquete-info-contenido {
+    		margin: 10px 0;
+    		padding: 0 20px;
+    		@media (min-width: $md) {
+    			overflow-y: scroll;
+    		}
+    		p {
+    			margin: 10px 0;
+    			text-align: justify;
+    		}
+    	}
+	}
 }

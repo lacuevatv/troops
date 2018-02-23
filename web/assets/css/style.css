@@ -1845,7 +1845,8 @@ footer {
 2.0 MENOS 18
 */
 .lugar-section {
-  margin: 50px 0; }
+  margin: 50px 0;
+  position: relative; }
 
 .paquetes-menos18 {
   margin: 50px 0; }
@@ -1958,7 +1959,7 @@ footer {
       width: 100%; }
   .paquete-menos18 .paquete-hover {
     position: absolute;
-    z-index: 11;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -1975,7 +1976,7 @@ footer {
     bottom: 10px;
     left: 0;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     font-size: 75%;
     line-height: 150%;
     padding: 10px 20px; }
@@ -2036,7 +2037,7 @@ footer {
           display: block;
           width: 23px;
           height: 23px;
-          background: rgba(255, 255, 255, 0.8) url(../images/sprite.png); }
+          background: rgba(255, 255, 255, 0.9) url(../images/sprite.png); }
           @media (min-width: 992px) {
             .paquete-menos18 .paquete-botones > li > a .icon-paquete-boton, .paquete-menos18 .paquete-botones > li button .icon-paquete-boton {
               left: 0; } }
@@ -2044,10 +2045,10 @@ footer {
           padding: 0px 7px;
           display: inline-block;
           margin-right: 30px;
-          background: rgba(255, 255, 255, 0.8); }
+          background: rgba(255, 255, 255, 0.9); }
           .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn:after, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn:after {
             content: '';
-            border-left: 5px rgba(255, 255, 255, 0.8) solid;
+            border-left: 5px rgba(255, 255, 255, 0.9) solid;
             border-bottom: 5px transparent solid;
             border-top: 5px transparent solid;
             position: absolute;
@@ -2059,7 +2060,7 @@ footer {
               margin-left: 30px; }
               .paquete-menos18 .paquete-botones > li > a .texto-paquete-btn:before, .paquete-menos18 .paquete-botones > li button .texto-paquete-btn:before {
                 content: '';
-                border-right: 5px rgba(255, 255, 255, 0.8) solid;
+                border-right: 5px rgba(255, 255, 255, 0.9) solid;
                 border-bottom: 5px transparent solid;
                 border-top: 5px transparent solid;
                 position: absolute;
@@ -2087,8 +2088,107 @@ footer {
   display: none;
   position: absolute;
   z-index: 11;
-  background: rgba(255, 255, 255, 0.8);
+  background: #fff;
   width: 100%;
-  height: 100%; }
+  padding: 0%;
+  padding-bottom: 50px; }
+  @media (min-width: 767px) {
+    .background-more-info {
+      padding-bottom: 150px; } }
+  @media (min-width: 992px) {
+    .background-more-info {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10%;
+      height: 100%; } }
+  .background-more-info .controls .close-control {
+    display: none;
+    position: absolute;
+    z-index: 11;
+    cursor: pointer;
+    right: 5%;
+    top: 0%;
+    width: 40px;
+    height: 50px;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -277px -209px; }
+    @media (min-width: 992px) {
+      .background-more-info .controls .close-control {
+        right: 10%;
+        top: 10%; } }
+    .background-more-info .controls .close-control:hover {
+      background-position: -277px -258px; }
+  .background-more-info .controls .left-control {
+    display: none;
+    position: absolute;
+    z-index: 11;
+    cursor: pointer;
+    left: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -370px -209px; }
+    @media (min-width: 992px) {
+      .background-more-info .controls .left-control {
+        left: 10%; } }
+    .background-more-info .controls .left-control:hover {
+      background-position: -370px -258px; }
+  .background-more-info .controls .right-control {
+    display: none;
+    position: absolute;
+    z-index: 11;
+    cursor: pointer;
+    right: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -327px -209px; }
+    @media (min-width: 992px) {
+      .background-more-info .controls .right-control {
+        right: 5%; } }
+    .background-more-info .controls .right-control:hover {
+      background-position: -327px -258px; }
+  .background-more-info .paquete-info {
+    position: relative;
+    display: block;
+    padding: 6%; }
+    @media (min-width: 992px) {
+      .background-more-info .paquete-info {
+        padding: 20%;
+        overflow: hidden; } }
+    .background-more-info .paquete-info h1 {
+      margin: 10px 0;
+      position: relative; }
+      .background-more-info .paquete-info h1 span {
+        position: relative;
+        z-index: 1; }
+      .background-more-info .paquete-info h1:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: -30px;
+        display: block;
+        border-top: 50px solid transparent;
+        border-right: 60px solid #45dacc;
+        border-bottom: 30px solid transparent; }
+    .background-more-info .paquete-info .paquete-info-contenido {
+      margin: 10px 0;
+      padding: 0 20px; }
+      @media (min-width: 992px) {
+        .background-more-info .paquete-info .paquete-info-contenido {
+          overflow-y: scroll; } }
+      .background-more-info .paquete-info .paquete-info-contenido p {
+        margin: 10px 0;
+        text-align: justify; }
 
 /*# sourceMappingURL=style.css.map */

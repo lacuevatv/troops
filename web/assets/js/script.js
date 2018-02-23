@@ -449,18 +449,44 @@ $( window ).on('load', function(){
         $window.trigger('scroll');
     }
    
+    //clic en btn más info para abrir el modal de más info
+   $(document).on('click', '.paquete-btn-info', function(){
+        var contenedor = $('.background-more-info');
+        $(contenedor).addClass('open-background');
+        contenedor.empty();
+        //agrega los controles
+        $(contenedor).append($('<div class="controls"><span class="close-control"></span><span class="left-control"></span><span class="right-control"></span></div>'));
 
-   
+        
+        var info = $(this.closest('article')).find('.paquete-info').clone();
+        $(contenedor).append(info);
 
+
+
+        //abre los controles, en este caso, solo cerrar
+        $('.close-control').fadeIn();
+
+        if (window.innerWidth < 992) {
+            //si es movil, busca la altura de lo que tiene que buscar y pone esa altura en el contenedor para que no sea tan alto
+            var h = $(contenedor).find('.paquete-info').height();
+            //a la altura obtenida le suma 150 para padding bottom y 100 para arriba
+            contenedor.height(h+150);
+            //ademas hace un scroll hacia arriba para mostrarlo adecuadamene
+            $('html, body').stop().animate({
+                scrollTop: $(contenedor).offset().top - 130
+            }, 'slow');
+        }
+   });
+
+   //cierra más info:
+   $(document).on('click', '.close-control', function(){
+        var contenedor = $('.background-more-info');
+        $(contenedor).removeClass('open-background');
+        $(contenedor).find('.paquete-info').remove();
+   });
 
 
 });//ON LOAD
-
-
-
-
-
-
 
 
 

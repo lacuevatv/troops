@@ -7,6 +7,7 @@
 <section class="lugar-section">
 	<div class="paquetes-wrapper">
 		<div class="background-more-info"></div>
+		
 		<div class="container">
 
 			<ul class="paquetes-menos18">
@@ -58,10 +59,16 @@
 						</div>
 						
 						<div class="paquete-info">
-							<h1>
-								<?php echo $paquetes[$i]['post_titulo']; ?>
+							<h1 class="section-title">
+								<span>
+									<?php echo $paquetes[$i]['post_titulo']; ?>
+								</span>
 							</h1>
-							<div>
+							<h5 class="section-sub-title">
+								<span class="deco-line"></span>
+								<span>Troops Viajes</span>
+							</h5>
+							<div class="paquete-info-contenido">
 								<?php echo $paquetes[$i]['post_contenido']; ?>
 							</div>
 						</div>
