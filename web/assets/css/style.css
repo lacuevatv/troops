@@ -108,48 +108,67 @@ button {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'NB International Pro';
-  src: local("NB International Pro"), url("../fonts/nbinternationalpro-regular.ttf") format("truetype");
+  src: url("../fonts/nbinternationalpro-regular.eot");
+  src: url("../fonts/nbinternationalpro-regular.WOFF") format("woff"), url("../fonts/nbinternationalpro-regular.ttf") format("truetype"), url("../fonts/nbinternationalpro-regular.svg") format("svg");
+  /*src: local('NB International Pro'),
+       url('../fonts/nbinternationalpro-regular.ttf') format('truetype');*/
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'NB International Pro Light';
-  src: local("NB International Pro Light"), url("../fonts/nbinternationalpro-light.ttf") format("truetype");
+  src: url("../fonts/nbinternationalpro-light.eot");
+  src: url("../fonts/nbinternationalpro-light.WOFF") format("woff"), url("../fonts/nbinternationalpro-light.ttf") format("truetype"), url("../fonts/nbinternationalpro-light.svg") format("svg");
+  /*src: local('NB International Pro Light'),
+  url('../fonts/nbinternationalpro-light.ttf') format('truetype');*/
   font-weight: light;
   font-style: normal; }
-/*@font-face {
-    font-family: 'NB International Pro Mono';
-    src: local('NB International Pro Mono'),
-         url('../fonts/nbinternationalpro-monospaced.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}*/
+@font-face {
+  font-family: 'NB International Pro Mono';
+  src: url("../fonts/nbinternationalpro-monospaced.eot");
+  src: url("../fonts/nbinternationalpro-monospaced.WOFF") format("woff"), url("../fonts/nbinternationalpro-monospaced.ttf") format("truetype"), url("../fonts/nbinternationalpro-monospaced.svg") format("svg");
+  /*src: local('NB International Pro Mono'),
+       url('../fonts/nbinternationalpro-monospaced.ttf') format('truetype');*/
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: 'Champagne & Limousines';
-  src: local("Champagne & Limousines"), url("../fonts/champagne&limousines.ttf") format("truetype");
+  src: url("../fonts/champagne&limousines.eot");
+  src: url("../fonts/champagne&limousines.WOFF") format("woff"), url("../fonts/champagne&limousines.ttf") format("truetype"), url("../fonts/champagne&limousines.svg") format("svg");
+  /*src: local('Champagne & Limousines'),
+       url('../fonts/champagne&limousines.ttf') format('truetype');*/
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Champagne & Limousines Italic';
-  src: local("Champagne & Limousines Italic"), url("../fonts/champagne&limousinesitalic.ttf") format("truetype");
+  src: url("../fonts/champagne&limousinesitalic.eot");
+  src: url("../fonts/champagne&limousinesitalic.WOFF") format("woff"), url("../fonts/champagne&limousinesitalic.ttf") format("truetype"), url("../fonts/champagne&limousinesitalic.svg") format("svg");
+  /*src: local('Champagne & Limousines Italic'),
+       url('../fonts/champagne&limousinesitalic.ttf') format('truetype');*/
   font-weight: normal;
   font-style: italic; }
 @font-face {
   font-family: 'Champagne & Limousines Bold';
-  src: local("Champagne & Limousines Bold Italic"), url("../fonts/champagne&limousinesbold.ttf") format("truetype");
+  src: url("../fonts/champagne&limousinesbold.eot");
+  src: url("../fonts/champagne&limousinesbold.WOFF") format("woff"), url("../fonts/champagne&limousinesbold.ttf") format("truetype"), url("../fonts/champagne&limousinesbold.svg") format("svg");
+  /*src: local('Champagne & Limousines Bold Italic'),
+       url('../fonts/champagne&limousinesbold.ttf') format('truetype');*/
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'Champagne & Limousines Bold Italic';
-  src: local("Champagne & Limousines Bold Italic"), url("../fonts/champagne&limousines-bold-italic.ttf") format("truetype");
+  src: url("../fonts/champagne&limousines-bold-italic.eot");
+  src: url("../fonts/champagne&limousines-bold-italic.WOFF") format("woff"), url("../fonts/champagne&limousines-bold-italic.ttf") format("truetype"), url("../fonts/champagne&limousines-bold-italic.svg") format("svg");
+  /*src: local('Champagne & Limousines Bold Italic'),
+       url('../fonts/champagne&limousines-bold-italic.ttf') format('truetype');*/
   font-weight: bold;
   font-style: italic; }
-/*@font-face {
-    font-family: 'Myriad Pro';
-    src: local('Myriad Pro'),
-         url('../fonts/myriadpro-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}*/
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("../fonts/myriadpro-regular.eot");
+  src: url("../fonts/myriadpro-regular.WOFF") format("woff"), url("../fonts/myriadpro-regular.ttf") format("truetype"), url("../fonts/myriadpro-regular.svg") format("svg");
+  /*src: url('../fonts/myriadpro-regular.ttf') format('truetype');*/
+  font-weight: normal;
+  font-style: normal; }
 /*--------------------------------------------------------------
 3.0 variables
 --------------------------------------------------------------*/
@@ -190,7 +209,7 @@ justify-content: center;
 4.0 General
 --------------------------------------------------------------*/
 html, body {
-  font-family: "NB International Pro", sans-serif;
+  font-family: "NB International Pro Mono", "NB International Pro", sans-serif;
   color: #625e59;
   background-color: #fff;
   font-size: 4vw;
@@ -309,7 +328,7 @@ footer {
       #legales img {
         width: 30%; } }
   #legales p {
-    font-family: "Champagne & Limousines Bold", "NB International Pro", sans-serif;
+    font-family: "Champagne & Limousines Bold", "NB International Pro Mono", "NB International Pro", sans-serif;
     margin: 15px 0;
     font-size: 80%;
     text-align: center;
@@ -890,7 +909,7 @@ footer {
     text-align: center;
     text-transform: uppercase;
     width: 70%;
-    font-family: "Champagne & Limousines", "NB International Pro", sans-serif;
+    font-family: "Champagne & Limousines", "NB International Pro Mono", "NB International Pro", sans-serif;
     font-size: 420%;
     color: white;
     line-height: 100%;
@@ -1086,7 +1105,7 @@ footer {
     flex-direction: row-reverse; } }
 
 .section-title {
-  font-family: "Champagne & Limousines", "NB International Pro", sans-serif;
+  font-family: "Champagne & Limousines", "NB International Pro Mono", "NB International Pro", sans-serif;
   font-size: 200%;
   line-height: 110%;
   text-transform: uppercase;
@@ -1438,7 +1457,7 @@ footer {
         border-bottom: 30px solid transparent; } }
 
 .titulo-icon {
-  font-family: "Champagne & Limousines", "NB International Pro", sans-serif;
+  font-family: "Champagne & Limousines", "NB International Pro Mono", "NB International Pro", sans-serif;
   font-size: 200%;
   line-height: 110%;
   text-transform: uppercase;
@@ -1710,7 +1729,7 @@ footer {
 
 .titulo-formulario-tours {
   position: relative;
-  font-family: "Champagne & Limousines", "NB International Pro", sans-serif;
+  font-family: "Champagne & Limousines", "NB International Pro Mono", "NB International Pro", sans-serif;
   font-size: 175%;
   line-height: 110%;
   text-transform: uppercase;
@@ -1768,7 +1787,7 @@ footer {
     padding: 20px 0; } }
 
 .formulario {
-  font-family: "NB International Pro", sans-serif !important; }
+  font-family: "NB International Pro Mono", "NB International Pro", sans-serif !important; }
   .formulario label {
     display: none; }
   .formulario .form-group {
@@ -1827,19 +1846,19 @@ footer {
   .formulario ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #625e59;
-    font-family: "NB International Pro", sans-serif !important; }
+    font-family: "NB International Pro Mono", "NB International Pro", sans-serif !important; }
   .formulario ::-moz-placeholder {
     /* Firefox 19+ */
     color: #625e59;
-    font-family: "NB International Pro", sans-serif !important; }
+    font-family: "NB International Pro Mono", "NB International Pro", sans-serif !important; }
   .formulario :-ms-input-placeholder {
     /* IE 10+ */
     color: #625e59;
-    font-family: "NB International Pro", sans-serif !important; }
+    font-family: "NB International Pro Mono", "NB International Pro", sans-serif !important; }
   .formulario :-moz-placeholder {
     /* Firefox 18- */
     color: #625e59;
-    font-family: "NB International Pro", sans-serif !important; }
+    font-family: "NB International Pro Mono", "NB International Pro", sans-serif !important; }
 
 /*
 2.0 MENOS 18

@@ -1,7 +1,8 @@
 /*FUENTES*/
-$fuente-principal: 'NB International Pro', sans-serif;
+$fuente-normal: 'NB International Pro', sans-serif;
+$fuente-principal: 'NB International Pro Mono', $fuente-normal;
 $fuente-principal-light: 'NB International Pro Light', sans-serif;
-//$fuente-monospace: 'NB International Pro Mono', monospace;
+
 $fuente-titulos: 'Champagne & Limousines', $fuente-principal;
 $fuente-titulos-italic: 'Champagne & Limousines Italic', $fuente-principal;
 $fuente-titulos-bold: 'Champagne & Limousines Bold' , $fuente-principal;
