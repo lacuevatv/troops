@@ -2210,4 +2210,326 @@ footer {
         margin: 10px 0;
         text-align: justify; }
 
+/*
+3.0 MAS 18
+*/
+.paquetes-mas18 {
+  position: relative; }
+
+.paquete-mas18 .galeria-wrapper {
+  position: relative;
+  margin: 50px 0; }
+.paquete-mas18 .detalles-wrapper {
+  font-size: 85%; }
+  @media (min-width: 767px) {
+    .paquete-mas18 .detalles-wrapper {
+      font-size: 100%; } }
+  @media (min-width: 992px) {
+    .paquete-mas18 .detalles-wrapper {
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between; } }
+  .paquete-mas18 .detalles-wrapper .detalle1 {
+    margin: 30px auto;
+    padding: 15px 10px;
+    border: 1px solid #dedede; }
+    @media (min-width: 992px) {
+      .paquete-mas18 .detalles-wrapper .detalle1 {
+        width: 38%;
+        margin: 0; } }
+    .paquete-mas18 .detalles-wrapper .detalle1 table {
+      width: 100%; }
+      @media (min-width: 1200px) {
+        .paquete-mas18 .detalles-wrapper .detalle1 table {
+          font-size: 110%; } }
+      .paquete-mas18 .detalles-wrapper .detalle1 table td {
+        padding: 5px; }
+        @media (min-width: 767px) {
+          .paquete-mas18 .detalles-wrapper .detalle1 table td {
+            padding: 15px 5px; } }
+      .paquete-mas18 .detalles-wrapper .detalle1 table td.color-destacado {
+        color: #45dacc;
+        width: 63%;
+        text-transform: uppercase;
+        border-right: 1px solid #dedede; }
+        @media (min-width: 767px) {
+          .paquete-mas18 .detalles-wrapper .detalle1 table td.color-destacado {
+            width: 60%; } }
+      .paquete-mas18 .detalles-wrapper .detalle1 table td.info {
+        width: 37%;
+        padding-left: 7%; }
+        @media (min-width: 767px) {
+          .paquete-mas18 .detalles-wrapper .detalle1 table td.info {
+            width: 40%; } }
+  .paquete-mas18 .detalles-wrapper .detalle2 {
+    margin: 30px auto;
+    padding: 15px 15px;
+    border: 1px solid #dedede; }
+    @media (min-width: 992px) {
+      .paquete-mas18 .detalles-wrapper .detalle2 {
+        width: 58%;
+        margin: 0;
+        padding: 10px 25px; } }
+    .paquete-mas18 .detalles-wrapper .detalle2 h1 {
+      text-transform: uppercase;
+      font-family: "Champagne & Limousines", "NB International Pro Mono", "NB International Pro", sans-serif;
+      font-size: 200%;
+      margin: 20px auto; }
+      @media (min-width: 992px) {
+        .paquete-mas18 .detalles-wrapper .detalle2 h1 {
+          margin: 0px auto 30px; } }
+    .paquete-mas18 .detalles-wrapper .detalle2 h5 {
+      margin: 20px 0; }
+    @media (min-width: 992px) {
+      .paquete-mas18 .detalles-wrapper .detalle2 .detalle-header {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        border-bottom: 1px solid #dedede;
+        padding: 10px 0; } }
+    .paquete-mas18 .detalles-wrapper .detalle2 .precio-archivo {
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: baseline;
+      -moz-align-items: baseline;
+      -ms-align-items: baseline;
+      -o-align-items: baseline;
+      align-items: baseline;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
+      margin: 20px 0; }
+      @media (min-width: 992px) {
+        .paquete-mas18 .detalles-wrapper .detalle2 .precio-archivo {
+          -webkit-flex-direction: column-reverse;
+          -moz-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+          -o-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+          -webkit-align-items: flex-end;
+          -moz-align-items: flex-end;
+          -ms-align-items: flex-end;
+          -o-align-items: flex-end;
+          align-items: flex-end;
+          margin: 0px 0 10px; } }
+      .paquete-mas18 .detalles-wrapper .detalle2 .precio-archivo a {
+        padding: 5px 10px;
+        height: 30px;
+        background-color: #ffe900; }
+        @media (min-width: 992px) {
+          .paquete-mas18 .detalles-wrapper .detalle2 .precio-archivo a {
+            margin-top: 20px; } }
+      .paquete-mas18 .detalles-wrapper .detalle2 .precio-archivo h4 {
+        height: 30px;
+        color: #45dacc;
+        text-transform: uppercase;
+        font-size: 160%;
+        line-height: 200%; }
+  .paquete-mas18 .detalles-wrapper .aereos-wrapper {
+    font-size: 85%; }
+    @media (min-width: 767px) {
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper {
+        font-size: 100%; } }
+    @media (min-width: 992px) {
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 90%; } }
+    @media (min-width: 1200px) {
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper {
+        font-size: 95%; } }
+    @media (min-width: 1500px) {
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper {
+        font-size: 100%; } }
+    .paquete-mas18 .detalles-wrapper .aereos-wrapper .separador-horizontal {
+      display: none; }
+      @media (min-width: 992px) {
+        .paquete-mas18 .detalles-wrapper .aereos-wrapper .separador-horizontal {
+          display: block;
+          width: 100%;
+          background-color: #dedede;
+          height: 1px;
+          margin: 0 2%; } }
+    .paquete-mas18 .detalles-wrapper .aereos-wrapper .viaje {
+      border-top: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      text-align: center;
+      padding: 20px 0;
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      -o-justify-content: space-around;
+      justify-content: space-around; }
+      @media (min-width: 767px) {
+        .paquete-mas18 .detalles-wrapper .aereos-wrapper .viaje {
+          padding: 40px 0;
+          -webkit-justify-content: space-evenly;
+          -moz-justify-content: space-evenly;
+          -ms-justify-content: space-evenly;
+          -o-justify-content: space-evenly;
+          justify-content: space-evenly; } }
+      @media (min-width: 992px) {
+        .paquete-mas18 .detalles-wrapper .aereos-wrapper .viaje {
+          padding: 15px 0;
+          width: 37%;
+          border: none;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          -o-flex-direction: column;
+          flex-direction: column;
+          border-right: 1px solid #dedede;
+          padding-right: 30px;
+          -webkit-align-items: flex-start;
+          -moz-align-items: flex-start;
+          -ms-align-items: flex-start;
+          -o-align-items: flex-start;
+          align-items: flex-start;
+          line-height: 150%; } }
+    .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion {
+      padding: 20px 0;
+      display: flex;
+      display: -o-flex;
+      display: -ms-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      -o-justify-content: space-around;
+      justify-content: space-around; }
+      @media (min-width: 767px) {
+        .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion {
+          -webkit-justify-content: space-evenly;
+          -moz-justify-content: space-evenly;
+          -ms-justify-content: space-evenly;
+          -o-justify-content: space-evenly;
+          justify-content: space-evenly; } }
+      @media (min-width: 992px) {
+        .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion {
+          width: 63%;
+          -webkit-justify-content: flex-end;
+          -moz-justify-content: flex-end;
+          -ms-justify-content: flex-end;
+          -o-justify-content: flex-end;
+          justify-content: flex-end;
+          padding: 15px 0;
+          line-height: 150%; } }
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion .salida {
+        padding-left: 50px;
+        position: relative; }
+        @media (min-width: 992px) {
+          .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion .salida {
+            margin-right: 50px; } }
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion .llegada {
+        padding-left: 50px;
+        position: relative; }
+      .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion .separador-vertical {
+        width: 1px;
+        height: 50px;
+        background: #dedede; }
+        @media (min-width: 992px) {
+          .paquete-mas18 .detalles-wrapper .aereos-wrapper .avion .separador-vertical {
+            display: none; } }
+.paquete-mas18 .icon-avion-in {
+  display: block;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: url(../images/sprite.png);
+  background-position: -331px -77px; }
+.paquete-mas18 .icon-avion-out {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../images/sprite.png);
+  background-position: -385px -77px; }
+.paquete-mas18 #contenedor-mapa {
+  height: 450px;
+  margin: 40px 0; }
+.paquete-mas18 .info-gral-wrapper {
+  margin: 60px 0 30px; }
+.paquete-mas18 .contenido-paquete {
+  margin-top: 60px; }
+  .paquete-mas18 .contenido-paquete h3 {
+    margin: 40px 0 20px;
+    font-size: 150%;
+    line-height: 110%;
+    text-transform: uppercase;
+    font-family: "Champagne & Limousines", "NB International Pro Mono", "NB International Pro", sans-serif; }
+  .paquete-mas18 .contenido-paquete p {
+    margin: 10px 0; }
+  .paquete-mas18 .contenido-paquete ul {
+    padding-left: 20px;
+    list-style: disc; }
+    .paquete-mas18 .contenido-paquete ul li {
+      padding-left: 20px;
+      list-style: disc; }
+  .paquete-mas18 .contenido-paquete strong {
+    font-weight: bold; }
+  .paquete-mas18 .contenido-paquete em {
+    font-style: italic; }
+
 /*# sourceMappingURL=style.css.map */

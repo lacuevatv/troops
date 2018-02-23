@@ -61,9 +61,10 @@
     <!------- owl ------>
     <script src="<?php echo MAINSURL; ?>/inc/lib/owl/owl.carousel.min.js"></script>
     <!------- GOOGLE MAPS ------>
-    <?php if ($pageActual == 'inicio') {
+    <?php if ( $pageActual == 'inicio' || $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos') {
         echo '<script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key='.APIKEYGOOGLE.'&callback=initMap"></script>';
     } ?>
+    <!------- OWN SCRIPT ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
 </body>
 </html>
