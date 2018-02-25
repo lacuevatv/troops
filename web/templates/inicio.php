@@ -143,14 +143,9 @@
 			</h3>
 		</a>
 		
-		<?php
-		$imagenInst = MAINSURL . '/assets/images/temp/instagram-pc.png';
-		if ( dispositivo() != 'pc' ) {
-			$imagenInst = MAINSURL . '/assets/images/temp/instagram-movil.png';
-		}
-		?>
+		
 
-		<!--<img class="image-responsive" src="<?php echo $imagenInst; ?>">-->
+		<!--<img class="image-responsive" src="<?php echo MAINSURL; ?>/assets/images/temp/instagram-pc.png">-->
 
 		<div class="sociales-wrapper">
 

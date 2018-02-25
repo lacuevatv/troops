@@ -14,7 +14,7 @@ VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
 4.0 
 --------------------------------------------------------------*/
 
-var baseUrl = 'http://' + window.location.host + '/troops';
+var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var pageActual = $('.wrapper-site').attr('data-page-actual');
 
@@ -168,7 +168,7 @@ $(document).ready(function(){
     //click en los icons de contenido sección nosotros
     $(document).on('click', '.toogle-icons-contenidos', function( e ){
         e.preventDefault();
-        //debugger;
+        
         var href = $(this).attr('href');
         var item = $(href);
         var h = item.prop('scrollHeight') + 'px';
@@ -241,6 +241,34 @@ $(document).ready(function(){
         }
 
     });
+
+    //hover en los iconos de contenido
+    $('.toogle-icons-contenidos').hover(
+
+        function () {
+            if ( window.innerWidth > 992 ) {
+                var href = $(this).attr('href');
+                var positionLeft = ($(this).offset().left)-70;              
+                
+                var marcador = $('.equipo-item-active').clone().addClass('equipo-item-active-clone');
+                marcador.appendTo('.nosotros-equipo');
+                
+                $(marcador).animate({
+                    'left':  positionLeft + 'px',
+                }, 500);
+            }
+        },
+        function () {
+            if ( window.innerWidth > 992 ) {
+                var marcador = $('.equipo-item-active-clone');
+                $(marcador).animate({
+                    'left':  '-10000px',
+                }, 500);   
+                $(marcador).remove();
+            }
+        },
+    );
+
 
     /*
      * AJAX FORMS
@@ -460,11 +488,14 @@ $( window ).on('load', function(){
         contenedor.empty();
         //agrega los controles
         $(contenedor).append($('<div class="controls"><span class="close-control"></span><span class="left-control"></span><span class="right-control"></span></div>'));
-
         
+        //clona la info del paquete y la adjunta al modal para mostrarla
         var info = $(this.closest('article')).find('.paquete-info').clone();
         $(contenedor).append(info);
-
+        //sube la pantalla para que se vea bien
+        $('html, body').stop().animate({
+            scrollTop: $(contenedor).offset().top - 130
+        }, 'slow');
 
 
         //abre los controles, en este caso, solo cerrar
