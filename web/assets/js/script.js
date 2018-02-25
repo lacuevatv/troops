@@ -14,7 +14,7 @@ VIDEO INICIO / GRILLA BARILOCHE / MAS INFO
 4.0 
 --------------------------------------------------------------*/
 
-var baseUrl = 'http://' + window.location.host;
+var baseUrl = 'http://' + window.location.host + '/troops';
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var pageActual = $('.wrapper-site').attr('data-page-actual');
 
@@ -137,17 +137,21 @@ $(document).ready(function(){
     /*
      * MARCADOR MENU
     */
-    $('.tours-nav-menu li').hover(
+    $('.tours-nav-menu li a').hover(
+
         function() {
-            if ( $('.tour-active-icon').length != 0 ) {
-                $('.tour-active-icon').clone().addClass('item-tem').prependTo($(this))
-            } else {
-                $('<span class="tour-active-icon item-tem"></span>').prependTo($(this))
+
+            if (window.innerWidth > 992) {
+                if ( $('.tour-active-icon').length != 0 ) {
+                    $('.tour-active-icon').clone().addClass('item-tem').prependTo($(this).closest('li'))
+                } else {
+                    $('<span class="tour-active-icon item-tem"></span>').prependTo($(this).closest('li'))
+                }
             }
         }, function() {
             $('.item-tem').fadeOut().remove();
         });
-    //$('.tour-active-icon').prependTo($($('.tours-nav-menu li')[4]))
+    
 
     /*
      * SECCION EQUIPOS
