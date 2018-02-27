@@ -64,12 +64,14 @@ if(!defined("SECUREACCESS"))
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Página<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="index.php?admin=biblioteca-medios" role="button">Medios</a>
+                  <a href="index.php?admin=promociones" role="button">Promociones</a>
                 </li>
                 <li>
-                  <a href="index.php?admin=promociones" role="button">promociones</a>
+                  <a href="index.php?admin=pages" role="button">Lugares</a>
                 </li>
-               
+               <li>
+                  <a href="index.php?admin=biblioteca-medios" role="button">Medios</a>
+                </li>
               </ul>
             </li>
           <?php endif; ?>
