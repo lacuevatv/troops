@@ -33,7 +33,7 @@
 												Localización:
 											</td>
 											<td class="info">
-												<?php echo $detalles['loc']; ?>
+												<?php echo $detalles[0]; ?>
 											</td>
 										</tr>
 
@@ -42,7 +42,7 @@
 												Asientos disponible:
 											</td>
 											<td class="info">
-												<?php echo $detalles['asientos']; ?>
+												<?php echo $detalles[1]; ?>
 											</td>
 										</tr>
 
@@ -51,7 +51,7 @@
 												Precio:
 											</td>
 											<td class="info">
-												<?php echo $detalles['precio']; ?>
+												<?php echo $detalles[2]; ?>
 											</td>
 										</tr>
 
@@ -60,7 +60,7 @@
 												Días:
 											</td>
 											<td class="info">
-												<?php echo $detalles['dias']; ?>
+												<?php echo $detalles[3]; ?>
 											</td>
 										</tr>
 
@@ -69,7 +69,7 @@
 												Descuento:
 											</td>
 											<td class="info">
-												<?php echo $detalles['descuento']; ?>
+												<?php echo $detalles[4]; ?>
 											</td>
 										</tr>
 									</table>
@@ -85,11 +85,11 @@
 											</h5>
 										</div>
 										<div class="precio-archivo">
-											<a href="<?php echo $detalles['avion-aterriza']; ?>" target="_blank">
+											<a href="<?php echo UPLOADSFILE . '/'. $paquetes[$i]['post_file']; ?>" target="_blank">
 												Descargar PDF
 											</a>
 											<h4>
-												<?php echo $detalles['precio']; ?>
+												<?php echo $detalles[2]; ?>
 											</h4>
 										</div>
 									</div>
@@ -97,23 +97,23 @@
 									<div class="aereos-wrapper">
 										<div class="viaje">
 											<p>
-												<?php echo $detalles['ida']; ?>
+												<?php echo $detalles[5]; ?>
 											</p>
 											<p>
-												<?php echo $detalles['idafecha']; ?>
+												<?php echo $detalles[6]; ?>
 											</p>
 										</div>
 										<div class="avion">
 											<p class="salida">
 												<span class="icon-avion-in"></span>
 												SALIDA<br>
-												<?php echo $detalles['avion-despegue']; ?>
+												<?php echo $detalles[7]; ?>
 											</p>
 											<div class="separador-vertical"></div>
 											<p class="llegada">
 												<span class="icon-avion-out"></span>
 												LLEGADA<br>
-												<?php echo $detalles['avion-aterriza']; ?>
+												<?php echo $detalles[8]; ?>
 											</p>	
 										</div>
 
@@ -121,10 +121,10 @@
 
 										<div class="viaje">
 											<p>
-												<?php echo $detalles['regreso']; ?>
+												<?php echo $detalles[9]; ?>
 											</p>
 											<p>
-												<?php echo $detalles['regresofecha']; ?>
+												<?php echo $detalles[10]; ?>
 											</p>
 										</div>
 
@@ -132,13 +132,13 @@
 											<p class="salida">
 												<span class="icon-avion-in"></span>
 												SALIDA<br>
-												<?php echo $detalles['avion-despegue2']; ?>
+												<?php echo $detalles[11]; ?>
 											</p>
 											<div class="separador"></div>
 											<p class="llegada">
 												<span class="icon-avion-out"></span>
 												LLEGADA<br>
-												<?php echo $detalles['avion-aterriza2']; ?>
+												<?php echo $detalles[12]; ?>
 											</p>
 										</div>
 									</div>

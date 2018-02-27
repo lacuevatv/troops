@@ -9,7 +9,7 @@ define ( 'TEMPLATEDIR', dirname( __FILE__ ) . '/../templates' );
 define ( 'MODULOSDIR', dirname( __FILE__ ) . '/modulos' );
 define ( 'UPLOADS', dirname( __FILE__ ) . '/../../contenido' );
 define ( 'UPLOADSIMAGES', dirname( __FILE__ ) . '/../../contenido' );
-define ( 'UPLOADSFILES', dirname( __FILE__ ) . '/../../contenido/archivos' );
+define ( 'UPLOADSFILES', dirname( __FILE__ ) . '/../../contenido' );
 //URL
 define ('CARPETASERVIDOR', '' );//esta variable se define si el sitio no está en el root del dominio y si está en una subcarpeta
 define ('MAINURL', 'http://' . $_SERVER['HTTP_HOST'] . CARPETASERVIDOR );
@@ -19,9 +19,9 @@ define ('UPLOADSURLIMAGES', UPLOADSURL . '');//carpeta  de imagenes (por si tien
 define ('UPLOADSURLFILES', UPLOADSURL . '');//carpeta de archivos (por si tiene distintas carpetas de contenido)
 
 //DEFINICIONES HEAD Y SCRIPTS
-define ( 'SITENAME', 'titulo' );
+define ( 'SITENAME', 'Troops' );
 define ( 'DATEPUBLISHED', '2018');
-define ('LOGOSITE' , URLADMINISTRADOR . '/assets/images/logosite.png');
+define ('LOGOSITE' , URLADMINISTRADOR . '/assets/images/logo.gif');
 define ( 'SITETITLE', 'Nombre - Panel de control' );
 define ( 'FAVICONICO', URLADMINISTRADOR . '/favicon.ico' );
 
@@ -35,5 +35,10 @@ $usertype = array(
 //variables de definicion de administrador
 global $categorias;//define las categorias para cargar noticias
 $categorias = array(
-	array( 'slug' => 'galeria', 'nombre' => 'Galería'),
+	array( 'slug' => 'bariloche', 'nombre' => 'Bariloche'),
+	array( 'slug' => 'porto-seguro', 'nombre' => 'Porto Seguro'),
+	array( 'slug' => 'jurere', 'nombre' => 'Jureré'),
+	array( 'slug' => 'las-lenas', 'nombre' => 'Las Leñas'),
+	array( 'slug' => 'cancun', 'nombre' => 'Cancún'),
+	array( 'slug' => 'tematicos', 'nombre' => 'Temáticos'),
 );

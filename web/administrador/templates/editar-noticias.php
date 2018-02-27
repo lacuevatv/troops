@@ -31,15 +31,19 @@ $dia          = isset($dataPost['dia']) ? $dataPost['dia'] : '';
 $mes          = isset($dataPost['mes']) ? $dataPost['mes'] : '';
 $year         = isset($dataPost['year']) ? $dataPost['year'] : '';
 $status       = isset($dataPost['status']) ? $dataPost['status'] : 'new';
+$detalles     = isset($dataPost['detalles']) ? unserialize($dataPost['detalles']) : '';
+$mapa         = isset($dataPost['mapa']) ? unserialize($dataPost['mapa']) : '';
+$archivo      = isset($dataPost['archivo']) ? $dataPost['archivo'] : '';
+
 
 ?>
 <!---------- editar noticias ---------------->
 <div class="contenido-modulo">
 	<h1 class="titulo-modulo">
 		<?php if ( $slug == '' ) {
-		echo 'Agregar nueva noticia';
+		echo 'Agregar nuevo paquete';
 	} else {
-		echo 'Editar Noticia';
+		echo 'Editar Paquete';
 	} ?>
 	</h1>
 	<div class="container">
@@ -126,7 +130,8 @@ $status       = isset($dataPost['status']) ? $dataPost['status'] : 'new';
 					<div class="form-group">
 						<label for="post_resumen" class="larger-label">Resumen de la noticia</label>
 						<textarea id="post_resumen" name="post_resumen"><?php echo $resumen; ?></textarea>
-					</div>			
+					</div>
+
 				</div><!-- // col -->
 
 				<div class="col-30">
@@ -162,15 +167,129 @@ $status       = isset($dataPost['status']) ? $dataPost['status'] : 'new';
 				<div class="col">
 
 					<div id="accordion">
-						<h3>Video destacado</h3>
+						<!--<h3>Video destacado</h3>
 						<div>
-	<!------ VIDEO DESTACADO DE LA NOTICIA ---------->
+	<!------ VIDEO DESTACADO DE LA NOTICIA -----
 							<div class="form-group">
 								<label for="post_video">Url del video
 								<small>Copiar url de Youtube</small> </label>
 								<input id="post_video" name="post_video" value="<?php echo $video; ?>">
 							</div>
+						</div>-->
+
+					<?php if ( $categoria == 'las-lenas' || $categoria == 'cancun' || $categoria == 'tematicos' ) : ?>
+						<h3>Mapa</h3>
+						<div>
+							<div class="row">
+								<div class="col-50">
+									<div class="form-group">
+										<label for="map_latitud">Map, latitud:</label>
+										<input type="text" name="map_latitud" value="<?php echo $mapa[0]; ?>">
+									</div>
+								</div>
+								<div class="col-50">
+									<div class="form-group">
+										<label for="map_longitud">Map, longitud</label>
+										<input type="text" name="map_longitud" value="<?php echo $mapa[1]; ?>">
+									</div>
+								</div>
+							</div>
 						</div>
+
+					<?php endif; ?>
+
+
+					<?php if ( $categoria == 'las-lenas' || $categoria == 'cancun' || $categoria == 'tematicos' ) : ?>
+						<h3>Detalles</h3>
+						<div>
+							<div class="row">
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_loc">Localización</label>
+										<input type="text" name="detalles_loc" value="<?php echo $detalles[0]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_asientos">Asientos disponible</label>
+										<input type="text" name="detalles_asientos" value="<?php echo $detalles[1]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_precio">Precio</label>
+										<input type="text" name="detalles_precio" value="<?php echo $detalles[2]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_dias">Días</label>
+										<input type="text" name="detalles_dias" value="<?php echo $detalles[3]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_descuento">Descuento</label>
+										<input type="text" name="detalles_descuento" value="<?php echo $detalles[4]; ?>">
+									</div>
+								</div>
+							</div><!-- //.row-->	
+							<div class="row">
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_ida">Ida</label>
+										<input type="text" name="detalles_ida" value="<?php echo $detalles[5]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_idafecha">Ida Fecha</label>
+										<input type="text" name="detalles_idafecha" value="<?php echo $detalles[6]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_aviondespegue">Avión despegue</label>
+										<input type="text" name="detalles_aviondespegue" value="<?php echo $detalles[7]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_avionaterriza">Avión Aterriza</label>
+										<input type="text" name="detalles_avionaterriza" value="<?php echo $detalles[8]; ?>">
+									</div>
+								</div>
+							</div><!-- //.row-->	
+							<div class="row">
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_regreso">Regreso</label>
+										<input type="text" name="detalles_regreso" value="<?php echo $detalles[9]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_regresofecha">Regreso Fecha</label>
+										<input type="text" name="detalles_regresofecha" value="<?php echo $detalles[10]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_aviondespegue2">Avión despegue</label>
+										<input type="text" name="detalles_aviondespegue2" value="<?php echo $detalles[11]; ?>">
+									</div>
+								</div>
+								<div class="col-20">
+									<div class="form-group">
+										<label for="detalles_avionaterriza2">Avión aterriza</label>
+										<input type="text" name="detalles_avionaterriza2" value="<?php echo $detalles[12]; ?>">
+									</div>
+								</div>
+								
+							</div><!-- //.row-->	
+						</div>
+					<?php endif; ?>
+
 						<h3>Galeria de imagenes</h3>
 						<div>
 	<!------ GALERIA DE IMAGENES DELA  NOTICIA ---------->
@@ -219,9 +338,25 @@ $status       = isset($dataPost['status']) ? $dataPost['status'] : 'new';
 							<?php }//if ?>
 							</ul>
 						</div>
-						<!------ LINK EXTERNO ---------->
-						
-				   	</div><!-- //#accordion -->
+						<!------ ARCHIVO DESCARGAR ---------->
+						<h3>Archivo de descarga</h3>
+						<div>
+							<p>
+								Este es el archivo para descargar.
+							</p>
+							<div class="col">
+							<?php if ( $archivo != '' ) : ?>
+								<a id="archivo-descarga" href="<?php echo UPLOADSURLFILES . '/' . $archivo; ?>" target="_blank" class="btn" data-href="<?php echo $archivo; ?>">Ver archivo</a>
+								<button type="button" class="btn btn-primary btn-cambiar-file">Cambiar archivo</button>
+								<button type="button" class="btn btn-danger btn-delete-file">Borrar archivo</button>
+							<?php else : ?>
+								<button type="button" class="btn btn-primary btn-cambiar-file">Agregar archivo</button>
+							<?php endif; ?>
+
+							</div>
+						</div>
+					</div><!-- //#accordion-->	
+				   	
 			   	</div><!-- // col -->
 			   	
 			</div><!-- // row -->

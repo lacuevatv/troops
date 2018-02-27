@@ -8,6 +8,7 @@
 - video
 - contacto
 2.0 MENOS 18
+3.0 MAS 18
 --------------------------------------------------------------*/
 .col-flex {
 	@media (min-width: $md) {
@@ -1704,7 +1705,7 @@
 	.contenido-paquete {
 		margin-top: 60px;
 
-		h3 {
+		h1, h2, h3 {
 			margin: 40px 0 20px;
 			font-size: 150%;
 			line-height: 110%;

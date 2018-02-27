@@ -1072,6 +1072,7 @@ footer {
 - video
 - contacto
 2.0 MENOS 18
+3.0 MAS 18
 --------------------------------------------------------------*/
 @media (min-width: 992px) {
   .col-flex {
@@ -2517,7 +2518,7 @@ footer {
   margin: 60px 0 30px; }
 .paquete-mas18 .contenido-paquete {
   margin-top: 60px; }
-  .paquete-mas18 .contenido-paquete h3 {
+  .paquete-mas18 .contenido-paquete h1, .paquete-mas18 .contenido-paquete h2, .paquete-mas18 .contenido-paquete h3 {
     margin: 40px 0 20px;
     font-size: 150%;
     line-height: 110%;

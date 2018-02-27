@@ -49,7 +49,7 @@ if( isAjax() ) {
  			$directorio = $directorioFiles;
  		} 
  		
- 		if ($newFile && move_uploaded_file($archivos['tmp_name'][$i], $directorio . '/' . $newFile)) {
+ 		if ( $newFile && move_uploaded_file($archivos['tmp_name'][$i], $directorio . '/' . $newFile ) ) {
  			//si se movio al directorio ahora lo subimos a la base de datos
  			
  			$query = "INSERT INTO " .$tabla. " (medio_nombre,medio_tipo,medio_post_type) VALUES ('".$newFile."','".$file_type."','".$post_type."')";

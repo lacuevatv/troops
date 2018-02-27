@@ -3,23 +3,27 @@
  * ver lista de noticias
  * parametros: limite a mostrar, estado (publicado, borrador, todos), estilo (el extendido mustra botones para editar la noticia, verla o publicarla), la categoria a mostrar y si muestra al final un pequeño resumen de lo que queda
 */
-function listaNoticias( $limit = 20, $status = 'all', $extended = false, $categoria = 'none', $resumenQuery = false ) {
+function listaNoticias( $limit = 20, $status = 'all', $extended = false, $categoria = 'none', $postType = 'paquete', $resumenQuery = false ) {
 	$connection = connectDB();
 	$tabla = 'posts';
 
 	//queries según parámetros
-	$query  = "SELECT * FROM " .$tabla. " ORDER by post_fecha desc LIMIT ".$limit." ";
+	$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' ORDER by post_fecha desc LIMIT ".$limit." ";
+	//si tiene otro post Type
+	if ( $postType != 'paquete' ) {
+		$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' AND post_categoria='".$categoria."' ORDER by post_fecha desc LIMIT ".$limit." ";
+	}
 	//si tiene categoria:
 	if ( $categoria != 'none' ) {
-		$query  = "SELECT * FROM " .$tabla. " WHERE post_categoria='".$categoria."' ORDER by post_fecha desc LIMIT ".$limit." ";
+		$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' AND post_categoria='".$categoria."' ORDER by post_fecha desc LIMIT ".$limit." ";
 	}
 	//si tiene definido status (publicado, borrador) y categoria
 	if ( $status != 'all' ) {
-		$query  = "SELECT * FROM " .$tabla. " WHERE post_status='".$status."' ORDER by post_fecha desc LIMIT ".$limit." ";
+		$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' AND post_status='".$status."' ORDER by post_fecha desc LIMIT ".$limit." ";
 	}
 	//si tiene definido status y categoria
 	if ( $status != 'all' && $categoria != 'none' ) {
-		$query  = "SELECT * FROM " .$tabla. " WHERE post_status='".$status."' AND post_categoria='".$categoria."' ORDER by post_fecha desc LIMIT ".$limit." ";
+		$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' AND post_status='".$status."' AND post_categoria='".$categoria."' ORDER by post_fecha desc LIMIT ".$limit." ";
 	}
 	
 	$result = mysqli_query($connection, $query);
@@ -179,6 +183,9 @@ function searchPost ( $slug ) {
 				'mes'          => $mes,
 				'year'         => $year,	
 				'status'       => $data['post_status'],
+				'mapa'         => $data['post_mapa'],
+				'detalles'     => $data['post_detalle'],
+				'archivo'      => $data['post_file'],
 			);
 
 		closeDataBase($connection);

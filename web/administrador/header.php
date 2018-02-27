@@ -47,13 +47,13 @@ if(!defined("SECUREACCESS"))
   <!--menu modulo asinado-->
           <ul class="menu-top menu-left">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Noticias<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Paquetes<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="index.php?admin=editar-noticias" role="button">Agregar nueva</a>
+                  <a href="index.php?admin=editar-noticias" role="button">Agregar nuevo</a>
                   </li>
                 <li>
-                  <a href="index.php?admin=noticias" role="button">Ver todas</a>
+                  <a href="index.php?admin=noticias" role="button">Ver todos</a>
                 </li>
               </ul>
             </li>
@@ -69,9 +69,7 @@ if(!defined("SECUREACCESS"))
                 <li>
                   <a href="index.php?admin=promociones" role="button">promociones</a>
                 </li>
-                <li>
-                  <a href="index.php?admin=editar-slider&slug=home" role="button">Slider Inicio</a>
-                </li>
+               
               </ul>
             </li>
           <?php endif; ?>
@@ -129,7 +127,7 @@ if(!defined("SECUREACCESS"))
       </div>
       <div class="col-20">
         <h5 class="fecha-hoy">
-          2 de octubre de <strong>2018</strong>
+          27 de febrero de <strong>2018</strong>
         </h5>
       </div>
     </div>

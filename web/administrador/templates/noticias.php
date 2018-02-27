@@ -33,7 +33,7 @@ load_module( 'noticias' );
 		<div class="row">
 			<div class="col">
 			<ul class="loop-noticias-backend">
-        		<?php listaNoticias(10, 'all', true, 'none', true); ?>
+        		<?php listaNoticias(10, 'all', true, 'none', 'paquete', true); ?>
         		
         	</ul>
         	</div><!-- // col -->

@@ -249,7 +249,7 @@ $(document).ready(function(){
 		//si es boton publicar
 		if ( name == 'submit_publish' ) {
 			
-			if (confirm('¿Seguro que quiere publicar esta noticia?')) {
+			if (confirm('¿Seguro que quiere publicar?')) {
 				//se cambia el status a publicado
 				$('#post_status').val('publicado');
 				//se hace submit al formulario
@@ -278,7 +278,7 @@ $(document).ready(function(){
 		//primero revalidamos que el titulo y el url esten,sino estan hay un error
 		//el título no puede estar vacío
 		if ( $('#post_title').val() == '' ) {
-			error.append( '<li class="error-msj-list-item-danger">El título de la noticia no puede estar vacía</li>');
+			error.append( '<li class="error-msj-list-item-danger">El título no puede estar vacía</li>');
 			return;
 		}
 		//la url no puede estar vacía
@@ -286,6 +286,12 @@ $(document).ready(function(){
 			error.append( '<li class="error-msj-list-item-danger">La URL no puede estar vacía</li>');
 			return;
 		}
+
+		var archivoDescarga = $('#archivo-descarga').attr('data-href');
+		if ( archivoDescarga == undefined ) {
+			archivoDescarga = '';
+		}
+
 		var galeriaImagenes = [];
 		//procesa los datos de la galeria de imagenes y su orden actual
 		var imagenes = $('.galeria-imagenes-wrapper').find('input');
@@ -296,8 +302,13 @@ $(document).ready(function(){
 		}
 		var formulario = $( this );
 		var formData = new FormData( formulario[0] );
+		//adjuntamos galeria de imagenes
 		formData.append('imgGaleria', galeriaImagenes);
+		//adjuntamos los datos del archivo
+		formData.append('archivo', archivoDescarga);
+
 		
+		console.log(archivoDescarga)
 		$.ajax({
 			type: 'POST',
 			url: ajaxFunctionDir + '/editor-backend.php',
@@ -414,6 +425,87 @@ $(document).ready(function () {
 					$('#imagen_destacada_wrapper').append(html);
 					//se borra el boton de cargar imagen
 					$('.upload-post_imagen_btn_wrapper').remove();
+		    		//se cierra el dialogo
+		    		$( this ).dialog( "close" );
+		    	}
+		    },
+		  ],
+		});
+		$( "#dialog" ).dialog( 'open' ).load( templatesDir + '/media-browser.php' );
+	});
+
+});// ready imagenDestacada ()
+
+
+/*
+SUBIR Y BORRAR ARCHIVO
+*/
+
+$(document).ready(function () {
+	//borrar imagen destacada
+	$(document).on('click', '.btn-delete-file', function(){
+		
+		if (confirm('Seguro quiere borrar el archivo')) {
+			
+			var contenedor = this.closest('div')
+			$(contenedor).find('a').remove();
+			$(contenedor).find('.btn-cambiar-file').text('Agregar archivo');
+
+			//borra el boton
+			this.remove();
+
+
+			
+		}
+	});
+
+
+	//cargar archivo
+	$(document).on('click','.btn-cambiar-file',function(){
+		
+		var contenedor = this.closest('div')
+		$(contenedor).find('a').remove()
+		$(contenedor).find('.btn-cambiar-file').text('cambiar archivo');
+		$(contenedor).find('.btn-delete-file').remove()
+
+		$( "#dialog" ).dialog({
+			title: 'Biblioteca de imágenes',
+			autoOpen: false,
+			appendTo: '.contenido-modulo',
+			height: 600,
+			width:768,
+			modal: true,
+			buttons: [
+		    {
+		    	text: "Cerrar",
+		      	class: 'btn btn-default',
+		      	click: function() {
+		        $( this ).dialog( "close" );
+		      }
+		    },
+		    {
+		    	text: 'Insertar archivo',
+		    	class: 'btn btn-success',
+		    	click: function () {
+		    		//se toma el nombre de la imagen, siempre la primera porque es UNA imagen destacada
+		    		archivo = $('.previewAtachment')[0];
+		    		archivo =  $(archivo).val();
+		    		if ( archivo == '' ) {
+		    			$( this ).dialog( "close" );
+		    			return;
+		    		}
+		    		//se incluye la imagen en el input a guardar en base de datos, solo nombre
+					$('#post_imagen').val(archivo);
+					//se genera url completo de la imagen para mostrar ahora
+					urlimg = uploadsDir + '/' + archivo;
+					//se imprime el html con el url de la imagen
+					var innherHtml = '<a id="archivo-descarga" href="'+urlimg+'" target="_blank" class="btn" data-href="'+archivo+'">Ver archivo</a>';
+					var html = $(innherHtml);
+					$(contenedor).prepend(html);
+					var botondel = '<button type="button" class="btn btn-danger btn-delete-file">Borrar archivo</button>';
+					var htmlB = $(botondel)
+					$(contenedor).append(htmlB);
+					
 		    		//se cierra el dialogo
 		    		$( this ).dialog( "close" );
 		    	}
