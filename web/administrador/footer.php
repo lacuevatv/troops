@@ -11,7 +11,7 @@ if(!defined("SECUREACCESS"))
 	<div class="container">
 	    Módulo de administración. <?php echo SITENAME; ?> - <?php echo DATEPUBLISHED; ?>
 	</div>
-	<div style="position: absolute; bottom: 20px;right: 5%;color:#bbb;"><a href="http://lacueva.tv" title="Agencia de desarrollo web" style="color: #bbb;text-decoration: none;">LaCueva.tv</a></div>
+	
 </footer>
 <!------- // fin contenido ------>
 <!------- script jqueryUI ------>

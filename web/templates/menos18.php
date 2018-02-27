@@ -10,6 +10,8 @@
 
 		<div class="container">
 
+	<?php if ($paquetes != null ) : ?>
+
 			<ul class="paquetes-menos18">
 				<span class="deco-paquetes-top-right"></span>
 		<?php 
@@ -101,6 +103,12 @@
 		<?php }
 			?>
 			</ul>
+	
+	<?php else : ?>
+
+		<?php getTemplate( '404' ); ?>
+
+	<?php endif; ?>
 
 		</div>
 	</div>

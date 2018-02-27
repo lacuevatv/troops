@@ -33,10 +33,9 @@ if ( $pageActual != 'inicio' ) {
 
 if ($data != null ) {
 	$headerTitulo = $data['post_titulo'];
-    $imagenHeader = UPLOADSURL . '/' . $data['post_imagen'];
-	if ( dispositivo() != 'pc' ) {
-        $imagenHeader = UPLOADSURL . '/' . $data['post_imagen'];
-    }
+	if ( $data['post_imagen'] != '' ) {
+		$imagenHeader = UPLOADSURL . '/' . $data['post_imagen'];	
+	}
 }
 
 include 'header.php';

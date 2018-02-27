@@ -6,7 +6,7 @@
  * carga otras noticias de acuerdo a la categoria que le piden
 */
 require_once('../functions.php');
-$noticiasPorPagina = 10;
+$noticiasPorPagina = POSTPERPAGE;
 $connection = connectDB();
 $tabla = 'posts';
 $categoria = isset( $_POST['categoria'] ) ? $_POST['categoria'] : 'none';
@@ -35,8 +35,6 @@ if ( $result->num_rows == 0 ) {
 		$video        = $row['post_video'];
 		$categoria    = $row['post_categoria'];
 		$galeria      = $row['post_galeria'];
-		$imgGaleria   = $row['post_imagenesGal'];
-		$linkExterno  = $row['post_link_externo'];
 		$status       = $row['post_status'];
 		$date         = $row['post_fecha'];
 
@@ -67,13 +65,14 @@ if ( $result->num_rows == 0 ) {
 				    		<small><?php echo $date; ?></small>
 				    	</h1>
 				    	<p class="links-edicion-noticias">
-				    		<a href="#editar-noticia" title="Editar">Editar Noticia</a> | 
-				    		<a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Ver noticia</a>
+				    		<a href="index.php?admin=editar-noticias&slug=<?php echo $url; ?>" title="Editar">Editar</a>
 				    		<?php 
 				    			if ( $status != 'publicado' ) {
 				    		?>
-				    		 | <a href="#publicar-noticia" title="Publicar">Publicar</a>
+				    		 | <a href="<?php echo $url; ?>" class="btn-publish-post" title="Publicar">Publicar</a>
+
 				    		<?php } ?>
+				    		| <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
 				    	</p>
 						
 				    </div>

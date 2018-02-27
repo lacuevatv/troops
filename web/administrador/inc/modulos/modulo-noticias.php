@@ -11,7 +11,7 @@ function listaNoticias( $limit = 20, $status = 'all', $extended = false, $catego
 	$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' ORDER by post_fecha desc LIMIT ".$limit." ";
 	//si tiene otro post Type
 	if ( $postType != 'paquete' ) {
-		$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' AND post_categoria='".$categoria."' ORDER by post_fecha desc LIMIT ".$limit." ";
+		$query  = "SELECT * FROM " .$tabla. " WHERE post_type='".$postType."' ORDER by post_fecha desc LIMIT ".$limit." ";
 	}
 	//si tiene categoria:
 	if ( $categoria != 'none' ) {
@@ -81,16 +81,14 @@ function listaNoticias( $limit = 20, $status = 'all', $extended = false, $catego
 				    	</h1>
 				    	<p class="links-edicion-noticias">
 				    		<a href="index.php?admin=editar-noticias&slug=<?php echo $url; ?>" title="Editar" class="btn-edit-news">
-					    		Editar Noticia
+					    		Editar
 					    	</a>
 					    	<?php 
 				    			if ( $status != 'publicado' ) {
 				    		?>
-				    		 | <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Vista Previa</a>
 				    		 | <a href="<?php echo $url; ?>" class="btn-publish-post" title="Publicar">Publicar</a> 
 				    		 | <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
 				    		<?php } else { ?>
-				    		 | <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Ver noticia</a>
 				    		 | <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
 				    		 <?php } ?>
 				    	</p>
@@ -116,7 +114,7 @@ function listaNoticias( $limit = 20, $status = 'all', $extended = false, $catego
 		}//FOREACH
 		//muestra el resumen de la búsqueda y lo imprime al final
 		if ( $resumenQuery ) {
-			$totales = mysqli_query($connection, "SELECT *  FROM " .$tabla. " ");
+			$totales = mysqli_query($connection, "SELECT *  FROM " .$tabla. " WHERE post_type='paquete'");
 			$cantTotal = $totales->num_rows;
 			$cargadasenQuery = count($rows);
 			//echo $cargadasenQuery . ' noticias cargadas. '.$cantTotal.' noticias en total' ;

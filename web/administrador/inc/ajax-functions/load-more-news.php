@@ -6,22 +6,22 @@
  * carga mas noticias
 */
 require '../functions.php';
-$noticiasPorPagina = 10;
+$noticiasPorPagina = POSTPERPAGE;
 $connection = connectDB();
 $tabla = 'posts';
 $pageActual = isset( $_POST['page'] ) ? intval( $_POST['page'] ) : 2;
 $categoria = isset( $_POST['categoria'] ) ? $_POST['categoria'] : 'none';
 
-$query  = "SELECT *  FROM " .$tabla. " ORDER by post_fecha desc LIMIT ".( ($pageActual-1 )*$noticiasPorPagina).", ".$noticiasPorPagina." ";
+$query  = "SELECT *  FROM " .$tabla. " WHERE post_type='paquete' ORDER by post_fecha desc LIMIT ".( ($pageActual-1 )*$noticiasPorPagina).", ".$noticiasPorPagina." ";
 
 if ( $categoria != 'none' ) {
-		$query  = "SELECT *  FROM " .$tabla. " WHERE post_categoria= '".$categoria."' ORDER by post_fecha desc LIMIT ".( ($pageActual-1 )*$noticiasPorPagina).", ".$noticiasPorPagina." ";
+		$query  = "SELECT *  FROM " .$tabla. " WHERE post_type='paquete' AND post_categoria= '".$categoria."' ORDER by post_fecha desc LIMIT ".( ($pageActual-1 )*$noticiasPorPagina).", ".$noticiasPorPagina." ";
 	}
 
 $result = mysqli_query($connection, $query);
 
 if ( $result->num_rows == 0 ) {
-	echo 'No hay más noticias para cargar';
+	echo 'No hay más para cargar';
 } else {
 
 	while ( $row = $result->fetch_array() ) {
@@ -91,7 +91,7 @@ if ( $result->num_rows == 0 ) {
 	}//FOREACH
 
 	//para ver cuantas son:
-	$totales = mysqli_query($connection, "SELECT *  FROM " .$tabla. " ");
+	$totales = mysqli_query($connection, "SELECT *  FROM " .$tabla. " WHERE post_type='paquete'");
 	$cantTotal = $totales->num_rows;
 	$cargadasenQuery = count($rows);
 	//echo $cargadasenQuery . ' noticias cargadas. '.$cantTotal.' noticias en total' ;

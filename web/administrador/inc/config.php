@@ -25,6 +25,8 @@ define ('LOGOSITE' , URLADMINISTRADOR . '/assets/images/logo.gif');
 define ( 'SITETITLE', 'Nombre - Panel de control' );
 define ( 'FAVICONICO', URLADMINISTRADOR . '/favicon.ico' );
 
+
+define('POSTPERPAGE', 10);
 //variables tipo de usuario
 global $usertype;
 $usertype = array(

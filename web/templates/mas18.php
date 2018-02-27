@@ -6,6 +6,9 @@
 <section class="lugar-section">
 	<div class="paquetes-wrapper">
 		<div class="container">
+
+	<?php if ($paquetes != null ) : ?>
+
 			<ul class="paquetes-mas18">
 		<?php 
 			for ($i=0; $i < count($paquetes); $i++) { 
@@ -155,10 +158,10 @@
 									Información General
 								</h2>
 
-								<h5 class="section-sub-title">
+								<h5 class="section-sub-title section-sub-title-short">
 									<span class="deco-line"></span>
 									<span>
-										<?php echo $detalles['loc']; ?>
+										<?php echo $detalles[0]; ?>
 									</span>
 								</h5>
 
@@ -197,6 +200,12 @@
 			?>
 			</ul>
 
+	<?php else : ?>
+
+		<?php getTemplate( '404' ); ?>
+
+	<?php endif; ?>
+	
 		</div>
 	</div>
 </section>

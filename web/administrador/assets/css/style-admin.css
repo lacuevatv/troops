@@ -728,7 +728,7 @@ ul.dropdown-menu {
 
 .btn-primary {
   border: none;
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #337ab7; }
 
 .btn-danger {
