@@ -25,9 +25,10 @@ define('SITETITLE', 'Troops');
 define('METADESCRIPTION', '');
 define('METAKEYS', '');
 define( 'HABILITACIONES', 'Toors Viajes E.V y T. 0.000 Disp. 0.000' );
-define('INSTAGRAM', 'viajestroops');
+define('INSTAGRAM', 'troops.viajes');
 //LINKS:
-define( 'LINK_EMAIL', 'info@lacueva.tv' );
+define( 'EMAILFORMULARIO', 'info@troops.tur.ar' );
+define( 'LINK_EMAIL', 'info@troops.tur.ar' );
 define( 'WHATSAPPTEXT', '+54.934.1559.0789');
 define( 'WHATSAPP', '54934590789');
 define('LINK_FACEBOOK', '#');

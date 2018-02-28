@@ -201,7 +201,7 @@
 			</address>
 
 			<form method="POST" id="contact-form-home" name="contact-form-home" class="formulario">
-
+				<input type="hidden" name="page" value="<?php global $pageActual; echo $pageActual; ?>">
 				<div class="form-group">
 					<label for="name">Nombre</label>
 					<input type="text" id="name" name="name" placeholder="Nombre">	

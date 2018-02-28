@@ -6,7 +6,7 @@
  * 
 */
 global $userStatus;
-if ($userStatus != '0' ) {
+if ($userStatus != '1' ) {
     echo 'No tiene permisos para ver esta sección';
     
     exit;

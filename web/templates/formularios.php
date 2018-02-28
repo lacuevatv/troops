@@ -9,7 +9,8 @@
 				<span>Pedí tu reunión Troops acá</span>
 			</h2>
 			
-			<form method="POST" id="contact-form-tour" name="contact-form-tour" class="formulario">
+			<form method="POST" id="contact-form-tour-menos" name="contact-form-tourmenos" class="formulario">
+				<input type="hidden" name="page" value="<?php global $pageActual; echo $pageActual; ?>">
 
 				<div class="form-group">
 					<label for="school">Nombre del colegio</label>

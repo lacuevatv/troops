@@ -292,9 +292,12 @@ $(document).ready(function(){
             cache: false,
             //funcion antes de enviar
             beforeSend: function() {
+                $('.url-form').text('Enviando, espere...');
             },
             success: function ( response ) {
-                console.log(response);
+                //console.log(response);
+                $('.url-form').text(response);
+                $('#contact-form-home')[0].reset();
                 
             },
             error: function ( ) {
@@ -307,13 +310,13 @@ $(document).ready(function(){
 
 
 
-    $('#contact-form-tour').submit(function( event ){
+    $('#contact-form-tour-menos').submit(function( event ){
         event.preventDefault();
     
         console.log('formulario-tours');
 
         formData = new FormData( this );
-        formData.append('function','contact-home');
+        formData.append('function','contact-tour-menos');
 
         $.ajax( {
             type: 'POST',
@@ -324,9 +327,12 @@ $(document).ready(function(){
             cache: false,
             //funcion antes de enviar
             beforeSend: function() {
+                $('.url-form').text('Enviando, espere...');
             },
             success: function ( response ) {
                 console.log(response);
+                $('.url-form').text(response);
+                $('#contact-form-tour-menos')[0].reset();
                 
             },
             error: function ( ) {
