@@ -599,6 +599,9 @@ $( window ).on('load', function(){
     $window.trigger('scroll');
     
 
+
+
+
 });//ON LOAD
 
 
@@ -639,23 +642,71 @@ $(window).on('load', function(){
 3.0 OWL SLIDERS
 --------------------------------------------------------------*/
 
-/*$(window).on('load', function(){
+
+//CARGA SLIDER EN MÁS 18
+$(window).on('load', function(){
     
-    $('#header-slider').owlCarousel({
-        loop:true,
-        margin:50,
-        nav:true,
-        navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
-        dots:true,
-        responsive:{
-            0:{
-                items:1
-            },
-        },
-    });
+    if( pageActual == 'las-lenas' || pageActual == 'cancun' || pageActual == 'tematicos') {
+        //inicia el carousel
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+            responsive:{
+                0:{
+                    items:1
+                },
+                992:{
+                    items:3
+                },
+                1200:{
+                    items:5
+                },
+                1300:{
+                    items:6
+                },
+                1500:{
+                    items:8
+                }
+            }
+        });//owl
 
+        if (window.innerWidth > 992) {
+            var MainImage = $('.main-picture-wrapper figure img');
+            var contenedor = $('.galeria-inner-wrapper');
+            var contenedorHeightNormal = $(contenedor).height();
+            //ajusta las medidas la inicio
+            var hImg = $('.main-picture-wrapper figure img').height();
+                $(contenedor).animate({
+                    'height': hImg + 'px'
+                },1000);
 
+            //al hacer clic en la imagen debería mostrar la que se selecciono
+            $('.toggle-picture').click(function(){
+                
+                //busca el src de la imagen
+                var href = $(this).attr('src');
+                //lo coloca como main image
+                $(MainImage).attr('src', href);
+                //ajusta las medidas
+                var hImg = $('.main-picture-wrapper figure img').height();
+                $(contenedor).animate({
+                    'height': hImg + 'px'
+                },1000);
+                
+            });
+        } else {
+            //busca la imagen mas alta y ajusta el contenedor
+            var hImg = $('.owl-carousel').height();
+            
+            $('.galeria-inner-wrapper').animate({
+                    'height': hImg + 'px'
+                },1000);
+        }
+
+    }
 
 });//on load
-*/
+
 

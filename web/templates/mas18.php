@@ -2,6 +2,7 @@
 	$categoria = $data['post_url'];
 	$template = $data['post_categoria'];//menos18 o mas18
 	$paquetes = getPostsExtended( 'paquete', $categoria );
+
 ?>
 <section class="lugar-section">
 	<div class="paquetes-wrapper animation-element fade-in-scroll">
@@ -19,14 +20,31 @@
 				<li>
 					<article id="<?php echo $paquetes[$i]['post_url']; ?>" class="paquete-mas18">
 						<header>
-							<div class="galeria-wrapper"></div>
-						</header>						
-						<section>
-							
 							<div class="galeria-wrapper animation-element fade-in-scroll">
 								<span class="deco-paquetes-top-right"></span>
-								<img src="<?php echo MAINSURL; ?>/assets/images/temp/reflaslenas.jpg" class="image-responsive">
+
+								<?php if ( $paquetes[$i]['post_galeria'] != 0 ) : ?>
+									
+									<?php $imagenes = unserialize($paquetes[$i]['post_imagenesGal']); 
+
+									getTemplate( 'galimages-mas18', $imagenes );
+
+									?>
+
+								<?php elseif ( $paquetes[$i]['post_imagen'] != '' ) : ?>
+
+									<img src="<?php echo UPLOADSURL . '/' . $paquetes[$i]['post_imagen']; ?>" class="image-responsive">
+									
+								<?php else : ?>
+									
+									<img src="<?php echo MAINSURL; ?>/assets/images/imagen-temp.jpg" class="image-responsive">
+
+								<?php endif; ?>
+								
 							</div>
+						</header>
+
+						<section>
 
 							<div class="detalles-wrapper animation-element slide-up">
 								<div class="detalle1">

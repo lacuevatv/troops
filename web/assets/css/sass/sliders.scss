@@ -1,0 +1,214 @@
+.galeria-inner-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    @media (min-width: $sm) {
+        height: 653px;
+    }
+    @media (min-width: $md) {
+        height: 478px;
+    }
+    @media (min-width: $lg) {
+        height: 557px;
+    }
+    @media (min-width: $xlg) {
+        height: 768px;
+    }
+    .main-picture-wrapper {
+        display: none;
+        @media (min-width: $md) {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        figure {
+            overflow:hidden;
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+
+            figcaption {
+                position: absolute;
+                top: 10%;
+                left: -1000px;
+                max-width: 30%;
+                background: $color-blanco-transparente;
+                padding: 5px 10px;
+                padding-left: 4%;
+                font-size: 75%;
+                line-height: 150%;
+                @include transition(all 1s);
+                span {
+                    position:relative;
+                    z-index: 1;
+                }
+                &:before {
+                    content: '';
+                    border-top: 30px transparent solid;
+                    border-right: 50px #45dacc solid;
+                    border-bottom: 50px transparent solid;
+                    left: 5px;
+                    top: 50%;
+                    position: absolute;
+                    z-index: 0;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }//.main-picture-wrapper
+    
+    .owl-carousel {
+        @media (min-width: $md) {
+            position: absolute;
+            width: 100%;
+            bottom: -300px;
+            left: 0%;
+            background: $color-blanco-transparente;
+            zoom: 1;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            @include transition(all 1s);
+        }
+        .owl-stage-outer {
+            @media (min-width: $md) {
+                width: 80%;
+                margin: 0 auto;
+                padding: 15px 0;
+            }
+            .owl-item {
+                @media (min-width: $md) {
+                    height: 120px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+}//.galeria-inner-wrapper
+
+.galeria-inner-wrapper:hover .owl-carousel {
+        bottom: 0;
+    }
+.galeria-inner-wrapper:hover .main-picture-wrapper figure figcaption {
+    left: 0;
+}
+
+.owl-nav {
+    display: none;
+    @media (min-width: $md) {
+        display: block;
+    }
+    .owl-prev {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        @media (min-width: $sm) {
+            left: 30px;
+        }
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+
+    .owl-next {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        @media (min-width: $sm) {
+            right: 30px;
+        }
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+    }
+}//.owl-nav
+
+
+//flechitas
+.icon-arrow {
+    display: block;
+    width: 15px;
+    height: 25px;
+    background: url(../images/sprite.png) no-repeat;
+    @media (min-width: $sm) {
+        width: 30px;
+        height: 45px;
+    }
+}
+
+.icon-arrow-left {
+    background-position: -375px -207px;
+    @media (min-width: $sm) {
+        background-position: -375px -207px;
+    }
+
+    &:hover {
+       background-position: -375px -255px;
+        @media (min-width: $sm) {
+            background-position: -375px -255px;
+        } 
+    }
+}
+
+.icon-arrow-right {
+    background-position: -332px -207px;
+    @media (min-width: $sm) {
+        background-position: -332px -207px;
+    }
+
+    &:hover {
+       background-position: -332px -255px;
+        @media (min-width: $sm) {
+            background-position: -332px -255px;
+        } 
+    }
+}

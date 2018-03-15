@@ -59,7 +59,8 @@
 <!------- jquery 3.1.1 ------>
     <script src="<?php echo MAINSURL; ?>/assets/js/jquery-3.2.1.min.js"></script>
     <!------- owl ------>
-    <script src="<?php echo MAINSURL; ?>/inc/lib/owl/owl.carousel.min.js"></script>
+    <script src="<?php echo MAINSURL; ?>/assets/js/owl.carousel.min.js"></script>
+    
     <!------- GOOGLE MAPS ------>
     <?php if ( $pageActual == 'inicio' || $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos') {
         echo '<script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key='.APIKEYGOOGLE.'&callback=initMap"></script>';
