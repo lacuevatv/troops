@@ -10,7 +10,7 @@ load_module( 'noticias' );
 <!---------- noticias ---------------->
 <div class="contenido-modulo">
 	<h1 class="titulo-modulo">
-		Ver noticias
+		Ver paquetes
 	</h1>
 	<div class="container">
 		<div class="row">

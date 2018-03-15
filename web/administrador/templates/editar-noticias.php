@@ -59,7 +59,7 @@ $archivo      = isset($dataPost['archivo']) ? $dataPost['archivo'] : '';
 				<div class="col-70">
 	<!------ TITULO DE LA NOTICIA ---------->
 					<div class="form-group">
-						<label for="post_title" class="larger-label">Título de la noticia </label>
+						<label for="post_title" class="larger-label">Título </label>
 						<input id="post_title" name="post_title" class="larger-input" value="<?php echo $titulo; ?>">
 						<?php if ( $titulo == '' ) { ?>
 						<input type="hidden" name="new_post" value="true">
@@ -128,7 +128,7 @@ $archivo      = isset($dataPost['archivo']) ? $dataPost['archivo'] : '';
 				<div class="col-70">
 	<!------ RESUMEN DE LA NOTICIA ---------->
 					<div class="form-group">
-						<label for="post_resumen" class="larger-label">Resumen de la noticia</label>
+						<label for="post_resumen" class="larger-label">Resumen</label>
 						<textarea id="post_resumen" name="post_resumen"><?php echo $resumen; ?></textarea>
 					</div>
 
@@ -159,7 +159,7 @@ $archivo      = isset($dataPost['archivo']) ? $dataPost['archivo'] : '';
 
 	<!------ CONTENIDO DE LA NOTICIA ---------->
 				<div class="form-group">
-					<label for="post_contenido" class="larger-label">Contenido de la noticia</label>
+					<label for="post_contenido" class="larger-label">Contenido</label>
 					<textarea id="post_contenido" name="post_contenido"><?php echo $contenido; ?></textarea>
 				</div>
 
@@ -377,7 +377,7 @@ $archivo      = isset($dataPost['archivo']) ? $dataPost['archivo'] : '';
 <!-- botones del modulo -->
 <footer class="footer-modulo container">
     <a type="button" href="index.php" class="btn">Volver al inicio</a>
-    <a type="button" href="index.php?admin=noticias" class="btn">Volver a noticias</a>
+    <a type="button" href="index.php?admin=noticias" class="btn">Volver a paquetes</a>
 </footer>
 	   
 	
