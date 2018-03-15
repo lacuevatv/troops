@@ -4,7 +4,7 @@
 
 	<div class="inner-container col-flex">
 		
-		<div class="form-wrapper-tours">
+		<div class="form-wrapper-tours animation-element slide-up">
 			<h2 class="titulo-formulario-tours">
 				<span>Pedí tu reunión Troops acá</span>
 			</h2>
@@ -56,7 +56,7 @@
 
 		</div><!-- //.form-wrapper -->
 		
-		<div class="image-form">
+		<div class="image-form animation-element slide-up">
 			
 			<?php
 			$imagenValijas = MAINSURL . '/assets/images/valijas.png';

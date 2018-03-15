@@ -5,7 +5,7 @@
 
 ?>
 <section class="lugar-section">
-	<div class="paquetes-wrapper">
+	<div class="paquetes-wrapper animation-element slide-up">
 		<div class="background-more-info"></div>
 
 		<div class="container">

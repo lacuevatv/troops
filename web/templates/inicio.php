@@ -3,7 +3,7 @@
 
 	<div class="nosotros-presentación-wrapper">
 		<div class="inner-container col-flex">
-			<div class="nosotros-presentación">
+			<div class="nosotros-presentación animation-element fade-in-scroll">
 				<h2 class="section-title">
 					Nosotros
 				</h2>
@@ -17,14 +17,14 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 			</div>
 
-			<div class="image-presentacion">
+			<div class="image-presentacion animation-element fade-in-scroll">
 				<img src="<?php echo MAINSURL; ?>/assets/images/plane.png" class="image-responsive">
 			</div>
 		</div>
 		
 	</div><!-- //.nosotros-presentación-wrapper -->
 
-	<div class="nosotros-equipo-decos-wrapper">
+	<div class="nosotros-equipo-decos-wrapper animation-element slide-up">
 		<span class="nosotros-deco-middle"></span>
 		<span class="nosotros-deco-sup"></span>
 	
@@ -134,7 +134,7 @@
 </section><!-- //#nosotros -->
 
 <!-- sociales -->
-<aside id="sociales" class="sociales-section">
+<aside id="sociales" class="sociales-section animation-element fade-in-scroll">
 	
 	<div class="inner-container">	
 		<a href="<?php echo LINK_INSTAGRAM; ?>" target="_blank" title="Instagram" class="link-instagram">
@@ -142,10 +142,6 @@
 				<?php echo '@' . INSTAGRAM; ?>
 			</h3>
 		</a>
-		
-		
-
-		<!--<img class="image-responsive" src="<?php echo MAINSURL; ?>/assets/images/temp/instagram-pc.png">-->
 
 		<div class="sociales-wrapper">
 
@@ -165,7 +161,7 @@
 </aside><!-- //#sociales -->
 
 <!-- video -->
-<aside id="video" class="video-section">
+<aside id="video" class="video-section animation-element fade-in-scroll">
 
 	<div class="video-wrapper">
 
@@ -182,7 +178,7 @@
 <!-- contacto -->
 <section id="contacto" class="contact-section">
 
-	<div class="inner-container col-flex col-flex-inverse">
+	<div class="inner-container col-flex col-flex-inverse animation-element slide-up">
 		
 		<div class="form-wrapper">
 			<h5 class="section-title section-title-reverse">

@@ -4,7 +4,7 @@
 	$paquetes = getPostsExtended( 'paquete', $categoria );
 ?>
 <section class="lugar-section">
-	<div class="paquetes-wrapper">
+	<div class="paquetes-wrapper animation-element fade-in-scroll">
 		<div class="container">
 
 	<?php if ($paquetes != null ) : ?>
@@ -23,12 +23,12 @@
 						</header>						
 						<section>
 							
-							<div class="galeria-wrapper">
+							<div class="galeria-wrapper animation-element fade-in-scroll">
 								<span class="deco-paquetes-top-right"></span>
 								<img src="<?php echo MAINSURL; ?>/assets/images/temp/reflaslenas.jpg" class="image-responsive">
 							</div>
 
-							<div class="detalles-wrapper">
+							<div class="detalles-wrapper animation-element slide-up">
 								<div class="detalle1">
 									<table>
 										<tr>
@@ -150,10 +150,10 @@
 								
 							</div>
 							
-							<div id="contenedor-mapa"></div>
+							<div id="contenedor-mapa" class="animation-element fade-in-scroll"></div>
 							
 
-							<div class="info-gral-wrapper">
+							<div class="info-gral-wrapper animation-element slide-up">
 								<h2 class="section-title">
 									Información General
 								</h2>

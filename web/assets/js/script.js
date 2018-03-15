@@ -526,11 +526,11 @@ $( window ).on('load', function(){
         $(contenedor).find('.paquete-info').remove();
    });
 
+
+
     /*
     parallax superior:
     */
-
-    
 
     //tomamos las imagenes
     var background = $('.top-header-content');
@@ -571,7 +571,7 @@ $( window ).on('load', function(){
     /*
      * ANIMACIONES
     */
-    var $animation_elements = $('.animation-element');
+    var $animation_elements_2 = $('.animation-element');
     var $window = $(window);
 
     function check_if_in_view_2() {
@@ -579,7 +579,7 @@ $( window ).on('load', function(){
       var window_top_position = $window.scrollTop();
       var window_bottom_position = (window_top_position + window_height);
 
-      $.each($animation_elements, function() {
+      $.each($animation_elements_2, function() {
         var $element = $(this);
         var element_height = $element.outerHeight();
         var element_top_position = $element.offset().top;

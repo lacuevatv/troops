@@ -175,7 +175,7 @@ global $pageActual;
 
 <!-- //..MAIN CONTENT HEADER -->
 
-        <nav class="tours-nav">
+        <nav class="tours-nav animation-element fade-in-scroll">
             <?php 
                 $html = '<ul class="tours-nav-menu';
                 if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'jurere' ) {
