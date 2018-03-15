@@ -615,6 +615,7 @@
 	    line-height: 100%;
 	    margin-top: 15px;
 		@include text-shadow(2px 2px 1px #111);
+		@include transition(all 0.2s);
 
 		@media (min-width: $md) {
 			top: 48%;

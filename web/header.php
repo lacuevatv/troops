@@ -167,8 +167,8 @@ global $pageActual;
 
         <div class="top-header-content">
             
-            <img src="<?php echo $imagenHeader; ?>" alt="troops">
-            <h1>
+            <img src="<?php echo $imagenHeader; ?>" alt="troops" class="image-header">
+            <h1 class="title-header">
                 <?php echo $headerTitulo; ?>
             </h1>
         </div>

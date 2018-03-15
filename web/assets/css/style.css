@@ -917,7 +917,11 @@ footer {
     -webkit-text-shadow: 2px 2px 1px #111;
     -moz-text-shadow: 2px 2px 1px #111;
     -ms-text-shadow: 2px 2px 1px #111;
-    text-shadow: 2px 2px 1px #111; }
+    text-shadow: 2px 2px 1px #111;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s; }
     @media (min-width: 992px) {
       .top-header-content h1 {
         top: 48%;
