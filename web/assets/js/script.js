@@ -487,6 +487,12 @@ $( window ).on('load', function(){
         $window.trigger('scroll');
     }
    
+
+    /*
+     * MENOS 18 / MAS 18 GALERIAS E INFO
+    */
+
+
     //clic en btn más info para abrir el modal de más info
    $(document).on('click', '.paquete-btn-info', function(){
         var contenedor = $('.background-more-info');
@@ -519,12 +525,103 @@ $( window ).on('load', function(){
         }
    });
 
-   //cierra más info:
+   //boton cerrar, para más info y galeria:
    $(document).on('click', '.close-control', function(){
         var contenedor = $('.background-more-info');
         $(contenedor).removeClass('open-background');
         $(contenedor).find('.paquete-info').remove();
    });
+
+   //clic en boton mostrar galeria, menos 18
+   $(document).on('click', '.paquete-btn-galeria', function(){
+        var paquete = this.closest('article');
+        var contenedor = $('.background-more-info');
+        $(contenedor).addClass('open-background');
+        contenedor.empty();
+        
+        //agrega los controles
+        $(contenedor).append($('<div class="controls"><span class="close-control"></span><span class="left-control"></span><span class="right-control"></span></div>'));
+        //abre los controles, en este caso, solo cerrar
+        $('.close-control').fadeIn();
+        //$('.left-control').fadeIn();
+        //$('.right-control').fadeIn();
+
+        //url basico
+        var href = baseUrl + '/contenido/';
+        //imagenes de este paquete
+        var imagenes = $(paquete).find('.paquete-lista-imagenes li');
+
+        //armamos html para insertar
+        var html = '<div class="galeria-wrapper-menos18"><div class="main-picture-wrapper"><figure class="main-picture"><img src=""></figure></div><div class="owl-carousel owl-theme">';
+                    
+                
+
+        for (var i = 0; i < imagenes.length; i++) {
+            html += '<div class="item"><img src="'+ href + $(imagenes[i]).text() + '" alt="Troops Viajes" class="toggle-picture"></div>'
+        }
+        
+        html += '</div></div>';
+
+        contenedor.append($(html));
+
+         //ademas hace un scroll hacia arriba para mostrarlo adecuadamene
+         if ( window.innerWidth > 992 ) {
+            $('html, body').stop().animate({
+                scrollTop: $(contenedor).offset().top - 70
+            }, 'slow');
+         } else {
+            $('html, body').stop().animate({
+                scrollTop: $(contenedor).offset().top - 130
+            }, 'slow');
+         }
+        
+
+        //inicializa el carousel
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+            responsive:{
+                0:{
+                    items:1
+                },
+                992:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
+            }
+        });//owl
+
+        if (window.innerWidth > 992) {
+            var MainImage = $('.main-picture-wrapper figure img');
+            var wrapper = $('.galeria-wrapper-menos18');
+            var wrapperHeightNormal = $(wrapper).height();
+            
+            //coloca la primera imagen como principal
+            $(MainImage).attr('src', href + $(imagenes[0]).text());
+
+            //al hacer clic en la imagen debería mostrar la que se selecciono
+            $('.toggle-picture').click(function(){
+                
+                //busca el src de la imagen
+                var href = $(this).attr('src');
+                //lo coloca como main image
+                $(MainImage).attr('src', href);
+            });
+        } else {
+            //busca la imagen mas alta y ajusta el contenedor
+            var hImg = $('.owl-carousel').height();
+            
+            $('.galeria-wrapper-menos18').animate({
+                    'height': hImg + 'px'
+                },1000);
+        }
+
+    });
+
 
 
 

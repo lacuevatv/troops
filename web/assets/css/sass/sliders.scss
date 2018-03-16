@@ -1,3 +1,6 @@
+/*
+ * GALERIA MAS 18
+*/
 .galeria-inner-wrapper {
     position: relative;
     height: 280px;
@@ -92,14 +95,13 @@
                     cursor: pointer;
                 }
             }
-        }
-        
+        } 
     }
 }//.galeria-inner-wrapper
 
 .galeria-inner-wrapper:hover .owl-carousel {
-        bottom: 0;
-    }
+    bottom: 0;
+}
 .galeria-inner-wrapper:hover .main-picture-wrapper figure figcaption {
     left: 0;
 }
@@ -212,3 +214,74 @@
         } 
     }
 }
+
+/*
+ * GALERIA MENOS 18
+*/
+
+.galeria-wrapper-menos18  {
+    height: 420px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-top: 6%;
+    @media (min-width: $md) {
+        margin-top: -5%;
+    }
+
+    @media (min-width: $xlg) {
+        height: 520px;
+    }
+
+
+    .main-picture-wrapper {
+        display: none;
+        @media (min-width: $md) {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        figure {
+            overflow:hidden;
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }//.main-picture-wrapper
+
+    .owl-carousel {
+        margin-top: 10%;
+        @media (min-width: $md) {
+            position: absolute;
+            width: 100%;
+            bottom: -160px;
+            left: 0%;
+            background: $color-blanco-transparente;
+            zoom: 1;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            @include transition(all 1s);
+        }
+        .owl-stage-outer {
+            @media (min-width: $md) {
+                width: 80%;
+                margin: 0 auto;
+                padding: 15px 0;
+            }
+            .owl-item {
+                @media (min-width: $md) {
+                    height: 120px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+        }
+    }//.owl-carousel
+}//.galeria-wrapper-menos18

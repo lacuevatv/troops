@@ -1258,7 +1258,7 @@
 			background-position: -277px -209px;
 			@media (min-width: $md) {
 				right: 10%;
-				top: 10%;
+				top: 2%;
 			}
 
 			&:hover {
@@ -1315,7 +1315,7 @@
 		display: block;
 		padding: 6%;
     	@media (min-width: $md) {
-    		padding: 20%;
+    		padding: 0 5%;
     		overflow: hidden;
     	}
     	h1 {
