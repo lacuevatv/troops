@@ -44,7 +44,7 @@ global $pageActual;
 <!-- // SEO SECCTION -->
 
 <!-- OWL -->
-    <link href="<?php echo MAINSURL; ?>/inc/lib/owl/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?php echo MAINSURL; ?>/assets/css/owl.carousel.min.css" rel="stylesheet">
 <!-- Custom CSS -->
     <link href="<?php echo MAINSURL; ?>/assets/css/style.css?<?php echo VERSION; ?>" rel="stylesheet">
 

@@ -243,31 +243,33 @@ $(document).ready(function(){
     });
 
     //hover en los iconos de contenido
-    $('.toogle-icons-contenidos').hover(
+    /*if ( window.innerWidth > 992 ) {
+        $('.toogle-icons-contenidos').hover(
 
-        function () {
-            if ( window.innerWidth > 992 ) {
-                var href = $(this).attr('href');
-                var positionLeft = ($(this).offset().left)-70;              
+            function () {
                 
-                var marcador = $('.equipo-item-active').clone().addClass('equipo-item-active-clone');
-                marcador.appendTo('.nosotros-equipo');
+                    var href = $(this).attr('href');
+                    var positionLeft = ($(this).offset().left)-70;              
+                    
+                    var marcador = $('.equipo-item-active').clone().addClass('equipo-item-active-clone');
+                    marcador.appendTo('.nosotros-equipo');
+                    
+                    $(marcador).animate({
+                        'left':  positionLeft + 'px',
+                    }, 500);
                 
-                $(marcador).animate({
-                    'left':  positionLeft + 'px',
-                }, 500);
-            }
-        },
-        function () {
-            if ( window.innerWidth > 992 ) {
-                var marcador = $('.equipo-item-active-clone');
-                $(marcador).animate({
-                    'left':  '-10000px',
-                }, 500);   
-                $(marcador).remove();
-            }
-        },
-    );
+            },
+            function () {
+                
+                    var marcador = $('.equipo-item-active-clone');
+                    $(marcador).animate({
+                        'left':  '-10000px',
+                    }, 500);   
+                    $(marcador).remove();
+                
+            },
+        );
+    }*/
 
 
     /*
