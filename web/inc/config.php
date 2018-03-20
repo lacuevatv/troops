@@ -36,8 +36,10 @@ define('LINK_INSTAGRAM', 'https://www.instagram.com/' . INSTAGRAM);
 define('LINK_TWITTER', '#');
 define('LINK_VIMEO', '#');
 define('LINK_YOUTUBE', '#');
-define('INSTAGRAMWIDGETPC', '<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/db5d98d1f5445cc4a7b3f4b55be9c4a0.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>');
-define('INSTAGRAMWIDGETMOVIL', '<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/bf96b875186c52ee83bc5ee4034b52a5.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>');
+define('INSTAGRAMWIDGETPC', '<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/ea7c675b61b15fa1b2900c224f858ba6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+');
+define('INSTAGRAMWIDGETMOVIL', '<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/ea7c675b61b15fa1b2900c224f858ba6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+');
 define('APIKEYGOOGLE', 'AIzaSyB5GkLW0DRJbzBoAksgvUvIbXL5rylmnr0' );
 
 global $categorias;
