@@ -376,7 +376,7 @@ $( window ).on('load', function(){
         var contenedor = $('.paquetes-menos18');
         //busca todos los paquetes (articles)
         var paquetes = $('.paquete-menos18');
-        var li = paquetes.closest('li');
+        var li = $(paquetes).closest('li');
 
         
         //primero redimensiona a todos
@@ -504,7 +504,7 @@ $( window ).on('load', function(){
         $(contenedor).append($('<div class="controls"><span class="close-control"></span><span class="left-control"></span><span class="right-control"></span></div>'));
         
         //clona la info del paquete y la adjunta al modal para mostrarla
-        var info = $(this.closest('article')).find('.paquete-info').clone();
+        var info = $($(this).closest('article')).find('.paquete-info').clone();
         $(contenedor).append(info);
         //sube la pantalla para que se vea bien
         $('html, body').stop().animate({
@@ -536,7 +536,7 @@ $( window ).on('load', function(){
 
    //clic en boton mostrar galeria, menos 18
    $(document).on('click', '.paquete-btn-galeria', function(){
-        var paquete = this.closest('article');
+        var paquete = $(this).closest('article');
         var contenedor = $('.background-more-info');
         $(contenedor).addClass('open-background');
         contenedor.empty();
