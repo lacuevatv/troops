@@ -153,6 +153,33 @@ $(document).ready(function(){
         });
     
 
+
+    //clic en toogle leer mas sección nosotros
+    $(document).on('click', '.nosotros-content-toggle', function( e ){
+        
+        var contenedor = $(this).closest('.nosotros-content')
+        $(this).remove();
+        if ( contenedor.css('height') == '150px' ) {
+            
+            var h = contenedor.prop('scrollHeight');
+            
+            contenedor.animate({
+                'height': h +'px',
+            }, 500);
+
+            
+        } else {
+            contenedor.animate({
+                'height': '150px',
+            }, 500);
+            
+        }
+
+        
+        
+    });
+    
+
     /*
      * SECCION EQUIPOS
     */
@@ -270,6 +297,8 @@ $(document).ready(function(){
             },
         );
     }*/
+
+
 
 
     /*

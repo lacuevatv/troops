@@ -43,7 +43,7 @@ include 'header.php';
 switch ($pageActual) {
 	case 'bariloche':
 	case 'porto-seguro':
-	case 'jurere':
+	case 'floripa':
 		
 		if ( $data != null ) {
 			getTemplate( 'menos18', $data );

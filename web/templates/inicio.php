@@ -12,9 +12,30 @@
 					<span class="deco-line"></span>
 					<span>Club de viajes</span>
 				</h5>
-
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+				<div class="nosotros-content">
+					<p>
+						Troops es una empresa especializada en la organización de viajes para jóvenes. Formada por profesionales de exitosa trayectoria y extensa experiencia en turismo.
+					</p>
+					<button class="nosotros-content-toggle">Leer más</button>
+					<p>
+						En Troops contamos con un equipo de especialistas para cada destino, cada uno con el profundo conocimiento de las expectativas y necesidades de los jóvenes a la hora de viajar.
+					</p>
+					<p>
+						Los mejores viajes de playa, nieve y los más increíbles festivales de música que se realizan por el mundo, están en nuestro calendario anual.
+					</p>
+					<p>
+						A través de nuestras oficinas en Rosario, Buenos Aires y Sao Paulo (Brasil), disponemos de la estructura necesaria para atender personalizadamente a nuestros pasajeros, tanto emisivos como receptivos.
+					</p>
+					<p>
+						La asociación que tenemos con empresas líderes de cada sector en nuestros destinos nos permite contar con grandes estructuras de respaldo para brindar los servicios contratados y el acceso a las nuevas tendencias para actualizar los contenidos de nuestros productos, año tras año.
+					</p>
+					<p>
+						¡Elegí tu destino y unite a nosotros para disfrutar del mejor viaje de tu vida!
+					</p>
+					<p>
+						<strong>ARE YOU READY?</strong>
+					</p>
+				</div>
 			</div>
 
 			<div class="image-presentacion animation-element fade-in-scroll">
@@ -45,10 +66,18 @@
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>
-										<span>Equipo</span>
+										<span>Coordinación permanente</span>
 									</h2>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										Personal especialista en asistencia y entretenimiento de grupos adolescentes.<br>
+										Profesionales idóneos e instruidos en dinámica grupal y primeros auxilios que aportan soporte a los coordinadores, brindan apoyo personalizado y exclusivo a todos los pasajeros. Ellos aportaran soluciones inmediatas a las particularidades que pudieran surgir durante el viaje.
+									</p>
+									<h2 class="section-sub-title section-sub-title-reverse">
+										<span class="deco-line"></span>
+										<span>Guardavidas Exclusivo</span>
+									</h2>
+									<p>
+										Disponemos de un guardavidas profesional y exclusivo para la asistencia en playas y piscinas durante toda la estadía de nuestros pasajeros.
 									</p>
 								</div>
 							</div>
@@ -72,7 +101,7 @@
 										<span>Estructura</span>
 									</h2>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										La asociación con empresas internacionales de primera linea idoneas en el servicio receptivo terrestre y la inversión genuina, nos permite contar con una de las mayores infraestructuras operativas en cada destino. Personal idóneo, micros, combis, oficinas, equipos de telecomunicaciones y por sobre todo respaldo.
 									</p>
 								</div>
 							</div>
@@ -92,10 +121,10 @@
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>
-										<span>Asistencia</span>
+										<span>Universal Assistance</span>
 									</h2>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										Todos nuestros viajes te incluyen cobertura total las 24 hs los 7 días de la semana, desde el inicio y hasta el final del tour. Contamos con un equipo médico exclusivo y permanente que está presente en los hoteles, excursiones, boliches y en todos los puntos donde se realizan las actividades.
 									</p>
 								</div>
 							</div>
@@ -115,11 +144,26 @@
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>
-										<span>Tecnología</span>
+										<span>Tecnologia de asistencia</span>
 									</h2>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										Pax ID es una herramienta revolucionaria que a través de brazaletes y dispositivos de lectura, nos permite identificar a cada pasajero, acceder a sus datos personales y medicos; y además controlar las entradas y salidas en cada actividad.
 									</p>
+
+									<ul>
+										<li>
+											Información personal y contacto.
+										</li>
+										<li>
+											Horarios de entrada y salida. 
+										</li>
+										<li>
+											Ficha médica online.
+										</li>
+										<li>
+											Condiciones de salud relevantes.
+										</li>
+									</ul>
 								</div>
 							</div>
 						</article>
@@ -192,9 +236,31 @@
 				</span>
 			</h5>
 
-			<address>
-				Av. Luis Cándido Carballo Nº 194 | Piso 1º Of. "B" Edificio "Dock Plaza - Business Center" Puerto Norte - Rosario.
-			</address>
+			<ul>
+				<li>
+					<h6>
+						Casa matriz Rosario
+					</h6>
+					<address>
+						Av. Luis Candido Carballo 194 - 1er Piso Of. "B" - Edificio Dock Plaza, Business - Puerto Norte Rosario.
+					</address>
+					<p>
+						Telefonos 0341-5252429/519
+					</p>
+				</li>
+				<li>
+					<h6>
+						Sucursal Lobos
+					</h6>
+					<address>
+						Alberdi 607 - Ciudad de Lobos - Provincia de Buenos Aires
+					</address>
+					<p>
+						Telefono 02227 - 423946
+					</p>
+				</li>
+
+			</ul>
 
 			<form method="POST" id="contact-form-home" name="contact-form-home" class="formulario">
 				<input type="hidden" name="page" value="<?php global $pageActual; echo $pageActual; ?>">

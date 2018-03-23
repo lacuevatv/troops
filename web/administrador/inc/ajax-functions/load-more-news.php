@@ -69,7 +69,7 @@ if ( $result->num_rows == 0 ) {
 				    	</h1>
 				    	<p class="links-edicion-noticias">
 				    		<a href="index.php?admin=editar-noticias&slug=<?php echo $url; ?>" title="Editar" class="btn-edit-news">
-					    		Editar Noticia
+					    		Editar
 					    	</a>
 					    	<?php 
 				    			if ( $status != 'publicado' ) {
@@ -78,7 +78,7 @@ if ( $result->num_rows == 0 ) {
 				    		 | <a href="<?php echo $url; ?>" class="btn-publish-post" title="Publicar">Publicar</a> 
 				    		 | <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
 				    		<?php } else { ?>
-				    		 | <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Ver noticia</a>
+				    		 | <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] .'/noticias/'. $url ?>" target="_blank" title="Ver">Ver</a>
 				    		 | <a href="<?php echo $url; ?>" class="btn-delete-post">Borrar</a>
 				    		 <?php } ?>
 				    	</p>

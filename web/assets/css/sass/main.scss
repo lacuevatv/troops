@@ -149,7 +149,46 @@
 	p {
 		text-align: justify;
 		line-height: 180%;
+
+		strong {
+			font-weight: 600;
+		}
 	}
+}
+
+.nosotros-content {
+	overflow: hidden;
+	height: 150px;
+
+	button {
+		display: block;
+		margin-bottom: 100px;
+		cursor: pointer;
+		font-family: $fuente-principal-light!important;
+		width: 100px;
+		height: 30px;
+		border: none;
+		background-color: $color-amarillo;
+		font-size: 130%;
+		color: $color-negro;
+		margin: 10px 0;
+		&:hover {
+			color: $color-negro;
+			background-color: $color-verde;
+		}
+
+		@media (min-width: $sm) {
+			margin-bottom: 100px;
+			width: 150px;
+			height: 40px;
+		}
+		@media (min-width: $md) {
+			margin-bottom: 100px;
+			width: 100px;
+			height: 30px;
+		}
+	}
+	
 }
 
 .image-presentacion {
@@ -334,6 +373,15 @@
 
 	p {
 		text-align: justify;
+		margin-bottom: 20pX;
+	}
+
+	ul {
+		padding-left: 30px;
+
+		li {
+			list-style: disc;
+		}
 	}
 	
 }
@@ -811,17 +859,29 @@
 
 .form-wrapper {
 	@media (min-width: $md) {
-		padding: 40px 0 40px 10%;
+		padding: 20px 0 40px 10%;
 	}
 
-	address {
-		font-size: 80%;
-		line-height: 180%;
-		@media (min-width: $md) {
-			font-size: 90%;
-			line-height: 200%;
+	ul {
+		li {
+			margin-bottom: 10px;
+			h6 {
+				font-size: 90%;
+				line-height: 200%;
+				font-weight: 600;
+			}
+			p, address {
+				font-size: 80%;
+				line-height: 180%;
+				@media (min-width: $md) {
+					display: inline;
+					font-size: 80%;
+					line-height: 200%;
+				}
+			}		
 		}
 	}
+	
 }
 
 .form-wrapper-tours {

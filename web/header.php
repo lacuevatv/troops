@@ -178,7 +178,7 @@ global $pageActual;
         <nav class="tours-nav animation-element fade-in-scroll">
             <?php 
                 $html = '<ul class="tours-nav-menu';
-                if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'jurere' ) {
+                if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
                     $html .= ' section-active';
                 }
 
@@ -203,11 +203,11 @@ global $pageActual;
                     </a>
                 </li>
                 <li role="menuitem">
-                    <?php if ( $pageActual == 'jurere' ) {
+                    <?php if ( $pageActual == 'floripa' ) {
                         echo '<span class="tour-active-icon"></span>';
                     } ?>
-                    <a href="<?php echo MAINSURL; ?>/jurere" title="Jureré">
-                        Jureré
+                    <a href="<?php echo MAINSURL; ?>/floripa" title="Floripa">
+                        Floripa
                     </a>
                 </li>
                 
@@ -216,7 +216,7 @@ global $pageActual;
             <!-- ICON RULETA -->
             <div class="tours-nav-icon">
                 <?php 
-                    if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'jurere' ) {
+                    if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
                         echo '<img src="' .MAINSURL . '/assets/images/ruletamenos.png">';
                     } elseif ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
                         echo '<img src="' .MAINSURL . '/assets/images/ruletamas.png">';
