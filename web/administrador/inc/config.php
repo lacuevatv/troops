@@ -39,7 +39,7 @@ global $categorias;//define las categorias para cargar noticias
 $categorias = array(
 	array( 'slug' => 'bariloche', 'nombre' => 'Bariloche'),
 	array( 'slug' => 'porto-seguro', 'nombre' => 'Porto Seguro'),
-	array( 'slug' => 'jurere', 'nombre' => 'Jureré'),
+	array( 'slug' => 'floripa', 'nombre' => 'Floripa'),
 	array( 'slug' => 'las-lenas', 'nombre' => 'Las Leñas'),
 	array( 'slug' => 'cancun', 'nombre' => 'Cancún'),
 	array( 'slug' => 'tematicos', 'nombre' => 'Temáticos'),

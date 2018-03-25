@@ -64,6 +64,8 @@ if ( $result->num_rows == 0 ) {
 				    		<?php echo $titulo; ?> 
 				    		| 
 				    		<span><?php echo $status; ?></span>
+				    		-
+				    		<span><?php echo $categoria; ?></span>
 				    		- 
 				    		<small><?php echo $date; ?></small>
 				    	</h1>

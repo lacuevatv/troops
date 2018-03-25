@@ -22,12 +22,16 @@
 							<img src="<?php echo UPLOADSURL . '/' . $paquetes[$i]['post_imagen']; ?>">	
 						</figure>
 						<div class="paquete-hover">
-
+						
+						<?php if ( $paquetes[$i]['post_resumen'] != '' ) : ?>
+						
 							<div class="paquete-resumen">
 								<p>
 									<?php echo $paquetes[$i]['post_resumen']; ?>
 								</p>
 							</div>
+
+						<?php endif; ?>
 
 							<ul class="paquete-botones">
 

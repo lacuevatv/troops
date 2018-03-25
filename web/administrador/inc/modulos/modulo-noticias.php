@@ -76,6 +76,8 @@ function listaNoticias( $limit = 20, $status = 'all', $extended = false, $catego
 				    		<?php echo $titulo; ?> 
 				    		| 
 				    		<span><?php echo $status; ?></span>
+				    		-
+				    		<span><?php echo $categoria; ?></span>
 				    		- 
 				    		<small><?php echo $date; ?></small>
 				    	</h1>
