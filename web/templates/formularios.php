@@ -59,10 +59,26 @@
 		<div class="image-form animation-element slide-up">
 			
 			<?php
-			$imagenValijas = MAINSURL . '/assets/images/valijas.png';
-			if ( dispositivo() != 'pc' ) {
-				$imagenValijas = MAINSURL . '/assets/images/valijas768.png';
+			
+
+			global $pageActual;
+			switch ($pageActual) {
+				case 'porto-seguro':
+					$imagenValijas = MAINSURL . '/assets/images/valijas-porto-seguro.png';
+					if ( dispositivo() != 'pc' ) {
+						$imagenValijas = MAINSURL . '/assets/images/valijas-porto-seguro768.png';
+					}
+					break;
+				
+				default:
+					$imagenValijas = MAINSURL . '/assets/images/valijas.png';
+					if ( dispositivo() != 'pc' ) {
+						$imagenValijas = MAINSURL . '/assets/images/valijas768.png';
+					}
+					break;
 			}
+			
+			
 			?>
 
 			<img class="image-responsive" src="<?php echo $imagenValijas; ?>">

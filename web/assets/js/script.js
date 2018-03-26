@@ -153,26 +153,42 @@ $(document).ready(function(){
         });
     
 
+    var hNosotros = $($('.nosotros-content p')[0]).height()+ 20;
+    $('.nosotros-content-wrapper').height(hNosotros);
+
 
     //clic en toogle leer mas sección nosotros
     $(document).on('click', '.nosotros-content-toggle', function( e ){
         
-        var contenedor = $(this).closest('.nosotros-content')
-        $(this).remove();
-        if ( contenedor.css('height') == '150px' ) {
+        var contenedor = $(this).closest('.nosotros-content-wrapper')
+        var texto = $(contenedor).find('.nosotros-content');
+        
+        var adicional = 30;
+
+        if (window.innerWidth > 960) {
+            adicional = 60;
+        }
+        if (window.innerWidth > 1380) {
+            adicional = 100;
+        }
+        if (window.innerWidth > 1800) {
+            adicional = 180;
+        }
+
+        if ( contenedor.height() == hNosotros ) {
             
-            var h = contenedor.prop('scrollHeight');
+            var h = texto.prop('scrollHeight') + adicional;
             
             contenedor.animate({
                 'height': h +'px',
             }, 500);
-
+            $(this).text('Cerrar');
             
         } else {
             contenedor.animate({
-                'height': '150px',
+                'height': hNosotros + 'px',
             }, 500);
-            
+            $(this).text('Leer más');
         }
 
         

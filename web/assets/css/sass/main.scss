@@ -149,6 +149,7 @@
 	p {
 		text-align: justify;
 		line-height: 180%;
+		margin-bottom: 20px;
 
 		strong {
 			font-weight: 600;
@@ -156,13 +157,20 @@
 	}
 }
 
-.nosotros-content {
+.nosotros-content-wrapper {
 	overflow: hidden;
 	height: 150px;
+	margin-bottom: 100px;
+
+	@media (min-width: $md) {
+		margin-bottom: 0;
+	}
 
 	button {
+		position: absolute;
+    	bottom: -30px;
 		display: block;
-		margin-bottom: 100px;
+		//margin-bottom: 100px;
 		cursor: pointer;
 		font-family: $fuente-principal-light!important;
 		width: 100px;
@@ -178,17 +186,30 @@
 		}
 
 		@media (min-width: $sm) {
-			margin-bottom: 100px;
+			bottom: -60px;
 			width: 150px;
 			height: 40px;
 		}
 		@media (min-width: $md) {
-			margin-bottom: 100px;
+			bottom: 0;
 			width: 100px;
 			height: 30px;
 		}
+		@media (min-width: $lg) {
+			bottom: 60px;
+		}
+
+		@media (min-width: 1400px) {
+			bottom: 100px;
+		}
+
+		@media (min-width: 1800px) {
+			bottom: 180px;
+		}
 	}
-	
+}
+
+.nosotros-content {	
 }
 
 .image-presentacion {

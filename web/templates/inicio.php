@@ -12,29 +12,32 @@
 					<span class="deco-line"></span>
 					<span>Club de viajes</span>
 				</h5>
-				<div class="nosotros-content">
-					<p>
-						Troops es una empresa especializada en la organización de viajes para jóvenes. Formada por profesionales de exitosa trayectoria y extensa experiencia en turismo.
-					</p>
+				<div class="nosotros-content-wrapper">
+					<div class="nosotros-content">
+						<p>
+							Troops es una empresa especializada en la organización de viajes para jóvenes. Formada por profesionales de exitosa trayectoria y extensa experiencia en turismo.
+						</p>
+						
+						<p>
+							En Troops contamos con un equipo de especialistas para cada destino, cada uno con el profundo conocimiento de las expectativas y necesidades de los jóvenes a la hora de viajar.
+						</p>
+						<p>
+							Los mejores viajes de playa, nieve y los más increíbles festivales de música que se realizan por el mundo, están en nuestro calendario anual.
+						</p>
+						<p>
+							A través de nuestras oficinas en Rosario, Buenos Aires y Sao Paulo (Brasil), disponemos de la estructura necesaria para atender personalizadamente a nuestros pasajeros, tanto emisivos como receptivos.
+						</p>
+						<p>
+							La asociación que tenemos con empresas líderes de cada sector en nuestros destinos nos permite contar con grandes estructuras de respaldo para brindar los servicios contratados y el acceso a las nuevas tendencias para actualizar los contenidos de nuestros productos, año tras año.
+						</p>
+						<p>
+							¡Elegí tu destino y unite a nosotros para disfrutar del mejor viaje de tu vida!
+						</p>
+						<p>
+							<strong>ARE YOU READY?</strong>
+						</p>
+					</div>
 					<button class="nosotros-content-toggle">Leer más</button>
-					<p>
-						En Troops contamos con un equipo de especialistas para cada destino, cada uno con el profundo conocimiento de las expectativas y necesidades de los jóvenes a la hora de viajar.
-					</p>
-					<p>
-						Los mejores viajes de playa, nieve y los más increíbles festivales de música que se realizan por el mundo, están en nuestro calendario anual.
-					</p>
-					<p>
-						A través de nuestras oficinas en Rosario, Buenos Aires y Sao Paulo (Brasil), disponemos de la estructura necesaria para atender personalizadamente a nuestros pasajeros, tanto emisivos como receptivos.
-					</p>
-					<p>
-						La asociación que tenemos con empresas líderes de cada sector en nuestros destinos nos permite contar con grandes estructuras de respaldo para brindar los servicios contratados y el acceso a las nuevas tendencias para actualizar los contenidos de nuestros productos, año tras año.
-					</p>
-					<p>
-						¡Elegí tu destino y unite a nosotros para disfrutar del mejor viaje de tu vida!
-					</p>
-					<p>
-						<strong>ARE YOU READY?</strong>
-					</p>
 				</div>
 			</div>
 
@@ -62,7 +65,7 @@
 							</a>
 
 							<div id="equipo" class="nosotros-equipo-content">
-								<img src="<?php echo MAINSURL; ?>/assets/images/temp/foto-muestra.jpg" class="image-responsive" >
+								<img src="<?php echo MAINSURL; ?>/assets/images/equipo.jpg" class="image-responsive" >
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>
@@ -94,7 +97,7 @@
 							</a>
 
 							<div id="estructura" class="nosotros-equipo-content">
-								<img src="<?php echo MAINSURL; ?>/assets/images/temp/foto-muestra.jpg" class="image-responsive" >
+								<img src="<?php echo MAINSURL; ?>/assets/images/estructura.jpg" class="image-responsive" >
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>
@@ -117,7 +120,7 @@
 							</a>
 
 							<div id="asistencia" class="nosotros-equipo-content">
-								<img src="<?php echo MAINSURL; ?>/assets/images/temp/foto-muestra.jpg" class="image-responsive" >
+								<img src="<?php echo MAINSURL; ?>/assets/images/asistencia.jpg" class="image-responsive" >
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>
@@ -140,7 +143,7 @@
 							</a>
 
 							<div id="tecnologia" class="nosotros-equipo-content">
-								<img src="<?php echo MAINSURL; ?>/assets/images/temp/foto-muestra.jpg" class="image-responsive" >
+								<img src="<?php echo MAINSURL; ?>/assets/images/tecnologia.jpg" class="image-responsive" >
 								<div>
 									<h2 class="section-sub-title section-sub-title-reverse">
 										<span class="deco-line"></span>

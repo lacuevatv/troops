@@ -1221,16 +1221,22 @@ footer {
       margin-top: 80px; } }
   .nosotros-presentación p {
     text-align: justify;
-    line-height: 180%; }
+    line-height: 180%;
+    margin-bottom: 20px; }
     .nosotros-presentación p strong {
       font-weight: 600; }
 
-.nosotros-content {
+.nosotros-content-wrapper {
   overflow: hidden;
-  height: 150px; }
-  .nosotros-content button {
+  height: 150px;
+  margin-bottom: 100px; }
+  @media (min-width: 992px) {
+    .nosotros-content-wrapper {
+      margin-bottom: 0; } }
+  .nosotros-content-wrapper button {
+    position: absolute;
+    bottom: -30px;
     display: block;
-    margin-bottom: 100px;
     cursor: pointer;
     font-family: "NB International Pro Light", sans-serif !important;
     width: 100px;
@@ -1240,19 +1246,28 @@ footer {
     font-size: 130%;
     color: #625e59;
     margin: 10px 0; }
-    .nosotros-content button:hover {
+    .nosotros-content-wrapper button:hover {
       color: #625e59;
       background-color: #45dacc; }
     @media (min-width: 767px) {
-      .nosotros-content button {
-        margin-bottom: 100px;
+      .nosotros-content-wrapper button {
+        bottom: -60px;
         width: 150px;
         height: 40px; } }
     @media (min-width: 992px) {
-      .nosotros-content button {
-        margin-bottom: 100px;
+      .nosotros-content-wrapper button {
+        bottom: 0;
         width: 100px;
         height: 30px; } }
+    @media (min-width: 1200px) {
+      .nosotros-content-wrapper button {
+        bottom: 60px; } }
+    @media (min-width: 1400px) {
+      .nosotros-content-wrapper button {
+        bottom: 100px; } }
+    @media (min-width: 1800px) {
+      .nosotros-content-wrapper button {
+        bottom: 180px; } }
 
 .image-presentacion {
   margin: 30px 0;
