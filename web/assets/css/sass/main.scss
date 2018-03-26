@@ -1374,12 +1374,20 @@
 		position:relative;
 		display: block;
 		padding: 6%;
+		max-width: 100%;
+		-webkit-flex-grow: 1;
+		-moz-flex-grow: 1;
+		-ms-flex-grow: 1;
+		-o-flex-grow: 1;
+		flex-grow: 1;
+		overflow: hidden;
+    		overflow-y: scroll;
+
     	@media (min-width: $md) {
     		padding: 0 5%;
-    		overflow: hidden;
     	}
     	h1 {
-    		margin: 10px 0;
+    		margin: 30px 0 10px;
     		position: relative;
     		span {
     			position: relative;
@@ -1401,12 +1409,23 @@
     	.paquete-info-contenido {
     		margin: 10px 0;
     		padding: 0 20px;
-    		@media (min-width: $md) {
-    			overflow-y: scroll;
+    		
+    		h3 {
+    			font-weight: 600;
+    			font-size: 120%;
+    			text-transform: uppercase;
+    			line-height: 120%;
+    			margin-top: 30px;
     		}
+
     		p {
     			margin: 10px 0;
     			text-align: justify;
+
+    			a {
+    				text-decoration: underline;
+    				word-wrap: break-word;
+    			}
     		}
     	}
 	}
