@@ -2123,6 +2123,14 @@ footer {
       @media (min-width: 992px) {
         .paquete-menos18 .paquete-resumen:before {
           left: -20px; } }
+    .paquete-menos18 .paquete-resumen h2 {
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+      font-size: 110%;
+      font-weight: 600;
+      padding-left: 15px;
+      margin-bottom: 5px; }
     .paquete-menos18 .paquete-resumen p {
       position: relative;
       z-index: 1; }
@@ -2292,10 +2300,12 @@ footer {
     -o-flex-grow: 1;
     flex-grow: 1;
     overflow: hidden;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    background: rgba(255, 255, 255, 0.6); }
     @media (min-width: 992px) {
       .background-more-info .paquete-info {
-        padding: 0 5%; } }
+        padding: 0 5%;
+        max-width: 80%; } }
     .background-more-info .paquete-info h1 {
       margin: 30px 0 10px;
       position: relative; }

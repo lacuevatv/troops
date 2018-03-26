@@ -26,6 +26,7 @@
 						<?php if ( $paquetes[$i]['post_resumen'] != '' ) : ?>
 						
 							<div class="paquete-resumen">
+								<h2><?php echo $paquetes[$i]['post_titulo']; ?></h2>
 								<p>
 									<?php echo $paquetes[$i]['post_resumen']; ?>
 								</p>

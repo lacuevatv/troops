@@ -164,8 +164,28 @@ global $pageActual;
         </nav><!-- //.main-nav-wrapper -->
 
 <!-- MAIN CONTENT HEADER -->
+        <?php 
+        
 
-        <div class="top-header-content">
+        if ( dispositivo () == 'pc' ) {
+            
+            $imagen = 'header-fondo-pc.png';
+            $color = '#ffe900';
+            if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
+                $imagen  = 'fondo-rosa.png';
+                $color = '#fc88b7';
+            }
+
+        } else {
+            $imagen = 'fondo-menu-movil.png';
+            if ( $pageActual == 'porto-seguro' ) {
+                $imagen  = 'fondo-rosa-movil.png';
+            }
+        }
+
+        $imagen = MAINSURL . '/assets/images/' . $imagen;
+        ?>
+        <div class="top-header-content" style="background: <?php echo $color; ?> url(<?php echo $imagen; ?>) ">
             
             <img src="<?php echo $imagenHeader; ?>" alt="troops" class="image-header">
             <h1 class="title-header">
