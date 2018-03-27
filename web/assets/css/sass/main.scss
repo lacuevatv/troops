@@ -239,6 +239,7 @@
 	padding: 70px 0;
 	@include clip-path(polygon(0% 3%, 100% 0%, 100% 100%, 0% 99%));
 
+
 	@media (min-width: $md) {
 		padding: 110px 0;
 		@include clip-path(polygon(0% 20%, 100% 0%, 100% 100%, 0% 90%));
@@ -248,6 +249,9 @@
 		@include clip-path(polygon(0% 15%, 100% 0%, 100% 100%, 0% 90%));
 	}
 }
+.nosotros-equipo-wrapper-safari {
+	@include transform(translateZ(0));
+} 
 
 .nosotros-equipo {
 	position: relative;

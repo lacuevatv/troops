@@ -55,6 +55,27 @@ function menos18TemplateHacks() {
     }
 }
 
+function safarihack () {
+    var safari = false;
+    var ms_ie = false;
+    var ua = window.navigator.userAgent;
+    var old_ie = ua.indexOf('MSIE ');
+    var new_ie = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge');
+
+    if ( (old_ie > -1) || (new_ie > -1) || (edge > -1) ) {
+        ms_ie = true;
+    }
+
+    if ( navigator.vendor.indexOf('Apple') > -1 ) {
+        safari = true;
+    }
+
+    $('.nosotros-equipo-wrapper').addClass('nosotros-equipo-wrapper-safari');
+}
+
+safarihack();
+
 /*--------------------------------------------------------------
 1.0 NAVIGATION / AJAX FORMS
 --------------------------------------------------------------*/

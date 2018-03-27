@@ -555,6 +555,13 @@
 	background-color: $color-amarillo-menu-transparente;
 }
 
+.tours-nav-menu-rosa {
+	background-color: $color-rosa-menu;	
+
+	&:hover {
+		background-color: $color-rosa-menu-transparente;	
+	}
+}
 
 /*
  * CONTENIDO HEADER

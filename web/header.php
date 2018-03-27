@@ -185,7 +185,7 @@ global $pageActual;
 
         $imagen = MAINSURL . '/assets/images/' . $imagen;
         ?>
-        <div class="top-header-content" style="background: <?php echo $color; ?> url(<?php echo $imagen; ?>) ">
+        <div class="top-header-content" style="background: <?php echo $color; ?> url(<?php echo $imagen; ?>) center">
             
             <img src="<?php echo $imagenHeader; ?>" alt="troops" class="image-header">
             <h1 class="title-header">
@@ -198,8 +198,13 @@ global $pageActual;
         <nav class="tours-nav animation-element fade-in-scroll">
             <?php 
                 $html = '<ul class="tours-nav-menu';
-                if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
+                
+                if ( $pageActual == 'bariloche' || $pageActual == 'floripa' ) {
                     $html .= ' section-active';
+                }
+
+                if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
+                    $html .= ' tours-nav-menu-rosa';
                 }
 
                 $html .= '" role="menu">';
@@ -236,21 +241,42 @@ global $pageActual;
             <!-- ICON RULETA -->
             <div class="tours-nav-icon">
                 <?php 
-                    if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
+                    switch ($pageActual) {
+                        case 'bariloche':
+                        case 'floripa':
+                            echo '<img src="' .MAINSURL . '/assets/images/ruletamenos.png">';
+                            break;
+                        case 'las-lenas':
+                        case 'cancun':
+                            echo '<img src="' .MAINSURL . '/assets/images/ruletamas.png">';
+                            break;
+                        case 'tematicos':
+                        case 'porto-seguro':
+                            echo '<img src="' .MAINSURL . '/assets/images/ruleta-rosa.png">';
+                            break;
+                        default:
+                            echo '<img src="' .MAINSURL . '/assets/images/ruleta-troops.gif">';
+                            break;
+                    }
+                    /*if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
                         echo '<img src="' .MAINSURL . '/assets/images/ruletamenos.png">';
                     } elseif ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
                         echo '<img src="' .MAINSURL . '/assets/images/ruletamas.png">';
                     } else {
                         echo '<img src="' .MAINSURL . '/assets/images/ruleta-troops.gif">';
-                    }
+                    }*/
                 ?>
 
             </div>
 
             <?php 
                 $html = '<ul class="tours-nav-menu tours-nav-menu-right';
-                if ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
+                if ( $pageActual == 'las-lenas' || $pageActual == 'cancun' ) {
                     $html .= ' section-active';
+                }
+
+                if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
+                    $html .= ' tours-nav-menu-rosa';
                 }
 
                 $html .= '" role="menu">';

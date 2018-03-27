@@ -854,6 +854,11 @@ footer {
 .section-active {
   background-color: rgba(255, 251, 206, 0.8); }
 
+.tours-nav-menu-rosa {
+  background-color: #ff6dca; }
+  .tours-nav-menu-rosa:hover {
+    background-color: rgba(255, 109, 202, 0.8); }
+
 /*
  * CONTENIDO HEADER
 */
@@ -1307,6 +1312,12 @@ footer {
       -moz-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 90%);
       -ms-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 90%);
       clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 90%); } }
+
+.nosotros-equipo-wrapper-safari {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0); }
 
 .nosotros-equipo {
   position: relative;
