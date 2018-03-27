@@ -55,7 +55,14 @@ function menos18TemplateHacks() {
     }
 }
 
-function safarihack () {
+/*
+ESTA FUNCIÓN LE AGREGA UNA CLASE CSS SI EL NAVEGADOR ES SAFARI
+En Safari el clip-path no funciona muy bien a no ser que se le ponga transform: translateZ(0),
+pero al ponerlo por defecto en chrome y opera se ve mal
+entonces cuando detecta q es safari incluye la clase
+*/
+
+function hackClipPath () {
     var safari = false;
     var ms_ie = false;
     var ua = window.navigator.userAgent;
@@ -70,17 +77,32 @@ function safarihack () {
     if ( navigator.vendor.indexOf('Apple') > -1 ) {
         safari = true;
     }
+    
 
-    $('.nosotros-equipo-wrapper').addClass('nosotros-equipo-wrapper-safari');
+    if ( safari ) {
+        //$('.nosotros-equipo-wrapper').addClass('nosotros-equipo-wrapper-safari');
+        $('.nosotros-equipo-wrapper').css({
+            'transform': 'translateZ(0)',
+            '-webkit-transform': 'translateZ(0)',
+            '-moz-transform': 'translateZ(0)',
+            '-ms-transform': 'translateZ(0)',
+            '-o-transform': 'translateZ(0)',
+        });
+    }
 }
 
-safarihack();
+
+
+
 
 /*--------------------------------------------------------------
 1.0 NAVIGATION / AJAX FORMS
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
+
+    //si es safari hackea el css para que funcione bien el clip-path
+    hackClipPath();
 
     /*
      * MENU basico
