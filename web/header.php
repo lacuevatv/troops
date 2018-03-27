@@ -176,10 +176,20 @@ global $pageActual;
                 $color = '#fc88b7';
             }
 
+            if ( $pageActual == 'cancun' || $pageActual == 'floripa' ) {
+                $imagen  = 'fondo-verde.png';
+                $color = '#45dacc';
+            }
+
         } else {
             $imagen = 'fondo-menu-movil.png';
-            if ( $pageActual == 'porto-seguro' ) {
+            if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos'  ) {
                 $imagen  = 'fondo-rosa-movil.png';
+                $color = '#fc88b7';
+            }
+             if ( $pageActual == 'cancun' || $pageActual == 'floripa' ) {
+                $imagen  = 'fondo-verde-movil.png';
+                $color = '#45dacc';
             }
         }
 
@@ -199,13 +209,13 @@ global $pageActual;
             <?php 
                 $html = '<ul class="tours-nav-menu';
                 
-                if ( $pageActual == 'bariloche' || $pageActual == 'floripa' ) {
+                if ( $pageActual == 'bariloche' || $pageActual == 'floripa' || $pageActual == 'porto-seguro' ) {
                     $html .= ' section-active';
                 }
 
-                if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
+                /*if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
                     $html .= ' tours-nav-menu-rosa';
-                }
+                }*/
 
                 $html .= '" role="menu">';
 
@@ -241,7 +251,7 @@ global $pageActual;
             <!-- ICON RULETA -->
             <div class="tours-nav-icon">
                 <?php 
-                    switch ($pageActual) {
+                    /*switch ($pageActual) {
                         case 'bariloche':
                         case 'floripa':
                             echo '<img src="' .MAINSURL . '/assets/images/ruletamenos.png">';
@@ -257,27 +267,27 @@ global $pageActual;
                         default:
                             echo '<img src="' .MAINSURL . '/assets/images/ruleta-troops.gif">';
                             break;
-                    }
-                    /*if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
+                    }*/
+                    if ( $pageActual == 'bariloche' || $pageActual == 'porto-seguro' || $pageActual == 'floripa' ) {
                         echo '<img src="' .MAINSURL . '/assets/images/ruletamenos.png">';
                     } elseif ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
                         echo '<img src="' .MAINSURL . '/assets/images/ruletamas.png">';
                     } else {
                         echo '<img src="' .MAINSURL . '/assets/images/ruleta-troops.gif">';
-                    }*/
+                    }
                 ?>
 
             </div>
 
             <?php 
                 $html = '<ul class="tours-nav-menu tours-nav-menu-right';
-                if ( $pageActual == 'las-lenas' || $pageActual == 'cancun' ) {
+                if ( $pageActual == 'las-lenas' || $pageActual == 'cancun' || $pageActual == 'tematicos' ) {
                     $html .= ' section-active';
                 }
 
-                if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
+                /*if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
                     $html .= ' tours-nav-menu-rosa';
-                }
+                }*/
 
                 $html .= '" role="menu">';
 
