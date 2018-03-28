@@ -2234,7 +2234,8 @@ footer {
   background: #fff;
   width: 100%;
   padding: 0%;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  min-height: 500px; }
   @media (min-width: 767px) {
     .background-more-info {
       padding-bottom: 150px; } }
