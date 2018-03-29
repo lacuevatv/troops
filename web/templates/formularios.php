@@ -63,6 +63,8 @@
 
 			global $pageActual;
 			switch ($pageActual) {
+				case 'floripa':
+				case 'cancun':
 				case 'porto-seguro':
 					$imagenValijas = MAINSURL . '/assets/images/valijas-porto-seguro.png';
 					if ( dispositivo() != 'pc' ) {

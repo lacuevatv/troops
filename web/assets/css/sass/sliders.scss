@@ -230,7 +230,7 @@
     }
 
     @media (min-width: $xlg) {
-        height: 520px;
+        height: 585px;
     }
 
 
@@ -251,7 +251,9 @@
             height: 100%;
             width: 100%;
             img {
-                width: 100%;
+                display: block;
+                width: 70%;
+                margin: 0 auto;
             }
         }
     }//.main-picture-wrapper

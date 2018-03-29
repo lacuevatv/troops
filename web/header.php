@@ -166,11 +166,11 @@ global $pageActual;
 <!-- MAIN CONTENT HEADER -->
         <?php 
         
-
+        $imagen = 'header-fondo-pc.png';
+        $color = '#ffe900';
         if ( dispositivo () == 'pc' ) {
             
-            $imagen = 'header-fondo-pc.png';
-            $color = '#ffe900';
+            
             if ( $pageActual == 'porto-seguro' || $pageActual == 'tematicos' ) {
                 $imagen  = 'fondo-rosa.png';
                 $color = '#fc88b7';

@@ -626,9 +626,8 @@ $( window ).on('load', function(){
    $(document).on('click', '.paquete-btn-galeria', function(){
         var paquete = $(this).closest('article');
         var contenedor = $('.background-more-info');
-        $(contenedor).addClass('open-background');
         contenedor.empty();
-        
+        $(contenedor).addClass('open-background');
         //agrega los controles
         $(contenedor).append($('<div class="controls"><span class="close-control"></span><span class="left-control"></span><span class="right-control"></span></div>'));
         //abre los controles, en este caso, solo cerrar
@@ -654,6 +653,8 @@ $( window ).on('load', function(){
 
         contenedor.append($(html));
 
+
+        
          //ademas hace un scroll hacia arriba para mostrarlo adecuadamene
          if ( window.innerWidth > 992 ) {
             $('html, body').stop().animate({
@@ -677,11 +678,14 @@ $( window ).on('load', function(){
                     items:1
                 },
                 992:{
-                    items:3
+                    items:4
                 },
                 1200:{
-                    items:4
-                }
+                    items:6
+                },
+                1500:{
+                    items:8
+                },
             }
         });//owl
 
