@@ -298,7 +298,7 @@ global $pageActual;
                     <?php if ( $pageActual == 'las-lenas' ) {
                         echo '<span class="tour-active-icon"></span>';
                     } ?>
-                    <a href="" title="Las Leñas">
+                    <a href="<?php echo MAINSURL; ?>/las-lenas" title="Las Leñas">
                         Las Leñas
                     </a>
                 </li>
@@ -306,7 +306,7 @@ global $pageActual;
                     <?php if ( $pageActual == 'cancun' ) {
                         echo '<span class="tour-active-icon"></span>';
                     } ?>
-                    <a href="" title="Cancún">
+                    <a href="<?php echo MAINSURL; ?>/cancun" title="Cancún">
                         Cancún
                     </a>
                 </li>
@@ -314,7 +314,7 @@ global $pageActual;
                     <?php if ( $pageActual == 'tematicos' ) {
                         echo '<span class="tour-active-icon"></span>';
                     } ?>
-                    <a href="" title="Temáticos">
+                    <a href="<?php echo MAINSURL; ?>/tematicos" title="Temáticos">
                         Temáticos
                     </a>
                 </li>

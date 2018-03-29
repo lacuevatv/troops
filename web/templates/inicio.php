@@ -28,7 +28,7 @@
 							A través de nuestras oficinas en Rosario, Buenos Aires y Sao Paulo (Brasil), disponemos de la estructura necesaria para atender personalizadamente a nuestros pasajeros, tanto emisivos como receptivos.
 						</p>
 						<p>
-							La asociación que tenemos con empresas líderes de cada sector en nuestros destinos nos permite contar con grandes estructuras de respaldo para brindar los servicios contratados y el acceso a las nuevas tendencias para actualizar los contenidos de nuestros productos, año tras año.
+							La asociación con empresas líderes de cada sector en nuestros destinos nos permite contar con grandes estructuras de respaldo para brindar los servicios contratados y el acceso a las nuevas tendencias para actualizar los contenidos de nuestros productos, año tras año.
 						</p>
 						<p>
 							¡Elegí tu destino y unite a nosotros para disfrutar del mejor viaje de tu vida!
