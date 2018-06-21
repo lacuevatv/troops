@@ -6,6 +6,7 @@
  * FOOTER
  * 
 */
+global $pageActual;
 ?>
 
 
@@ -35,6 +36,7 @@
     		</button>
     	</section>
 
+		<?php if ( $pageActual != 'las-lenas' && $pageActual != 'cancun' && $pageActual != 'tematicos' ) : ?>
     	<section id="legales">
     		<div class="container">
     			<p>
@@ -51,7 +53,8 @@
 
     		</div>
     	</section>
-        
+		<?php endif; ?>
+
     </footer>
 
 </div><!--- //.wrapper-site -->

@@ -46,7 +46,7 @@
 
 						<section>
 
-							<div class="detalles-wrapper animation-element slide-up">
+							<!--<div class="detalles-wrapper animation-element slide-up">
 								<div class="detalle1">
 									<table>
 										<tr>
@@ -166,8 +166,13 @@
 
 								</div>
 								
+							</div>-->
+							<div style="text-align:right;">
+							<a style="padding: 10px 15px;height: 30px;background-color:#ffe900;" href="<?php echo UPLOADSFILE . '/'. $paquetes[$i]['post_file']; ?>" target="_blank">
+												Descargar PDF
+											</a>
 							</div>
-							
+
 							<div id="contenedor-mapa" class="animation-element fade-in-scroll"></div>
 							
 
