@@ -4,6 +4,8 @@
 
 	<div class="inner-container col-flex">
 		
+		<?php if ( $data == 'menos18' ) : ?>
+
 		<div class="form-wrapper-tours animation-element slide-up">
 			<h2 class="titulo-formulario-tours">
 				<span>Pedí tu reunión Troops acá</span>
@@ -56,6 +58,58 @@
 
 		</div><!-- //.form-wrapper -->
 		
+		<?php else :
+		global $pageActual;
+		function renamePageActual ($slug) {
+			switch ($slug) {
+				case 'las-lenas':
+					echo 'Las Leñas';
+					break;
+				
+				case 'cancun':
+					echo 'Cancún';
+					break;
+				case 'tematicos':
+					return 'Temáticos';
+					break;
+			}
+		}
+		?>
+
+		<div class="form-wrapper-tours animation-element slide-up">
+			<h2 class="titulo-formulario-tours">
+				<span>Pedí tu reunión Troops acá</span>
+			</h2>
+			
+			<form method="POST" id="contact-form-tour-mas" name="contact-form-tourmas" class="formulario">
+				<input type="hidden" name="page" value="<?php echo renamePageActual($pageActual); ?>">
+				
+				<div class="form-group">
+					<label for="name">Nombre y apellido</label>
+					<input type="text" id="name" name="name" placeholder="Tu nombre y apellido">
+				</div>
+
+				<div class="form-group">
+					<label for="telephone">Teléfono</label>
+					<input type="number" id="telephone" name="telephone" placeholder="Teléfono movil" required>	
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required placeholder="E-mail">
+				</div>
+
+				<div class="form-group-col-2">
+					<span class="url-form">troops.tur.ar</span>
+					<input type="submit" value="Enviar" class="btn-form">	
+				</div>
+
+			</form>
+
+		</div><!-- //.form-wrapper -->
+
+		<?php endif; ?>
+
 		<div class="image-form animation-element slide-up">
 			
 			<?php

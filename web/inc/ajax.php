@@ -67,6 +67,28 @@ if( isAjax() ) {
 			
 			enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email);
 		break;
+
+		case 'contact-tour-mas':
+			// Valores enviados desde el formulario
+			if ( !isset($_POST['email']) || !isset($_POST['telephone']) ) {
+			    die ('Es necesario completar todos los datos del formulario');
+			}
+
+			$page = isset($_POST['page']) ? $_POST['page'] : 'más 18';
+			$nombre = isset($_POST['name']) ? $_POST['name'] : '';
+			$telephone = isset($_POST['telephone']) ? $_POST['telephone'] : '';
+			$email = isset($_POST['email']) ? $_POST['email'] : '';
+			$msj = isset($_POST['msj']) ? $_POST['msj'] : '';
+
+			$mensaje = 'Nombre: '. $nombre . '<br> Teléfono: '. $telephone . '<br> Destino: '. $page . '<br> Email: '. $email . '<br> Mensaje: ' . $msj .'<br>';
+
+			$asunto = 'Contacto desde la página - ' . $page;
+			// Email donde se enviaran los datos cargados en el formulario de contacto
+			$emailDestino = EMAILFORMULARIO;
+
+			
+			enviarFormulario( $emailDestino , $asunto, $mensaje, $nombre, $email);
+		break;
 	}
 
 	

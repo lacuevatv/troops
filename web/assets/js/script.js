@@ -428,7 +428,40 @@ $(document).ready(function(){
             error: function ( ) {
                 console.log('error');
             },
-    });//cierre ajax
+        });//cierre ajax
+
+
+    });//.submit
+
+    $('#contact-form-tour-mas').submit(function( event ){
+        event.preventDefault();
+    
+        console.log('formulario-tours-mas');
+
+        formData = new FormData( this );
+        formData.append('function','contact-tour-mas');
+
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
+            //funcion antes de enviar
+            beforeSend: function() {
+                $('.url-form').text('Enviando, espere...');
+            },
+            success: function ( response ) {
+                console.log(response);
+                $('.url-form').text(response);
+                $('#contact-form-tour-mas')[0].reset();
+                
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+        });//cierre ajax
 
 
     });//.submit
